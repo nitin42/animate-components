@@ -11,9 +11,9 @@ npm install animate-components --save
 ## Usage
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { Swing } from "animate-components";
+import { Swing } from 'animate-components';
 
 class App extends Component {
   render() {
