@@ -119,10 +119,5 @@ Default: `visible`
 
 ## Contributing
 Here is the [guide]().
-<br/>
 
-<<<<<<< HEAD
 **More animations coming soon 😃** !!
-=======
-**More animations coming soon 😃** !!
->>>>>>> df3d326df4829966e9bf369976ead0a8f9c13346
