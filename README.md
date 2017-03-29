@@ -2,8 +2,6 @@
 
 > ***Elemental components for animation in React***
 
-**Tested on Chrome, Safari and Firefox**.
-
 ## Install
 ```
 npm install animate-components --save
@@ -123,4 +121,8 @@ Default: `visible`
 Here is the [guide]().
 <br/>
 
+<<<<<<< HEAD
 **More animations coming soon 😃** !!
+=======
+**More animations coming soon 😃** !!
+>>>>>>> df3d326df4829966e9bf369976ead0a8f9c13346
