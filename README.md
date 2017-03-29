@@ -1,6 +1,6 @@
 # Animate Components
 
-> ***Elemental components for animations in React***
+> ***Elemental components for animation in React***
 
 ## Install
 
