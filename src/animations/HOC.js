@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-let HOC = (componentName, animationName) =>
+let HOC = (composedComponent, animationName) =>
   class extends Component {
     state = {
       styles: {}
