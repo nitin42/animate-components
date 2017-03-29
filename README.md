@@ -1,4 +1,4 @@
-# animate-components
+# Animate Components
 
 > ***Elemental components for animation in React***
 
