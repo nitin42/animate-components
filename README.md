@@ -2,8 +2,6 @@
 
 > ***Elemental components for animation in React***
 
-**Tested on Chrome, Safari and Firefox**.
-
 ## Install
 ```
 npm install animate-components --save
