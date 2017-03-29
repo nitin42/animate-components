@@ -82,6 +82,11 @@ export {
 }
 ```
 
+Further you can,
+* **Find and fix the bugs.**
+* **Add tests.**
+* **Suggest any changes.**
+
 That's it ! I'm excited to see your pull request.
 
 There's lot to be done. Cleaning up the codebase, testing and adding more features to the components.
