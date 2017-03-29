@@ -1,0 +1,27 @@
+{
+  "name": "animate-components",
+  "version": "0.3.6",
+  "description": "Elemental components for animations in React",
+  "keywords": [
+    "react",
+    "keyframes",
+    "animate"
+  ],
+  "main": "index.js",
+  "scripts": {},
+  "files": [
+    "lib"
+  ],
+  "author": "Nitin Tulswani <tulswani19@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0"
+  }
+}
