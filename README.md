@@ -3,11 +3,13 @@
 > ***Elemental components for animation in React***
 
 ## Install
+
 ```
 npm install animate-components --save
 ```
 
 ## Usage
+
 ```javascript
 import React, { Component } from "react";
 
@@ -27,9 +29,11 @@ class App extends Component {
 ```
 
 ## Animations
+
 Below is a list of all available animations.
 
 ### Bounce
+
 * `Bounce`
 * `BounceUp`
 * `BounceRight`
@@ -37,6 +41,7 @@ Below is a list of all available animations.
 * `BounceDown`
 
 ### Fade
+
 * `FadeIn`
 * `FadeInUp`
 * `FadeInRight`
@@ -47,15 +52,18 @@ Below is a list of all available animations.
 * `FadeInRightBig`
 
 ### Flip
+
 * `Flip`
 * `FlipX`
 * `FlipY`
 
 ### LightSpeed
+
 * `LightOut`
 * `LightIn`
 
 ### Rotate
+
 * `RotateIn`
 * `RotateRight`
 * `RotateLeft`
@@ -63,6 +71,7 @@ Below is a list of all available animations.
 * `RotateUpLeft`
 
 ### Slide
+
 * `SlideUp`
 * `SlideDown`
 * `SlideLeft`
@@ -70,6 +79,7 @@ Below is a list of all available animations.
 * `SlideExpandUp`
 
 ### Special
+
 * `Flash`
 * `RollOut`
 * `RollIn`
@@ -87,30 +97,37 @@ Below is a list of all available animations.
 Props
 
 **duration**
-Type: `string`
+
+Type: `string`<br/>
 Default: `1s`
 
 **timingFunction**
-Type: `string`
+
+Type: `string`<br/>
 Default: `ease`
 
 **delay**
-Type: `string`
+
+Type: `string`<br/>
 Default: `0s`
 
 **direction**
-Type: `string`
+
+Type: `string`<br/>
 Default: `normal`
 
 **iterations**
-Type: `string`
+
+Type: `string`<br/>
 Default: `1`
 
 **backfaceVisibility**
-Type: `string`
+
+Type: `string`<br/>
 Default: `visible`
 
 ### Example
+
 ```javascript
 <BounceUp duration="2s" timingFunction="ease-in" iterations="3">
   <h1>Hello World</h1>
@@ -118,6 +135,7 @@ Default: `visible`
 ```
 
 ## Contributing
+
 Here is the [guide](https://github.com/nitin42/animate-components/blob/master/CONTRIBUTING.md).
 
 **More animations coming soon 😃** !!
