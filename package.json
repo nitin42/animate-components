@@ -5,7 +5,8 @@
   "keywords": [
     "react",
     "keyframes",
-    "animate"
+    "animate",
+    "high order components"
   ],
   "main": "index.js",
   "scripts": {},
