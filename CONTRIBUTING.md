@@ -89,6 +89,6 @@ Further you can,
 
 That's it ! I'm excited to see your pull request.
 
-There's lot to be done. Cleaning up the codebase, testing and adding more features to the components.
+There's lot to be done. Cleaning up the codebase, testing and adding more features.
 
 Thanks ❤️
