@@ -118,6 +118,6 @@ Default: `visible`
 ```
 
 ## Contributing
-Here is the [guide]().
+Here is the [guide](https://github.com/nitin42/animate-components/blob/master/CONTRIBUTING.md).
 
 **More animations coming soon 😃** !!
