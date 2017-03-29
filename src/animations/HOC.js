@@ -12,7 +12,7 @@ let HOC = (composedComponent, animationName) =>
       delay: "0s",
       direction: "normal",
       iterations: "1",
-      backfaceVisibility: "visible",
+      backfaceVisible: "visible",
       fillMode: "none"
     };
 
