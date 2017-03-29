@@ -121,7 +121,7 @@ Default: `normal`
 Type: `string`<br/>
 Default: `1`
 
-**backfaceVisibility**
+**backfaceVisible**
 
 Type: `string`<br/>
 Default: `visible`
