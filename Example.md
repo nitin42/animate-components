@@ -1,7 +1,5 @@
 # Example
 
-Here is the complete example.
-
 ```javascript
 import React, { Component } from 'react';
 import { Bounce } from 'animate-components';
