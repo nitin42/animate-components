@@ -23,3 +23,4 @@ render () {
 - [ ] Tests.
 - [ ] Type checking (optional).
 - [ ] Making animations more flexible.
+- [ ] Linting
