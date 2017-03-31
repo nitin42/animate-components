@@ -27,6 +27,7 @@ class App extends Component {
   }
 }
 ```
+Check out the complete example with details [here](#Example.md)
 
 ## Animations
 
