@@ -48,7 +48,7 @@ export default HOC('NewAnimation', newAnimation); // Creates the component
 
 Note that HOC takes two arguments, one is the name of your component(**type string**) and the other is the keyframe defined for the animation.
 
-If you want to create multiple components for animation, create a single object and export it like this
+If you want to create multiple animation components, create a single object and export it like this
 
 ```javascript
 // newAnimation.js
@@ -81,14 +81,8 @@ export {
   NewAnimationThree
 }
 ```
-
-Further you can,
-* **Find and fix the bugs.**
-* **Add tests.**
-* **Suggest any changes.**
+Also check [this](https://github.com/nitin42/animate-components/blob/master/Todo.md) todo list for the project if you want to contribute further.
 
 That's it ! I'm excited to see your pull request.
 
-There's lot to be done. Cleaning up the codebase, testing and adding more features.
-
-Thanks ❤️
+There's lot to be done. Thanks ❤️
