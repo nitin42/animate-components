@@ -10,23 +10,6 @@ npm install animate-components --save
 
 ## Usage
 
-```javascript
-import React, { Component } from 'react';
-
-import { Swing } from 'animate-components';
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Swing>
-          <h1>Hello</h1>
-        </Swing>
-      </div>
-    );
-  }
-}
-```
 Check out the complete example with details [here](https://github.com/nitin42/animate-components/blob/master/Example.md)
 
 ## Animations
