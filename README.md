@@ -110,14 +110,6 @@ Default: `1`
 Type: `string`<br/>
 Default: `visible`
 
-### Example
-
-```javascript
-<BounceUp duration="2s" timingFunction="ease-in" iterations="3">
-  <h1>Hello World</h1>
-</BounceUp>
-```
-
 ## Contributing
 
 Here is the [guide](https://github.com/nitin42/animate-components/blob/master/CONTRIBUTING.md).
