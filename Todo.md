@@ -24,3 +24,4 @@ render () {
 - [ ] Type checking (optional).
 - [ ] Making animations more flexible.
 - [ ] Linting
+- [ ] Make site more attractive (may be some animation demo)
