@@ -27,7 +27,7 @@ class App extends Component {
   }
 }
 ```
-Check out the complete example with details [here](#Example.md)
+Check out the complete example with details [here](https://github.com/nitin42/animate-components/edit/master/Example.md)
 
 ## Animations
 
