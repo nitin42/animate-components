@@ -60,7 +60,6 @@ Below is a list of all available animations.
 * `SlideDown`
 * `SlideLeft`
 * `SlideRight`
-* `SlideExpandUp`
 
 ### Special
 
