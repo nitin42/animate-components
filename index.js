@@ -1,35 +1,35 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Hatch = exports.Entrance = exports.ExpandUp = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = undefined;
 
-var _index = require("./lib/animations/bounce/index");
+var _index = require('./lib/animations/bounce/index');
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = require("./lib/animations/fade/index");
+var _index3 = require('./lib/animations/fade/index');
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _index5 = require("./lib/animations/flip/index");
+var _index5 = require('./lib/animations/flip/index');
 
 var _index6 = _interopRequireDefault(_index5);
 
-var _index7 = require("./lib/animations/lightspeed/index");
+var _index7 = require('./lib/animations/lightspeed/index');
 
 var _index8 = _interopRequireDefault(_index7);
 
-var _index9 = require("./lib/animations/rotate/index");
+var _index9 = require('./lib/animations/rotate/index');
 
 var _index10 = _interopRequireDefault(_index9);
 
-var _special = require("./lib/animations/special");
+var _special = require('./lib/animations/special');
 
 var _special2 = _interopRequireDefault(_special);
 
-var _index11 = require("./lib/animations/slide/index");
+var _index11 = require('./lib/animations/slide/index');
 
 var _index12 = _interopRequireDefault(_index11);
 
