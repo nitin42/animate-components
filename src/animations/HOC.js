@@ -1,6 +1,32 @@
-import React, { Component } from "react";
+// @flow
 
-let HOC = (componentName, animationName) =>
+import React, { Component } from 'react';
+
+type Props = {
+  duration: string,
+  timingFunction: string,
+  delay: string,
+  direction: string,
+  iterations: string,
+  backfaceVisible: string,
+  fillMode: string
+};
+
+type DefaultProps = {
+  duration: string,
+  timingFunction: string,
+  delay: string,
+  direction: string,
+  iterations: string,
+  backfaceVisible: string,
+  fillMode: string
+};
+
+type State = {
+  styles: Object
+};
+
+let HOC = (componentName: string, animationName: string) =>
   class extends Component {
     state = {
       styles: {}
@@ -12,18 +38,8 @@ let HOC = (componentName, animationName) =>
       delay: "0s",
       direction: "normal",
       iterations: "1",
-      backfaceVisibility: "visible",
+      backfaceVisible: "visible",
       fillMode: "none"
-    };
-
-    static propTypes = {
-      duration: React.PropTypes.string,
-      timingFunction: React.PropTypes.string,
-      delay: React.PropTypes.string,
-      direction: React.PropTypes.string,
-      iterations: React.PropTypes.string,
-      backfaceVisible: React.PropTypes.string,
-      fillMode: React.PropTypes.string
     };
 
     componentDidMount = () => {
@@ -41,11 +57,12 @@ let HOC = (componentName, animationName) =>
         styles: {
           display: "inline-block" /** <span> elements can't be animated with CSS. In order to animate them with 
                                 CSS we assign display property to them */,
-          WebkitAnimation: `${animationName} ${duration} ${timingFunction} ${delay} ${fillMode} ${direction} ${iterations}`,
+          // Works but will be updated later.
+          animation: `${animationName} ${duration} ${timingFunction} ${delay} ${fillMode} ${direction} ${iterations}`,
           backfaceVisibility: `${backfaceVisible}`
         }
       });
-    };
+    }
 
     // Using <span> instead of composedComponent because each component has a base component <span> only.
     render() {

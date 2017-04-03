@@ -9,24 +9,24 @@ import {
   pulse,
   expandUp,
   entrance,
-  hatch
-} from "./styledSpecial";
+  hatch,
+} from './styledSpecial';
 
-import HOC from "./HOC";
+import HOC from './HOC';
 
 // Special animation components
 const specialObj = {
-  Flash: HOC("Flash", flash),
-  RollOut: HOC("RollOut", rollOut),
-  RollIn: HOC("RollIn", rollIn),
-  Rubber: HOC("Rubber", rubber),
-  Swing: HOC("Swing", swing),
-  Zoom: HOC("Zoom", zoom),
-  Hinge: HOC("Hinge", hinge),
-  Pulse: HOC("Pulse", pulse),
-  ExpandUp: HOC("ExpandUp", expandUp),
-  Entrance: HOC("Entrance", entrance),
-  Hatch: HOC("Hatch", hatch)
+  Flash: HOC('Flash', flash),
+  RollOut: HOC('RollOut', rollOut),
+  RollIn: HOC('RollIn', rollIn),
+  Rubber: HOC('Rubber', rubber),
+  Swing: HOC('Swing', swing),
+  Zoom: HOC('Zoom', zoom),
+  Hinge: HOC('Hinge', hinge),
+  Pulse: HOC('Pulse', pulse),
+  ExpandUp: HOC('ExpandUp', expandUp),
+  Entrance: HOC('Entrance', entrance),
+  Hatch: HOC('Hatch', hatch),
 };
 
 export default specialObj;

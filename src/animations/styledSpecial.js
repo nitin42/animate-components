@@ -1,4 +1,4 @@
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components';
 
 const flash = keyframes`
 	from {
@@ -246,5 +246,5 @@ export {
   pulse,
   expandUp,
   entrance,
-  hatch
+  hatch,
 };

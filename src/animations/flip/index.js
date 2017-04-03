@@ -1,7 +1,7 @@
 import {
 	flip,
 	flipX,
-	flipY
+	flipY,
 } from './styledFlip';
 
 import HOC from '../HOC';
@@ -10,7 +10,7 @@ import HOC from '../HOC';
 const flipObj = {
 	Flip: HOC('Flip', flip),
 	FlipX: HOC('FlipX', flipX),
-	FlipY: HOC('FlipY', flipY)
-}
+	FlipY: HOC('FlipY', flipY),
+};
 
 export default flipObj;

@@ -1,25 +1,25 @@
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
-	0% {
-		opacity: 0;
-	}
+  0% {
+  	opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+  	opacity: 1;
+  }
 `;
 
 const left = keyframes`
-	from {
-		opacity: 0;
-	 	-webkit-transform: translate3d(-100%, 0, 0);
-	}
+  from {
+  	opacity: 0;
+  	-webkit-transform: translate3d(-100%, 0, 0);
+  }
 
-	to {
-		opacity: 1;
-		-webkit-transform: none;
-	}
+  to {
+  	opacity: 1;
+  	-webkit-transform: none;
+  }
 `;
 
 const leftBig = keyframes`
