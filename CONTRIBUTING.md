@@ -4,7 +4,8 @@ It would be super exciting if you want to contribute to `animate-components`. To
 
 * Create two files for eg `newAnimation.js` & `styledNewAnimation.js`.
 
-* Define the keyframes for the animation in `styledNewAnimation.js` using [styled-components]().
+* Define the keyframes for the animation in `styledNewAnimation.js` using [styled-components](https://github.com/styled-components/styled-components).
+
 ```javascript
 // styledNewAnimation.js
 
@@ -20,16 +21,18 @@ const newAnimation = keyframes`
   }
 `;
 ```
+
 You can also create the keyframes in `newAnimation.js` and directly use it instead of creating `styledNewAnimation.js` but it would not be handy for creating multiple keyframes.
 
 * Export the newAnimation.
+
 ```javascript
 // styledNewAnimation.js
 
 export default newAnimation;
 ```
 
-* Import the [high order component]() present in the **animation** folder. You can find it [here]().
+* Import the [high order component](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e) present in the **animation** folder. You can find it [here](https://github.com/nitin42/animate-components/blob/master/src/animations/HOC.js).
 
 * Export the component like this
 
@@ -38,13 +41,14 @@ export default newAnimation;
 
 import { newAnimation } from './styledNewAnimation';
 
-import HOC from './HOC; // High Order Component
+import HOC from './HOC'; // High Order Component
 
 export default HOC('NewAnimation', newAnimation); // Creates the component
 ```
+
 Note that HOC takes two arguments, one is the name of your component(**type string**) and the other is the keyframe defined for the animation.
 
-If you want to create multiple components for animation, create a single object and export it like this
+If you want to create multiple animation components, create a single object and export it like this
 
 ```javascript
 // newAnimation.js
@@ -62,7 +66,7 @@ const newAnimationObj = {
 export default newAnimationObj;
 ```
 
-* Lastly import the above object (`newAnimationObj`) in [main.js]() and extract all the components from it. For eg
+* Lastly import the above object (`newAnimationObj`) in [main.js](https://github.com/nitin42/animate-components/blob/master/main.js) and extract all the components from it. For eg
 
 ```javascript
 // main.js
@@ -78,8 +82,14 @@ export {
 }
 ```
 
+Generate the build using
+
+```
+npm run build
+```
+
+Also check [this](https://github.com/nitin42/animate-components/blob/master/Todo.md) todo list for the project if you want to contribute further.
+
 That's it ! I'm excited to see your pull request.
 
-There's lot to be done. Cleaning up the codebase, testing and adding more features to the components.
-
-Thanks ❤️
+There's lot to be done. Thanks ❤️
