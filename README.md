@@ -1,35 +1,23 @@
-# animate-components
+# Animate Components
 
 > ***Elemental components for animation in React***
 
 ## Install
+
 ```
 npm install animate-components --save
 ```
 
 ## Usage
-```javascript
-import React, { Component } from "react";
 
-import { Swing } from "animate-components";
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Swing>
-          <h1>Hello</h1>
-        </Swing>
-      </div>
-    );
-  }
-}
-```
+Check out the complete example with details [here](https://github.com/nitin42/animate-components/blob/master/Example.md)
 
 ## Animations
+
 Below is a list of all available animations.
 
 ### Bounce
+
 * `Bounce`
 * `BounceUp`
 * `BounceRight`
@@ -37,6 +25,7 @@ Below is a list of all available animations.
 * `BounceDown`
 
 ### Fade
+
 * `FadeIn`
 * `FadeInUp`
 * `FadeInRight`
@@ -47,15 +36,18 @@ Below is a list of all available animations.
 * `FadeInRightBig`
 
 ### Flip
+
 * `Flip`
 * `FlipX`
 * `FlipY`
 
 ### LightSpeed
+
 * `LightOut`
 * `LightIn`
 
 ### Rotate
+
 * `RotateIn`
 * `RotateRight`
 * `RotateLeft`
@@ -63,13 +55,14 @@ Below is a list of all available animations.
 * `RotateUpLeft`
 
 ### Slide
+
 * `SlideUp`
 * `SlideDown`
 * `SlideLeft`
 * `SlideRight`
-* `SlideExpandUp`
 
 ### Special
+
 * `Flash`
 * `RollOut`
 * `RollIn`
@@ -87,42 +80,37 @@ Below is a list of all available animations.
 Props
 
 **duration**
-Type: `string`
+
+Type: `string`<br/>
 Default: `1s`
 
 **timingFunction**
-Type: `string`
+
+Type: `string`<br/>
 Default: `ease`
 
 **delay**
-Type: `string`
+
+Type: `string`<br/>
 Default: `0s`
 
 **direction**
-Type: `string`
+
+Type: `string`<br/>
 Default: `normal`
 
 **iterations**
-Type: `string`
+
+Type: `string`<br/>
 Default: `1`
 
-**backfaceVisibility**
-Type: `string`
+**backfaceVisible**
+
+Type: `string`<br/>
 Default: `visible`
 
-### Example
-```javascript
-<BounceUp duration="2s" timingFunction="ease-in" iterations="3">
-  <h1>Hello World</h1>
-</BounceUp>
-```
-
 ## Contributing
-Here is the [guide]().
-<br/>
 
-<<<<<<< HEAD
+Here is the [guide](https://github.com/nitin42/animate-components/blob/master/CONTRIBUTING.md).
+
 **More animations coming soon 😃** !!
-=======
-**More animations coming soon 😃** !!
->>>>>>> df3d326df4829966e9bf369976ead0a8f9c13346
