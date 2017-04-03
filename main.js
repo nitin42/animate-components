@@ -1,10 +1,10 @@
-import bounceObj from "./lib/animations/bounce/index";
-import fadeObj from "./lib/animations/fade/index";
-import flipObj from "./lib/animations/flip/index";
-import lightObj from "./lib/animations/lightspeed/index";
-import rotateObj from "./lib/animations/rotate/index";
-import specialObj from "./lib/animations/special";
-import slideObj from "./lib/animations/slide/index";
+import bounceObj from './lib/animations/bounce/index';
+import fadeObj from './lib/animations/fade/index';
+import flipObj from './lib/animations/flip/index';
+import lightObj from './lib/animations/lightspeed/index';
+import rotateObj from './lib/animations/rotate/index';
+import specialObj from './lib/animations/special';
+import slideObj from './lib/animations/slide/index';
 
 const { Bounce, BounceUp, BounceRight, BounceLeft, BounceDown } = bounceObj;
 
@@ -16,7 +16,7 @@ const {
   FadeInDown,
   FadeInUpBig,
   FadeInRightBig,
-  FadeInLeftBig
+  FadeInLeftBig,
 } = fadeObj;
 
 const { Flip, FlipX, FlipY } = flipObj;
@@ -28,7 +28,7 @@ const {
   RotateRight,
   RotateLeft,
   RotateUpRight,
-  RotateUpLeft
+  RotateUpLeft,
 } = rotateObj;
 
 const {
@@ -42,7 +42,7 @@ const {
   Pulse,
   ExpandUp,
   Entrance,
-  Hatch
+  Hatch,
 } = specialObj;
 
 const { SlideUp, SlideRight, SlideLeft, SlideDown } = slideObj;
@@ -85,5 +85,5 @@ export {
   SlideRight,
   ExpandUp,
   Entrance,
-  Hatch
+  Hatch,
 };
