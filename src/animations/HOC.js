@@ -9,7 +9,8 @@ type Props = {
   direction: string,
   iterations: string,
   backfaceVisible: string,
-  fillMode: string
+  fillMode: string,
+  playState: string
 };
 
 type DefaultProps = {
@@ -19,7 +20,8 @@ type DefaultProps = {
   direction: string,
   iterations: string,
   backfaceVisible: string,
-  fillMode: string
+  fillMode: string,
+  playState: string
 };
 
 type State = {
@@ -39,7 +41,8 @@ let HOC = (componentName: string, animationName: string) =>
       direction: "normal",
       iterations: "1",
       backfaceVisible: "visible",
-      fillMode: "none"
+      fillMode: "none",
+      playState: "running"
     };
 
     componentDidMount = () => {
@@ -50,7 +53,8 @@ let HOC = (componentName: string, animationName: string) =>
         direction,
         iterations,
         backfaceVisible,
-        fillMode
+        fillMode,
+        playState
       } = this.props;
 
       this.setState({
@@ -58,7 +62,7 @@ let HOC = (componentName: string, animationName: string) =>
           display: "inline-block" /** <span> elements can't be animated with CSS. In order to animate them with 
                                 CSS we assign display property to them */,
           // Works but will be updated later.
-          animation: `${animationName} ${duration} ${timingFunction} ${delay} ${fillMode} ${direction} ${iterations}`,
+          animation: `${animationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState}`,
           backfaceVisibility: `${backfaceVisible}`
         }
       });
