@@ -1,6 +1,6 @@
 {
   "name": "animate-components",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "description": "Elemental components for animations in React",
   "keywords": [
     "react",
@@ -13,8 +13,7 @@
   "main": "index.js",
   "scripts": {
     "flow": "flow",
-    "build": "babel src --out-dir lib && babel main.js --out-file index.js",
-    "lint": "eslint ."
+    "build": "babel src -d lib && babel main.js --out-file index.js"
   },
   "files": [
     "lib"
@@ -30,11 +29,6 @@
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
     "flow-bin": "^0.42.0"
   }
 }
