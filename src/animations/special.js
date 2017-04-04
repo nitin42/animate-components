@@ -1,3 +1,5 @@
+// @flow
+
 import {
   flash,
   rollOut,
@@ -12,10 +14,12 @@ import {
   hatch,
 } from './styledSpecial';
 
+import type { Components } from '../../types';
+
 import HOC from './HOC';
 
 // Special animation components
-const specialObj = {
+const specialObj: Components  = {
   Flash: HOC('Flash', flash),
   RollOut: HOC('RollOut', rollOut),
   RollIn: HOC('RollIn', rollIn),

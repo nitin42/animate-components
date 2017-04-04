@@ -1,3 +1,5 @@
+// @flow
+
 import {
   bounce,
   bounceDown,
@@ -8,8 +10,10 @@ import {
 
 import HOC from '../HOC';
 
+import type { Components } from '../../../types';
+
 // Bounce animation components
-const bounceObj = {
+const bounceObj: Components = {
   Bounce: HOC('Bounce', bounce),
   BounceDown: HOC('BounceDown', bounceDown),
   BounceUp: HOC('BounceUp', bounceUp),

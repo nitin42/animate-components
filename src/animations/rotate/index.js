@@ -1,3 +1,5 @@
+// @flow
+
 import {
   rotateIn,
   rotateLeft,
@@ -8,8 +10,10 @@ import {
 
 import HOC from '../HOC';
 
+import type { Components } from '../../../types';
+
 // Rotating animation components
-const rotateObj = {
+const rotateObj: Components = {
   RotateIn: HOC('RotateIn', rotateIn),
   RotateLeft: HOC('RotateLeft', rotateLeft),
   RotateRight: HOC('RotateRight', rotateRight),

@@ -1,3 +1,5 @@
+// @flow
+
 import {
 	lightIn,
 	lightOut,
@@ -5,8 +7,10 @@ import {
 
 import HOC from '../HOC';
 
+import type { Components } from '../../../types';
+
 // Lightspeed animation components
-const lightObj = {
+const lightObj: Components = {
 	LightIn: HOC('LightIn', lightIn),
 	LightOut: HOC('LightOut', lightOut),
 };

@@ -1,3 +1,5 @@
+// @flow
+
 import {
 	flip,
 	flipX,
@@ -6,8 +8,10 @@ import {
 
 import HOC from '../HOC';
 
+import type { Components } from '../../../types';
+
 // Flip animation components
-const flipObj = {
+const flipObj: Components = {
 	Flip: HOC('Flip', flip),
 	FlipX: HOC('FlipX', flipX),
 	FlipY: HOC('FlipY', flipY),
