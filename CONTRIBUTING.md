@@ -46,7 +46,7 @@ import HOC from './HOC'; // High Order Component
 export default HOC('NewAnimation', newAnimation); // Creates the component
 ```
 
-Note that HOC takes two arguments, one is the name of your component(**type string**) and the other is the keyframe defined for the animation.
+Note that HOC takes two arguments, one is the name of your component and the other is the keyframe defined for the animation.
 
 If you want to create multiple animation components, create a single object and export it like this
 
