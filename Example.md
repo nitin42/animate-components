@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div>
         <Bounce>
-          <h1>Hello, My name is Billy</h1>
+          <h1>Hello World!</h1>
         </Bounce>
       </div>
     );
