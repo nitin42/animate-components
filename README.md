@@ -1,4 +1,7 @@
 # Animate Components
+![downloads](https://img.shields.io/badge/downloads-3k-brightgreen.svg)
+![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?maxAge=2592000)
+![dependencies](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)
 
 > ***Elemental components for animation in React***
 
@@ -108,6 +111,18 @@ Default: `1`
 
 Type: `string`<br/>
 Default: `visible`
+
+**fillMode**
+
+Type: `string`<br/>
+Default: `none`
+
+**playState**
+
+Type: `string`<br/>
+Default: `running`
+
+
 
 ## Contributing
 
