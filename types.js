@@ -1,6 +1,5 @@
 // @flow
 
-// Single component
 export type component = function;
 
 // Animation components object
