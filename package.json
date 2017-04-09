@@ -13,7 +13,8 @@
   "main": "index.js",
   "scripts": {
     "flow": "flow",
-    "build": "babel src -d lib && babel main.js --out-file index.js"
+    "build": "babel src -d lib && babel main.js --out-file index.js",
+    "test": "jest --watch"
   },
   "files": [
     "lib"
@@ -21,14 +22,19 @@
   "author": "Nitin Tulswani <tulswani19@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "jsdoc": "^3.4.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "styled-components": "^1.4.4"
   },
   "devDependencies": {
+    "babel-jest": "^19.0.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-react": "^6.23.0",
-    "flow-bin": "^0.42.0"
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.8.0",
+    "flow-bin": "^0.42.0",
+    "jest": "^19.0.2",
+    "react-addons-test-utils": "^15.5.1"
   }
 }
