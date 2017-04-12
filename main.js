@@ -1,10 +1,14 @@
-import bounceObj from './lib/animations/bounce/index';
-import fadeObj from './lib/animations/fade/index';
-import flipObj from './lib/animations/flip/index';
-import lightObj from './lib/animations/lightspeed/index';
-import rotateObj from './lib/animations/rotate/index';
-import specialObj from './lib/animations/special';
-import slideObj from './lib/animations/slide/index';
+/**
+ * @author Nitin Tulswani <tulswani19@gmail.com>
+ */
+
+import bounceObj from './dist/animations/bounce/index';
+import fadeObj from './dist/animations/fade/index';
+import flipObj from './dist/animations/flip/index';
+import lightObj from './dist/animations/lightspeed/index';
+import rotateObj from './dist/animations/rotate/index';
+import specialObj from './dist/animations/special';
+import slideObj from './dist/animations/slide/index';
 
 const { Bounce, BounceUp, BounceRight, BounceLeft, BounceDown } = bounceObj;
 
@@ -47,6 +51,7 @@ const {
 
 const { SlideUp, SlideRight, SlideLeft, SlideDown } = slideObj;
 
+/** Animation components */
 export {
   Bounce,
   BounceUp,
