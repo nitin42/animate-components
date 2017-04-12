@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', './lib/animations/bounce/index', './lib/animations/fade/index', './lib/animations/flip/index', './lib/animations/lightspeed/index', './lib/animations/rotate/index', './lib/animations/special', './lib/animations/slide/index'], factory);
+    define(['exports', './dist/animations/bounce/index', './dist/animations/fade/index', './dist/animations/flip/index', './dist/animations/lightspeed/index', './dist/animations/rotate/index', './dist/animations/special', './dist/animations/slide/index'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('./lib/animations/bounce/index'), require('./lib/animations/fade/index'), require('./lib/animations/flip/index'), require('./lib/animations/lightspeed/index'), require('./lib/animations/rotate/index'), require('./lib/animations/special'), require('./lib/animations/slide/index'));
+    factory(exports, require('./dist/animations/bounce/index'), require('./dist/animations/fade/index'), require('./dist/animations/flip/index'), require('./dist/animations/lightspeed/index'), require('./dist/animations/rotate/index'), require('./dist/animations/special'), require('./dist/animations/slide/index'));
   } else {
     var mod = {
       exports: {}
