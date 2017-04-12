@@ -42,5 +42,13 @@ The animation component can takes these props:
 ```javascript
 <Bounce backfaceVisible="visible">
 ```
+* **fillMode**
+```javascript
+<Bounce fillMode="forward">
+```
+* **playState**
+```javascript
+<Bounce playState="running">
+```
 
 All the animation components are wrapped in a high order component which renders a `<span>` with the styles derived from the **props**.
