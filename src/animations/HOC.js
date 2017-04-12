@@ -28,6 +28,11 @@ type State = {
   styles: Object
 };
 
+/**
+ * High Order Component
+ * @param {string} componentName - Name of the animation component
+ * @param {string} keyframes - Keyframes defined for the animation 
+ */
 let HOC = (componentName: string, animationName: string) =>
   class extends Component {
     state = {
