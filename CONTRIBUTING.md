@@ -88,8 +88,6 @@ Generate the build using
 npm run build
 ```
 
-Also check [this](https://github.com/nitin42/animate-components/blob/master/Todo.md) todo list for the project if you want to contribute further.
-
 That's it ! I'm excited to see your pull request.
 
 There's lot to be done. Thanks ❤️
