@@ -131,7 +131,29 @@ Default: `none`
 Type: `string`<br/>
 Default: `running`
 
+**block**
 
+Description: Renders the animation component with `div` wrapper with `display: block`.
+
+Example
+
+```javascript
+
+import React from 'react';
+
+import { Entrance } from 'animate-components';
+
+class App extends React.Component {
+	render () {
+		return (
+			<Entrance block>
+				<h1>Hello World!</h1>
+			</Entrance>
+		);
+	}
+}
+
+```
 
 ## Contributing
 
