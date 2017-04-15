@@ -12,6 +12,7 @@ import {
   expandUp,
   entrance,
   hatch,
+  starWars
 } from './styledSpecial';
 
 import type { Components } from '../../types';
@@ -31,6 +32,7 @@ const specialObj: Components  = {
   ExpandUp: HOC('ExpandUp', expandUp),
   Entrance: HOC('Entrance', entrance),
   Hatch: HOC('Hatch', hatch),
+  StarWars: HOC('StarWars', starWars)
 };
 
 export default specialObj;

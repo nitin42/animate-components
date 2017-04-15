@@ -235,6 +235,27 @@ const hatch = keyframes`
 	}
 `;
 
+const starWars = keyframes`
+	0% {
+		opacity: 0;
+		transform: scale(1.5) translateY(-0.75em);
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateZ(-1000em);
+	}
+`;
+
 export {
   flash,
   rollOut,
@@ -247,4 +268,5 @@ export {
   expandUp,
   entrance,
   hatch,
+  starWars,
 };
