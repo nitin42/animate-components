@@ -1,6 +1,11 @@
 # dependencies
 /node_modules
 
+
+# umd build
+/dist
+index.js
+
 # misc
 .DS_Store
 .env

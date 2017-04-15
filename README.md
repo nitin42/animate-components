@@ -4,6 +4,10 @@
 ![dependencies](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)
 ![version](https://img.shields.io/badge/animate--components-0.4.6-brightgreen.svg)
 
+<p align="center">
+	<img src="https://i.gyazo.com/64801677fb24b4492eb0b90870ead297.gif" />
+</p>
+
 > ***Elemental components for animation in React***
 
 ## Install
@@ -13,6 +17,10 @@ npm install animate-components --save
 ```
 
 ## Usage
+
+<p align="center">
+	<img src="https://gyazo.com/9fc95209d4a04c636b7af98711cd0df3.png" />
+</p>
 
 Check out the complete example with details [here](https://github.com/nitin42/animate-components/blob/master/Example.md)
 
