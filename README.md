@@ -19,7 +19,7 @@ npm install animate-components --save
 ## Usage
 
 <p align="center">
-	<img src="https://i.gyazo.com/abc6d916f3801507872bdab7b16c0c3b.png" />
+	<img src="https://gyazo.com/9fc95209d4a04c636b7af98711cd0df3.png" />
 </p>
 
 Check out the complete example with details [here](https://github.com/nitin42/animate-components/blob/master/Example.md)
