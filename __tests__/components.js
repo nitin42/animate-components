@@ -1,6 +1,9 @@
 import React from "react";
+
 import renderer from "react-test-renderer";
+
 import { keyframes } from 'styled-components';
+
 import {shallow, mount} from 'enzyme';
 
 import { Bounce } from "../main";
