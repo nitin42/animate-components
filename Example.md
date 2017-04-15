@@ -5,7 +5,7 @@
 </p>
 
 The animation component can takes these props:
-* **duration**
+* **duration** - 
 It defines how many seconds or milliseconds an animation takes to complete one cycle.
 
 ```javascript
@@ -13,7 +13,7 @@ It defines how many seconds or milliseconds an animation takes to complete one c
 <Entrance duration="2s">
 
 ```
-* **delay**
+* **delay** - 
 Specifies a delay for the start of an animation.
 
 ```javascript
@@ -21,7 +21,7 @@ Specifies a delay for the start of an animation.
 <Entrance delay="2s">
 
 ```
-* **timingFunction**
+* **timingFunction** - 
 Specifies the speed curve of the animation.
 
 ```javascript
@@ -29,7 +29,7 @@ Specifies the speed curve of the animation.
 <Entrance timingFunction="ease-in">
 
 ```
-* **direction**
+* **direction** - 
 This prop is used to let an animation run in reverse direction or alternate cycles.
 
 ```javascript
@@ -37,7 +37,7 @@ This prop is used to let an animation run in reverse direction or alternate cycl
 <Entrance direction="reverse">
 
 ```
-* **iterations**
+* **iterations** - 
 Specifies the number of times an animation should run.
 
 ```javascript
@@ -45,7 +45,7 @@ Specifies the number of times an animation should run.
 <Entrance iterations="2">
 
 ```
-* **backfaceVisible**
+* **backfaceVisible** - 
 It defines whether or not an element should be visible when not facing the screen.
 
 ```javascript
@@ -53,7 +53,7 @@ It defines whether or not an element should be visible when not facing the scree
 <Entrance backfaceVisible="visible">
 
 ```
-* **fillMode**
+* **fillMode** - 
 Specifies a style for the element when the animation is not playing.
 
 ```javascript
@@ -61,7 +61,7 @@ Specifies a style for the element when the animation is not playing.
 <Entrance fillMode="forward">
 
 ```
-* **playState**
+* **playState** - 
 Specifies whether the animation is running or paused.
 
 ```javascript
@@ -69,7 +69,7 @@ Specifies whether the animation is running or paused.
 <Entrance playState="running">
 
 ```
-* **block**
+* **block** - 
 Specifies whether to render the component and its children in `<div>` wrapper with the display `display: block`.
 
 ```javascript
