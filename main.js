@@ -47,6 +47,7 @@ const {
   ExpandUp,
   Entrance,
   Hatch,
+  StarWars
 } = specialObj;
 
 const { SlideUp, SlideRight, SlideLeft, SlideDown } = slideObj;
@@ -88,6 +89,7 @@ export {
   SlideDown,
   SlideLeft,
   SlideRight,
+  StarWars,
   ExpandUp,
   Entrance,
   Hatch,
