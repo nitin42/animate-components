@@ -3,7 +3,7 @@
 .*/index.js
 
 [include]
-
+.*/node_modules/styled-components/.*
 [libs]
 
 [options]
