@@ -1,54 +1,65 @@
 # Example
 
-```javascript
-import React, { Component } from 'react';
-import { Bounce } from 'animate-components';
-
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <Bounce>
-          <h1>Hello World!</h1>
-        </Bounce>
-      </div>
-    );
-  }
-}
-```
+<p align="center">
+	<img src="https://gyazo.com/9fc95209d4a04c636b7af98711cd0df3.png" />
+</p>
 
 The animation component can takes these props:
 * **duration**
 ```javascript
-<Bounce duration="2s">
+
+<Entrance duration="2s">
+
 ```
 * **delay**
 ```javascript
-<Bounce delay="2s">
+
+<Entrance delay="2s">
+
 ```
 * **timingFunction**
 ```javascript
-<Bounce timingFunction="ease-in">
+
+<Entrance timingFunction="ease-in">
+
 ```
 * **direction**
 ```javascript
-<Bounce direction="reverse">
+
+<Entrance direction="reverse">
+
 ```
 * **iterations**
 ```javascript
-<Bounce iterations="2">
+
+<Entrance iterations="2">
+
 ```
 * **backfaceVisible**
 ```javascript
-<Bounce backfaceVisible="visible">
+
+<Entrance backfaceVisible="visible">
+
 ```
 * **fillMode**
 ```javascript
-<Bounce fillMode="forward">
+
+<Entrance fillMode="forward">
+
 ```
 * **playState**
 ```javascript
-<Bounce playState="running">
-```
 
-All the animation components are wrapped in a high order component which renders a `<span>` with the styles derived from the **props**.
+<Entrance playState="running">
+
+```
+* **block**
+```javascript
+
+<Entrance block>
+  <h1>
+    Hello World
+  </h1>
+</Entrance>
+
+```
