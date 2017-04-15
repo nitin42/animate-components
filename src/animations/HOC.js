@@ -35,44 +35,44 @@ type State = {
  * @param {string} keyframes - Keyframes defined for the animation 
  */
 let HOC = (ComposedComponent: string, AnimationName: string) =>
-	class extends Component<DefaultProps, Props, State> {
-		state = {
-			styles: {}
-		};
+  class extends Component<DefaultProps, Props, State> {
+    state = {
+      styles: {}
+    };
 
-		static defaultProps = {
-			duration: "1s",
-			timingFunction: "ease",
-			delay: "0s",
-			direction: "normal",
-			iterations: "1",
-			backfaceVisible: "visible",
-			fillMode: "none",
-			playState: "running"
-		};
+    static defaultProps = {
+      duration: "1s",
+      timingFunction: "ease",
+      delay: "0s",
+      direction: "normal",
+      iterations: "1",
+      backfaceVisible: "visible",
+      fillMode: "none",
+      playState: "running"
+    };
 
-		componentDidMount = () => {
-			const {
+    componentDidMount = () => {
+      const {
         duration,
-				timingFunction,
-				delay,
-				direction,
-				iterations,
-				backfaceVisible,
-				fillMode,
-				playState
+        timingFunction,
+        delay,
+        direction,
+        iterations,
+        backfaceVisible,
+        fillMode,
+        playState
       } = this.props;
 
-			this.setState({
-				styles: {
-					animation: `
+      this.setState({
+        styles: {
+          animation: `
             ${AnimationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} 
             ${fillMode} ${playState}
           `,
-					backfaceVisibility: `${backfaceVisible}`
-				}
-			});
-		}
+          backfaceVisibility: `${backfaceVisible}`
+        }
+      });
+    }
 
     // Performance bottleneck (avoid re-render)
     // shouldComponentUpdate(nextProps: Props, nextState: State) {
@@ -99,30 +99,28 @@ let HOC = (ComposedComponent: string, AnimationName: string) =>
     //       return true;
     //   }
     // }
-
-		renderRootWithBlock = (): ?React$Element<*> => {
+    renderRootWithBlock = (): ?React$Element<*> => {
       const styles = Object.assign({}, this.state.styles, {position: "relative"});
-
-			return (
-				<div style={styles}>
-					{this.props.children}
-				</div>
-			);
-		}
-
-		renderRootWithInline = (): ?React$Element<*> => {
+      return (
+        <div style={styles}>
+          {this.props.children}
+        </div>
+      );
+    }
+    
+    renderRootWithInline = (): ?React$Element<*> => {
       const styles = Object.assign({}, this.state.styles, {display: "inline-block"});
 
-			return (
-				<span style={styles}>
-					{this.props.children}
-				</span>
-			);
-		}
+      return (
+        <span style={styles}>
+          {this.props.children}
+        </span>
+      );
+    }
 
-		render(): ?React$Element<*> {
-			return this.props.block ? this.renderRootWithBlock() : this.renderRootWithInline()
-		}
-	}
+    render(): ?React$Element<*> {
+      return this.props.block ? this.renderRootWithBlock() : this.renderRootWithInline()
+    }
+  }
 
 export default HOC;
