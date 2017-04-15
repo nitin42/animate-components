@@ -144,13 +144,13 @@ import React from 'react';
 import { Entrance } from 'animate-components';
 
 class App extends React.Component {
-	render () {
-		return (
-			<Entrance block>
-				<h1>Hello World!</h1>
-			</Entrance>
-		);
-	}
+  render () {
+    return (
+      <Entrance block>
+        <h1>Hello World!</h1>
+      </Entrance>
+    );
+  }
 }
 
 ```
