@@ -4,10 +4,7 @@ exports[`High Order Component should render an animation 1`] = `
 <span
   style={
     Object {
-      "animation": "
-                UNeSH 1s ease 0s 1 normal 
-                none running
-              ",
+      "animation": "UNeSH 1s ease 0s 1 normal none running",
       "backfaceVisibility": "visible",
       "display": "inline-block",
     }
@@ -19,10 +16,7 @@ exports[`High Order Component should render the children with the props 1`] = `
 <span
   style={
     Object {
-      "animation": "
-                UNeSH 2s ease 0s 1 normal 
-                none running
-              ",
+      "animation": "UNeSH 2s ease 0s 1 normal none running",
       "backfaceVisibility": "visible",
       "display": "inline-block",
     }
