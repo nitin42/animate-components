@@ -103,7 +103,7 @@ const newAnimationObj: Components = {
 export default newAnimationObj;
 ```
 
-Run `yarn flow` and check for errors. If there are no errors, generate the build 
+Run `yarn flow` and check for the errors. If there are no errors, generate the build 
 
 ```
 yarn build
