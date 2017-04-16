@@ -82,8 +82,4 @@ Below is a list of all available animations.
 * `Entrance`
 * `Hatch`
 
-## Contributing
-
-Here is the [guide](https://github.com/nitin42/animate-components/blob/master/CONTRIBUTING.md).
-
 **More animations coming soon 😃** !!
