@@ -16,13 +16,8 @@
 npm install animate-components --save
 ```
 
-## Usage
-
-<p align="center">
-	<img src="https://gyazo.com/9fc95209d4a04c636b7af98711cd0df3.png" />
-</p>
-
-Check out the complete example with details [here](https://github.com/nitin42/animate-components/blob/master/Example.md)
+## Docs
+Check the complete documentation [here](./docs).
 
 ## Animations
 
@@ -86,74 +81,6 @@ Below is a list of all available animations.
 * `ExpandUp`
 * `Entrance`
 * `Hatch`
-
-## API
-
-Props
-
-**duration**
-
-Type: `string`<br/>
-Default: `1s`
-
-**timingFunction**
-
-Type: `string`<br/>
-Default: `ease`
-
-**delay**
-
-Type: `string`<br/>
-Default: `0s`
-
-**direction**
-
-Type: `string`<br/>
-Default: `normal`
-
-**iterations**
-
-Type: `string`<br/>
-Default: `1`
-
-**backfaceVisible**
-
-Type: `string`<br/>
-Default: `visible`
-
-**fillMode**
-
-Type: `string`<br/>
-Default: `none`
-
-**playState**
-
-Type: `string`<br/>
-Default: `running`
-
-**block**
-
-Description: Renders the animation component with `div` wrapper with `display: block`.
-
-Example
-
-```javascript
-
-import React from 'react';
-
-import { Entrance } from 'animate-components';
-
-class App extends React.Component {
-  render () {
-    return (
-      <Entrance block>
-        <h1>Hello World!</h1>
-      </Entrance>
-    );
-  }
-}
-
-```
 
 ## Contributing
 
