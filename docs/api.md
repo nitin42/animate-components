@@ -1,56 +1,56 @@
 # API Reference
 
-Props
+#### Props
 
-**duration**
+* **duration**
 
 Type: `string`
 
 Default: `1s`
 
-**timingFunction**
+* **timingFunction**
 
 Type: `string`
 
 Default: `ease`
 
-**delay**
+* **delay**
 
 Type: `string`
 
 Default: `0s`
 
-**direction**
+* **direction**
 
 Type: `string`
 
 Default: `normal`
 
-**iterations**
+* **iterations**
 
 Type: `string`
 
 Default: `1`
 
-**backfaceVisible**
+* **backfaceVisible**
 
 Type: `string`
 
 Default: `visible`
 
-**fillMode**
+* **fillMode**
 
 Type: `string`
 
 Default: `none`
 
-**playState**
+* **playState**
 
 Type: `string`
 
 Default: `running`
 
-**block**
+* **block**
 
 Renders the animation component with `div` wrapper with `display: block`.
 
