@@ -8,3 +8,4 @@ This is the `animate-components` documentation.
 * [Usage](./usage.md)
 * [API reference](./api.md)
 * [FAQ](faq.md)
+* [Contributing](../Contributing.md)
