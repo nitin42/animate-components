@@ -2,7 +2,7 @@
 
 It would be super exciting if you want to contribute to `animate-components`. To create an animation component,
 
-* Create two files for eg `newAnimation.js` & `styledNewAnimation.js`.
+* Create two files for eg `newAnimation.js` & `styledNewAnimation.js` in `src`.
 
 * Define the keyframes for the animation in `styledNewAnimation.js` using [styled-components](https://github.com/styled-components/styled-components).
 
@@ -82,10 +82,31 @@ export {
 }
 ```
 
-Generate the build using
+### Flow code
+Add type annotations to your components.
+
+```javascript
+// newAnimation.js
+
+import {newAnimation, newAnimationTwo, newAnimationThree } from './styledNewAnimation';
+
+import HOC from './HOC';
+
+import type { Components } from '../../../types';
+
+const newAnimationObj: Components = {
+  NewAnimation: HOC('NewAnimation', newAnimation),
+  NewAnimationTwo: HOC('NewAnimationTwo', newAnimationTwo),
+  NewAnimationThree: HOC('NewAnimationThree', newAnimationThree)
+};
+
+export default newAnimationObj;
+```
+
+Run `yarn flow` and check for errors. If there are no errors, generate the build 
 
 ```
-npm run build
+yarn build
 ```
 
 That's it ! I'm excited to see your pull request.
