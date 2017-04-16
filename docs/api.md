@@ -14,4 +14,4 @@
 | **playState** | string      |    running |
 | **block** | boolean      |    |
 
-Read more about the `block` prop [here]('./faq.md')
+Read more about the `block` prop [here]('faq.md')
