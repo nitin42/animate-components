@@ -11,7 +11,7 @@ import { Entrance } from 'animate-components';
 class App extends React.Component {
   render () {
     return (
-      <Entrance duration="2s" block>
+      <Entrance duration="3s" block>
         <h1>Hello World!</h1>
       </Entrance>
     );
