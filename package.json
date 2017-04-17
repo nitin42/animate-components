@@ -1,6 +1,6 @@
 {
   "name": "animate-components",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "description": "Elemental components for animations in React",
   "keywords": [
     "react",
@@ -20,7 +20,8 @@
     "flow": "flow",
     "prebuild": "rm -rf dist",
     "build": "babel src -d dist && babel main.js --out-file index.js",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "start": "./node_modules/.bin/webpack-dev-server --watch --open --config ./starter/webpack.config.js"
   },
   "files": [
     "dist",
@@ -35,14 +36,23 @@
   },
   "devDependencies": {
     "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.0",
     "enzyme": "^2.8.0",
     "flow-bin": "^0.42.0",
+    "html-webpack-plugin": "^2.28.0",
+    "html-webpack-template": "^6.0.1",
     "jest": "^19.0.2",
     "jsdoc": "^3.4.3",
+    "postcss-loader": "^1.3.3",
     "react-addons-test-utils": "^15.5.1",
-    "react-test-renderer": "^15.5.4"
+    "react-hot-loader": "^1.3.1",
+    "react-test-renderer": "^15.5.4",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }
