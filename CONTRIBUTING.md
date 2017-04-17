@@ -109,6 +109,28 @@ Run `yarn flow` and check for the errors. If there are no errors, generate the b
 yarn build
 ```
 
+### Running the animations
+To check wether the animations and its properties are working, there is a [starter kit](). Import any newly created animation like this
+
+```javascript
+// ./starter/App.js
+
+import React, { Component } from 'react';
+
+import { ExpanseDown } from '../main';
+
+export default class App extends Component {
+  render () {
+    return (
+      <ExpanseDown duration="2s">
+        <h1>Hello World</h1>
+      </ExpanseDown>
+    );
+  }
+}
+```
+Start the server using `yarn start` and you're ready to go.
+
 That's it ! I'm excited to see your pull request.
 
 There's lot to be done. Thanks ❤️
