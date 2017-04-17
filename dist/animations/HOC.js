@@ -62,7 +62,6 @@ var HOC = function HOC(ComposedComponent, AnimationName) {
         });
       }, _this.renderRootWithBlock = function () {
         var styles = Object.assign({}, _this.state.styles, { position: "relative" });
-
         return _react2.default.createElement(
           "div",
           { style: styles },
@@ -104,6 +103,7 @@ var HOC = function HOC(ComposedComponent, AnimationName) {
     //       return true;
     //   }
     // }
+
 
     _createClass(_class, [{
       key: "render",
