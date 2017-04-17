@@ -10,7 +10,4 @@ or install using yarn,
 yarn add animate-components
 ```
 
-Tested on, 
-* **Google Chrome**
-* **Safari**
-* **Mozilla Firefox**
+Tested on **Google Chrome**, **Safari** and **Mozilla Firefox**
