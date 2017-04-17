@@ -82,4 +82,23 @@ Below is a list of all available animations.
 * `Entrance`
 * `Hatch`
 
-**More animations coming soon 😃** !!
+### Perspective
+
+* `PDown`
+* `PUp` 
+* `PLeft`
+* `PRight`
+
+### Bingo
+
+* `PuffOut`
+* `PuffIn`
+* `VanishOut`
+* `VanishIn`
+
+### Expanse (in space)
+
+* `ExpanseUp`
+* `ExpanseDown`
+* `ExpanseLeft`
+* `ExpanseRight`
