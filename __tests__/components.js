@@ -39,7 +39,7 @@ it('each component should export an object containing different animation compon
 
 it('exports all the animation components', () => {
 	expect(typeof All).toBe('object');
-	expect(Object.keys(All).length).toBe(39);
+	expect(Object.keys(All).length).toBe(51);
 });
 
 it("renders the animation component", () => {
