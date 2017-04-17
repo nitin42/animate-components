@@ -21,6 +21,7 @@
     "prebuild": "rm -rf dist",
     "build": "babel src -d dist && babel main.js --out-file index.js",
     "test": "jest --watch",
+    "coverage": "jest --coverage",
     "start": "./node_modules/.bin/webpack-dev-server --watch --open --config ./starter/webpack.config.js"
   },
   "files": [
@@ -30,7 +31,9 @@
   "author": "Nitin Tulswani <tulswani19@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.5.2",
     "react-dom": "^15.4.2",
     "styled-components": "^1.4.4"
   },
