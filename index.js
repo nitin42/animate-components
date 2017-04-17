@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Hatch = exports.Entrance = exports.ExpandUp = exports.StarWars = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = undefined;
+exports.ExpanseUp = exports.ExpanseDown = exports.ExpanseRight = exports.ExpanseLeft = exports.VanishOut = exports.VanishIn = exports.PuffOut = exports.PuffIn = exports.PLeft = exports.PRight = exports.PUp = exports.PDown = exports.Hatch = exports.Entrance = exports.ExpandUp = exports.StarWars = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = undefined;
 
 var _index = require('./dist/animations/bounce/index');
 
@@ -33,16 +33,29 @@ var _index11 = require('./dist/animations/slide/index');
 
 var _index12 = _interopRequireDefault(_index11);
 
+var _index13 = require('./dist/animations/perspective/index');
+
+var _index14 = _interopRequireDefault(_index13);
+
+var _index15 = require('./dist/animations/Bingo/index');
+
+var _index16 = _interopRequireDefault(_index15);
+
+var _index17 = require('./dist/animations/expanse/index');
+
+var _index18 = _interopRequireDefault(_index17);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * @author Nitin Tulswani <tulswani19@gmail.com>
+ */
 
 var Bounce = _index2.default.Bounce,
     BounceUp = _index2.default.BounceUp,
     BounceRight = _index2.default.BounceRight,
     BounceLeft = _index2.default.BounceLeft,
-    BounceDown = _index2.default.BounceDown; /**
-                                              * @author Nitin Tulswani <tulswani19@gmail.com>
-                                              */
-
+    BounceDown = _index2.default.BounceDown;
 var FadeIn = _index4.default.FadeIn,
     FadeInUp = _index4.default.FadeInUp,
     FadeInRight = _index4.default.FadeInRight,
@@ -77,6 +90,18 @@ var SlideUp = _index12.default.SlideUp,
     SlideRight = _index12.default.SlideRight,
     SlideLeft = _index12.default.SlideLeft,
     SlideDown = _index12.default.SlideDown;
+var PDown = _index14.default.PDown,
+    PUp = _index14.default.PUp,
+    PRight = _index14.default.PRight,
+    PLeft = _index14.default.PLeft;
+var PuffOut = _index16.default.PuffOut,
+    PuffIn = _index16.default.PuffIn,
+    VanishOut = _index16.default.VanishOut,
+    VanishIn = _index16.default.VanishIn;
+var ExpanseUp = _index18.default.ExpanseUp,
+    ExpanseRight = _index18.default.ExpanseRight,
+    ExpanseDown = _index18.default.ExpanseDown,
+    ExpanseLeft = _index18.default.ExpanseLeft;
 
 /** Animation components */
 
@@ -119,3 +144,15 @@ exports.StarWars = StarWars;
 exports.ExpandUp = ExpandUp;
 exports.Entrance = Entrance;
 exports.Hatch = Hatch;
+exports.PDown = PDown;
+exports.PUp = PUp;
+exports.PRight = PRight;
+exports.PLeft = PLeft;
+exports.PuffIn = PuffIn;
+exports.PuffOut = PuffOut;
+exports.VanishIn = VanishIn;
+exports.VanishOut = VanishOut;
+exports.ExpanseLeft = ExpanseLeft;
+exports.ExpanseRight = ExpanseRight;
+exports.ExpanseDown = ExpanseDown;
+exports.ExpanseUp = ExpanseUp;
