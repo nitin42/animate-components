@@ -82,6 +82,7 @@ Below is a list of all available animations.
 * `Entrance`
 * `Hatch`
 
+## 🚀 New
 ### Perspective
 
 * `PDown`
