@@ -48,7 +48,7 @@ export default HOC('NewAnimation', newAnimation); // Creates the component
 
 Note that HOC takes two arguments, one is the name of your component and the other is the keyframe defined for the animation.
 
-If you want to create multiple animation components, create a single object and export it like this
+If you want to create multiple animation components, create a single object and export it.
 
 ```javascript
 // newAnimation.js
@@ -110,7 +110,7 @@ yarn build
 ```
 
 ### Running the animations
-To check wether the animations and its properties are working, there is a [starter kit](). Import any newly created animation like this
+To check wether the animations and its properties are working, there is a [starter kit](). Example - 
 
 ```javascript
 // ./starter/App.js
