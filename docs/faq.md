@@ -26,3 +26,17 @@ This will give the output
   <h1>Hello World!</h1>
 </div>
 ```
+
+### Multistep animations 
+You can nest one or more components to do multistep animations. For example - 
+
+```javascript
+<Entrance>
+  <FadeIn duration="2s" delay="2s">
+    <h1>Hello World</h1>
+  </FadeIn>
+</Entrance>
+```
+
+### Transition support
+Handling transitions via `animate-components` is currently not supported.  
