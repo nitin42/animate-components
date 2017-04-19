@@ -38,5 +38,5 @@ You can nest one or more components to do multistep animations. For example -
 </Entrance>
 ```
 
-### Transition support
-Handling transitions via `animate-components` is currently not supported.  
+### Transitions support
+Handling transitions via `animate-components` is currently not supported. Hopefully in next release ? 
