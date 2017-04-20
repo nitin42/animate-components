@@ -5,7 +5,7 @@ exports[`High Order Component should render an animation 1`] = `
   style={
     Object {
       "animation": "
-                UNeSH 1s ease 0s 1 normal 
+                UNeSH 1s ease 0s 1 normal
                 none running
               ",
       "backfaceVisibility": "visible",
@@ -20,7 +20,7 @@ exports[`High Order Component should render the children with the props 1`] = `
   style={
     Object {
       "animation": "
-                UNeSH 2s ease 0s 1 normal 
+                UNeSH 2s ease 0s 1 normal
                 none running
               ",
       "backfaceVisibility": "visible",
@@ -39,7 +39,7 @@ exports[`renders the animation component 1`] = `
   style={
     Object {
       "animation": "
-                bGJZDZ 1s ease 0s 1 normal 
+                bGJZDZ 1s ease 0s 1 normal
                 none running
               ",
       "backfaceVisibility": "visible",
@@ -54,7 +54,7 @@ exports[`renders the animation component with \`block\` props 1`] = `
   style={
     Object {
       "animation": "
-                bGJZDZ 1s ease 0s 1 normal 
+                bGJZDZ 1s ease 0s 1 normal
                 none running
               ",
       "backfaceVisibility": "visible",
@@ -73,7 +73,7 @@ exports[`renders the animation component with props 1`] = `
   style={
     Object {
       "animation": "
-                bGJZDZ 2s ease 4s 1 reverse 
+                bGJZDZ 2s ease 4s 1 reverse
                 none running
               ",
       "backfaceVisibility": "visible",

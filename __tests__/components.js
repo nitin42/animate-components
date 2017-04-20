@@ -30,16 +30,16 @@ const Sample = HOC('Sample', sample);
 
 it('keyframes should be string', () => {
 	expect(typeof bounce).toBe('string');
-});	
+});
 
 it('each component should export an object containing different animation components', () => {
 	expect(typeof bounceObj).toBe('object');
 	expect(Object.keys(bounceObj).length).not.toBe(0);
 });
 
-it('exports all the animation components', () => {
+it('exports all the animation components and keyframes', () => {
 	expect(typeof All).toBe('object');
-	expect(Object.keys(All).length).toBe(51);
+	expect(Object.keys(All).length).toBe(103);
 });
 
 it("renders the animation component", () => {
@@ -111,4 +111,3 @@ it('component holds it state (defined) when no props are passed', () => {
 
 	expect(wrapper.state().styles).toBeDefined;
 });
-
