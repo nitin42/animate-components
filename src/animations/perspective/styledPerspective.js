@@ -1,6 +1,6 @@
 import { keyframes } from 'styled-components';
 
-const down = keyframes`
+const perspectiveDown = keyframes`
   0% {
     transform-origin: 0 100%;
     transform: perspective(800px) rotateX(0deg);
@@ -12,7 +12,7 @@ const down = keyframes`
   }
 `;
 
-const up = keyframes`
+const perspectiveUp = keyframes`
   0% {
     transform-origin: 0 0;
     transform: perspective(800px) rotateX(0deg);
@@ -24,7 +24,7 @@ const up = keyframes`
   }
 `
 
-const right = keyframes`
+const perspectiveRight = keyframes`
 	0% {
 		transform-origin: 100% 0;
 		transform: perspective(800px) rotateY(0deg);
@@ -36,7 +36,7 @@ const right = keyframes`
 	}
 `
 
-const left = keyframes`
+const perspectiveLeft = keyframes`
 	0% {
 		transform-origin: 0 0;
 		transform: perspective(800px) rotateY(0deg);
@@ -49,8 +49,8 @@ const left = keyframes`
 `
 
 export {
-	down,
-	up,
-	right,
-	left
+	perspectiveDown,
+	perspectiveUp,
+	perspectiveRight,
+	perspectiveLeft
 }

@@ -1,16 +1,16 @@
 // @flow
 
-import { Up, down, left, right } from './styledExpanse';
+import { expanseUp, expanseDown, expanseLeft, expanseRight } from './styledExpanse';
 
 import HOC from '../HOC';
 
 import type { Components } from '../../../types';
 
 const expanseObj: Components = {
-	ExpanseUp: HOC('ExpanseUp', Up),
-	ExpanseDown: HOC('ExpanseDown', down),
-	ExpanseLeft: HOC('ExpanseLeft', left),
-	ExpanseRight: HOC('ExpanseRight', right)
+	ExpanseUp: HOC('ExpanseUp', expanseUp),
+	ExpanseDown: HOC('ExpanseDown', expanseDown),
+	ExpanseLeft: HOC('ExpanseLeft', expanseLeft),
+	ExpanseRight: HOC('ExpanseRight', expanseRight)
 }
 
 export default expanseObj;

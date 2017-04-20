@@ -32,7 +32,7 @@ const leftBig = keyframes`
 		opacity: 1;
 		-webkit-transform: none;
 	}
-	
+
 `;
 
 const right = keyframes`
@@ -70,7 +70,7 @@ const down = keyframes`
 	to {
 		opacity: 1;
 		-webkit-transform: none;
-	}	
+	}
 `;
 
 const downBig = keyframes`
@@ -102,7 +102,7 @@ const upBig = keyframes`
 		opacity: 0;
 		-webkit-transform: translate3d(0, 2000px, 0);
 	}
-	
+
 	to {
 		opacity: 1;
 		-webkit-transform: none;

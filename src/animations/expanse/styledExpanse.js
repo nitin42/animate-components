@@ -1,10 +1,10 @@
 import { keyframes } from 'styled-components';
 
-const Up = keyframes`
+const expanseUp = keyframes`
 	0% {
 		opacity: 0;
 		transform-origin: 50% 0%;
-		transform: scale(.2) translate(0%, -200%); 
+		transform: scale(.2) translate(0%, -200%);
 	}
 
 	100% {
@@ -14,12 +14,12 @@ const Up = keyframes`
 	}
 `;
 
-const down = keyframes`
+const expanseDown = keyframes`
 	0% {
 		opacity: 0;
 		transform-origin: 50% 100%;
 		transform: scale(.2) translate(0%, 200%);
-	}	
+	}
 
 	100% {
 		opacity: 1;
@@ -28,7 +28,7 @@ const down = keyframes`
 	}
 `
 
-const left = keyframes`
+const expanseLeft = keyframes`
 	0% {
 		opacity: 0;
 		transform-origin: 0% 50%;
@@ -42,7 +42,7 @@ const left = keyframes`
 	}
 `;
 
-const right = keyframes`
+const expanseRight = keyframes`
 	0% {
 		opacity: 0;
 		transform-origin: 100% 50%;
@@ -57,8 +57,8 @@ const right = keyframes`
 `;
 
 export {
-	Up,
-	down,
-	left,
-	right
+	expanseUp,
+	expanseDown,
+	expanseLeft,
+	expanseRight
 }
