@@ -1,27 +1,27 @@
-const webpack = require('webpack');
-const {join, resolve} = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const { join, resolve } = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const VENDOR = ['react', 'react-dom', 'styled-components'];
+const VENDOR = ["react", "react-dom", "styled-components"];
 
 module.exports = {
   entry: {
     main: [
-      'webpack-dev-server/client?http://0.0.0.0:8080',
-      'webpack/hot/only-dev-server', 
-      join(__dirname, 'index.js')
+      "webpack-dev-server/client?http://0.0.0.0:8080",
+      "webpack/hot/only-dev-server",
+      join(__dirname, "index.js")
     ],
     vendor: VENDOR
   },
   output: {
-    filename: '[name].[hash].js',
-    path: resolve(__dirname, 'build'),
-    publicPath: '/'
+    filename: "[name].[hash].js",
+    path: resolve(__dirname, "build"),
+    publicPath: "/"
   },
   devServer: {
     hot: true,
-    contentBase: resolve(__dirname, 'build'),
-    publicPath: '/', 
+    contentBase: resolve(__dirname, "build"),
+    publicPath: "/",
     noInfo: true
   },
   stats: {
@@ -34,20 +34,17 @@ module.exports = {
     version: true,
     warnings: true
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ["babel-loader"]
       },
       {
         test: /\.css$/,
-        use: ['style-loader',
-            'css-loader?modules',
-            'postcss-loader'
-        ]
+        use: ["style-loader", "css-loader?modules", "postcss-loader"]
       }
     ]
   },
@@ -55,12 +52,12 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template: require('html-webpack-template'),
-      appMountId: 'app'
+      template: require("html-webpack-template"),
+      appMountId: "app"
     }),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      name: "vendor"
     })
   ]
 };
