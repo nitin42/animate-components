@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.left = exports.right = exports.up = exports.down = undefined;
+exports.perspectiveLeft = exports.perspectiveRight = exports.perspectiveUp = exports.perspectiveDown = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  0% {\n    transform-origin: 0 100%;\n    transform: perspective(800px) rotateX(0deg);\n  }\n\n  100% {\n    transform-origin: 0 100%;\n    transform: perspective(800px) rotateX(-180deg);\n  }\n'], ['\n  0% {\n    transform-origin: 0 100%;\n    transform: perspective(800px) rotateX(0deg);\n  }\n\n  100% {\n    transform-origin: 0 100%;\n    transform: perspective(800px) rotateX(-180deg);\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  0% {\n    transform-origin: 0 0;\n    transform: perspective(800px) rotateX(0deg);\n  }\n\n  100% {\n    transform-origin: 0 0;\n    transform: perspective(800px) rotateX(180deg);\n  }\n'], ['\n  0% {\n    transform-origin: 0 0;\n    transform: perspective(800px) rotateX(0deg);\n  }\n\n  100% {\n    transform-origin: 0 0;\n    transform: perspective(800px) rotateX(180deg);\n  }\n']),
@@ -14,15 +14,15 @@ var _styledComponents = require('styled-components');
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var down = (0, _styledComponents.keyframes)(_templateObject);
+var perspectiveDown = (0, _styledComponents.keyframes)(_templateObject);
 
-var up = (0, _styledComponents.keyframes)(_templateObject2);
+var perspectiveUp = (0, _styledComponents.keyframes)(_templateObject2);
 
-var right = (0, _styledComponents.keyframes)(_templateObject3);
+var perspectiveRight = (0, _styledComponents.keyframes)(_templateObject3);
 
-var left = (0, _styledComponents.keyframes)(_templateObject4);
+var perspectiveLeft = (0, _styledComponents.keyframes)(_templateObject4);
 
-exports.down = down;
-exports.up = up;
-exports.right = right;
-exports.left = left;
+exports.perspectiveDown = perspectiveDown;
+exports.perspectiveUp = perspectiveUp;
+exports.perspectiveRight = perspectiveRight;
+exports.perspectiveLeft = perspectiveLeft;

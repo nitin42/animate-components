@@ -21,7 +21,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /**
  * High Order Component
  * @param {string} componentName - Name of the animation component
- * @param {string} keyframes - Keyframes defined for the animation 
+ * @param {string} keyframes - Keyframes defined for the animation
  */
 var HOC = function HOC(ComposedComponent, AnimationName) {
   var _class, _temp2;
@@ -56,19 +56,23 @@ var HOC = function HOC(ComposedComponent, AnimationName) {
 
         _this.setState({
           styles: {
-            animation: "\n            " + AnimationName + " " + duration + " " + timingFunction + " " + delay + " " + iterations + " " + direction + " \n            " + fillMode + " " + playState + "\n          ",
+            animation: "\n            " + AnimationName + " " + duration + " " + timingFunction + " " + delay + " " + iterations + " " + direction + "\n            " + fillMode + " " + playState + "\n          ",
             backfaceVisibility: "" + backfaceVisible
           }
         });
       }, _this.renderRootWithBlock = function () {
-        var styles = Object.assign({}, _this.state.styles, { position: "relative" });
+        var styles = Object.assign({}, _this.state.styles, {
+          position: "relative"
+        });
         return _react2.default.createElement(
           "div",
           { style: styles },
           _this.props.children
         );
       }, _this.renderRootWithInline = function () {
-        var styles = Object.assign({}, _this.state.styles, { display: "inline-block" });
+        var styles = Object.assign({}, _this.state.styles, {
+          display: "inline-block"
+        });
 
         return _react2.default.createElement(
           "span",
