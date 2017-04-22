@@ -14,74 +14,6 @@ import PObj from './dist/animations/perspective/index';
 import bingoObj from './dist/animations/Bingo/index';
 import expanseObj from './dist/animations/expanse/index';
 
-// Exposing keyframes for explicit use.
-import {
-	puffmeout,
-	puffmein,
-	vanishout,
-	vanishin
-} from './dist/animations/Bingo/styledBingo';
-
-import {
-  bounce,
-  bounceDown,
-  bounceUp,
-  bounceLeft,
-  bounceRight,
-} from './dist/animations/bounce/styledBounce';
-
-import { expanseUp, expanseDown, expanseLeft, expanseRight } from './dist/animations/expanse/styledExpanse';
-
-import {
-  down,
-  downBig,
-  up,
-  upBig,
-  left,
-  right,
-  leftBig,
-  rightBig,
-  fadeIn,
-} from './dist/animations/fade/styledFade';
-
-import {
-	flip,
-	flipX,
-	flipY,
-} from './dist/animations/flip/styledFlip';
-
-import {
-	lightIn,
-	lightOut,
-} from './dist/animations/lightspeed/styledLight';
-
-import { perspectiveDown, perspectiveUp, perspectiveRight, perspectiveLeft } from './dist/animations/perspective/styledPerspective';
-
-import { slideUp, slideDown, slideLeft, slideRight } from './dist/animations/slide/styledSlide';
-
-import {
-  rotateIn,
-  rotateLeft,
-  rotateRight,
-  rotateUpRight,
-  rotateUpLeft,
-} from './dist/animations/rotate/styledRotate';
-
-import {
-  flash,
-  rollOut,
-  rollIn,
-  rubber,
-  swing,
-  zoom,
-  hinge,
-  pulse,
-  expandUp,
-  entrance,
-  hatch,
-  starWars
-} from './dist/animations/styledSpecial';
-
 const { Bounce, BounceUp, BounceRight, BounceLeft, BounceDown } = bounceObj;
 
 const {
@@ -129,62 +61,6 @@ const { PDown, PUp, PRight, PLeft } = PObj;
 const { PuffOut, PuffIn, VanishOut, VanishIn } = bingoObj;
 
 const { ExpanseUp, ExpanseRight, ExpanseDown, ExpanseLeft } = expanseObj;
-
-/** keyframes */
-export {
-  puffmeout,
-  puffmein,
-  vanishout,
-  vanishin,
-  bounce,
-  bounceDown,
-  bounceUp,
-  bounceLeft,
-  bounceRight,
-  expanseUp,
-  expanseDown,
-  expanseLeft,
-  expanseRight,
-  down,
-  downBig,
-  up,
-  upBig,
-  left,
-  right,
-  leftBig,
-  rightBig,
-  fadeIn,
-  flip,
-	flipX,
-	flipY,
-  lightIn,
-	lightOut,
-  perspectiveDown,
-  perspectiveUp,
-  perspectiveRight,
-  perspectiveLeft,
-  slideUp,
-  slideDown,
-  slideLeft,
-  slideRight,
-  rotateIn,
-  rotateLeft,
-  rotateRight,
-  rotateUpRight,
-  rotateUpLeft,
-  flash,
-  rollOut,
-  rollIn,
-  rubber,
-  swing,
-  zoom,
-  hinge,
-  pulse,
-  expandUp,
-  entrance,
-  hatch,
-  starWars
-}
 
 /** Animation components */
 export {
