@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
 
-import { ExpanseDown } from '../main';
-
 import {
-	puffmeout,
-	puffmein,
-	vanishout,
-	vanishin
-} from '../src/animations/Bingo/styledBingo';
+	FadeIn,
+	Rotate
+} from '../main';
 
 export default class App extends Component {
 	render () {
-		const styles = {
-			animation: `${puffmein} 3s`
-		}
-
 		return (
-			<div style={styles}>
+			<FadeIn duration="3s">
 				<h1>Hello World</h1>
-			</div>
+			</FadeIn>
 		);
 	}
 }
