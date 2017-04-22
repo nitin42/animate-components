@@ -1,0 +1,33 @@
+{
+  "name": "animate-components",
+  "description": "Elemental components for animations in React",
+  "main": "./css/animate-components.css",
+  "authors": [
+    "Nitin Tulswani <tulswani19@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "keyframes",
+    "animate",
+    "high",
+    "order",
+    "component",
+    "composed",
+    "components",
+    "animations",
+    "styled",
+    "renderer",
+    "block",
+    "renderer",
+    "styled"
+  ],
+  "homepage": "https://github.com/nitin42/animate-components",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
