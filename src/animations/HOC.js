@@ -52,6 +52,10 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
   };
 
   componentDidMount = () => {
+    this.store(this.props);
+  };
+
+  store = (props: Props) => {
     const {
       duration,
       timingFunction,
@@ -61,10 +65,11 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
       backfaceVisible,
       fillMode,
       playState
-    } = this.props;
+    } = props;
 
     this.setState({
       styles: {
+        // All the animations have vendor prefixes so just simply setState.
         animation: `
             ${AnimationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction}
             ${fillMode} ${playState}
@@ -72,36 +77,11 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
         backfaceVisibility: `${backfaceVisible}`
       }
     });
-  };
+  }
 
-  // Performance bottleneck (avoid re-render)
-  // shouldComponentUpdate(nextProps: Props, nextState: State) {
-  //   const currentProps = this.props;
-
-  //   switch(currentProps) {
-  //     case (currentProps.duration === nextProps.duration):
-  //       return false;
-  //     case (currentProps.timingFunction === nextProps.timingFunction):
-  //       return false;
-  //     case (currentProps.delay === nextProps.delay):
-  //       return false;
-  //     case (currentProps.direction === nextProps.direction):
-  //       return false;
-  //     case (currentProps.iterations === nextProps.iterations):
-  //       return false;
-  //     case (currentProps.backfaceVisible === nextProps.backfaceVisible):
-  //       return false;
-  //     case (currentProps.fillMode === nextProps.fillMode):
-  //       return false;
-  //     case (currentProps.playState === nextProps.playState):
-  //       return false;
-  //     default:
-  //       return true;
-  //   }
-  // }
   renderRootWithBlock = (): ?React$Element<*> => {
     const styles = Object.assign({}, this.state.styles, {
-      position: "relative"
+      display: "block"
     });
     return (
       <div style={styles}>
