@@ -82,7 +82,7 @@ const bounceUp = keyframes`
 
   to {
     transform: translate3d(0, 0, 0);
-  } 
+  }
 `;
 
 const bounceLeft = keyframes`
@@ -110,7 +110,7 @@ const bounceLeft = keyframes`
 
   to {
     transform: none;
-  } 
+  }
 `;
 
 const bounceRight = keyframes`
@@ -138,7 +138,7 @@ const bounceRight = keyframes`
 
   to {
     transform: none;
-  } 
+  }
 `;
 
 export { bounce, bounceDown, bounceUp, bounceLeft, bounceRight };
