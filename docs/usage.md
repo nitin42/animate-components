@@ -82,3 +82,15 @@ Specifies whether to render the component and its children in `<div>` wrapper wi
 </Entrance>
 
 ```
+
+You can also use minified copy of the css file which is available via cdn or you can manually download and specify the stylesheet.
+
+Example - 
+
+```html
+<div class="animate entrance">
+  <h1>Hello World</h1>
+</div>
+```
+
+Add class `animate` to the element you want to animate.
