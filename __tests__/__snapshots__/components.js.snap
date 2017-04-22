@@ -58,7 +58,7 @@ exports[`renders the animation component with \`block\` props 1`] = `
                 none running
               ",
       "backfaceVisibility": "visible",
-      "position": "relative",
+      "display": "block",
     }
   }
 >
