@@ -42,7 +42,7 @@ and then add class or className `animate` to the element you want to animate.
 Example - 
 
 ```html
-<div class="animate fadeIn">
+<div className="animate fadeIn">
   <h1>Hello World</h1>
 </div>
 ```
