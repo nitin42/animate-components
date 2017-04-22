@@ -29,6 +29,7 @@ const rollIn = keyframes`
 	}
 
 	to {
+		-ms-transform: none;
 		transform: none;
 		opacity: 1;
 	}
@@ -43,7 +44,6 @@ const rollOut = keyframes`
 		transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
 		opacity: 0;
 	}
-	
 `;
 
 const rubber = keyframes`
@@ -111,20 +111,25 @@ const zoom = keyframes`
 
 const hinge = keyframes`
 	from {
+		-ms-transform-origin: top-left;
 		transform-origin: top-left;
 		animation-timing-function: ease-in-out;
 		opacity: 1;
 	}
 
 	20%, 40% {
+		-ms-transform-origin: top-left;
 		transform-origin: top-left;
+		-ms-transform: rotate(0, 0, 1, 80deg);
 		transform: rotate(0, 0, 1, 80deg);
 		animation-timing-function: ease-in-out;
 		opacity: 1;
 	}
 
 	60%, 80% {
+		-ms-transform-origin: top-left;
 		transform-origin: top-left;
+		-ms-transform: rotate(0, 0, 1, 20deg);
 		transform: rotate(0, 0, 1, 20deg);
 		animation-timing-function: ease-in-out;
 		opacity: 1;
@@ -158,11 +163,11 @@ const expandUp = keyframes`
 	60%{
 		transform: translateY(-7%) scaleY(1.12);
 	}
-	
+
 	75%{
 		transform: translateY(3%);
-	}	
-	
+	}
+
 	100% {
 		transform: translateY(0%) scale(1) scaleY(1);
 	}
@@ -175,30 +180,30 @@ const entrance = keyframes`
 	}
 
 	30% {
-		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);		
+		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
 		opacity: 1;
 	}
-	
+
 	45% {
 		transform: scale(0.98);
 		opacity: 1;
 	}
-	
+
 	60% {
 		transform: scale(1.01);
 		opacity: 1;
-	}	
-	
+	}
+
 	75% {
 		transform: scale(0.99);
 		opacity: 1;
 	}
-	
+
 	90% {
-		transform: scale(1.01);	
+		transform: scale(1.01);
 		opacity: 1;
-	}	
-	
+	}
+
 	100% {
 		transform: scale(1);
 		opacity: 1;
@@ -213,23 +218,23 @@ const hatch = keyframes`
 	20% {
 		transform: rotate(-2deg) scaleY(1.05);
 	}
-	
+
 	35% {
 		transform: rotate(2deg) scaleY(1);
 	}
-	
+
 	50% {
 		transform: rotate(-2deg);
-	}	
-	
+	}
+
 	65% {
 		transform: rotate(1deg);
-	}	
-	
+	}
+
 	80% {
 		transform: rotate(-1deg);
-	}		
-	
+	}
+
 	100% {
 		transform: none;
 	}
