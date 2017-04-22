@@ -1,0 +1,14 @@
+@keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale3d(.4, .4, .4);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.zoom {
+  animation-name: zoom
+}

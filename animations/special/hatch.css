@@ -1,0 +1,33 @@
+@keyframes hatch {
+  0% {
+    transform: scaleY(0.6);
+  }
+
+  20% {
+    transform: rotate(-2deg) scaleY(1.05);
+  }
+
+  35% {
+    transform: rotate(2deg) scaleY(1);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  65% {
+    transform: rotate(1deg);
+  }
+
+  80% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.hatch {
+  animation-name: hatch
+}

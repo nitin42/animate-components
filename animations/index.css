@@ -1,0 +1,11 @@
+.animate {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.animate.flipX,
+.animate.flipY,
+.animate.bounceIn,
+.animate.bounceOut {
+  animation-duration: .85s;
+}
