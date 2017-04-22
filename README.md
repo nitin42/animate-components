@@ -12,9 +12,41 @@
 
 ## Install
 
+**npm**
+
 ```
 npm install animate-components --save
 ```
+
+**yarn**
+
+```
+yarn add install animate-components --save
+```
+
+**bower**
+
+```
+bower install animate-components --save
+```
+
+or use a cdn version hosted by [unpkg](https://unpkg.com/#/)
+
+```html
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/animate-components@0.7.2/css/animate-components.min.css">
+</head>
+```
+and then add class or className `animate` to the element you want to animate. 
+
+Example - 
+
+```html
+<div class="animate fadeIn">
+  <h1>Hello World</h1>
+</div>
+```
+
 
 ## Docs
 Check the complete documentation [here](./docs).
