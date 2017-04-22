@@ -88,7 +88,7 @@ You can also use minified copy of the css file which is available via cdn or you
 Example - 
 
 ```html
-<div class="animate entrance">
+<div className="animate entrance">
   <h1>Hello World</h1>
 </div>
 ```
