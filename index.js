@@ -3,8 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ExpanseUp = exports.ExpanseDown = exports.ExpanseRight = undefined;
-exports.ExpanseLeft = exports.VanishOut = exports.VanishIn = exports.PuffOut = exports.PuffIn = exports.PLeft = exports.PRight = exports.PUp = exports.PDown = exports.Hatch = exports.Entrance = exports.ExpandUp = exports.StarWars = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = exports.starWars = exports.hatch = exports.entrance = exports.expandUp = exports.pulse = exports.hinge = exports.zoom = exports.swing = exports.rubber = exports.rollIn = exports.rollOut = exports.flash = exports.rotateUpLeft = exports.rotateUpRight = exports.rotateRight = exports.rotateLeft = exports.rotateIn = exports.slideRight = exports.slideLeft = exports.slideDown = exports.slideUp = exports.perspectiveLeft = exports.perspectiveRight = exports.perspectiveUp = exports.perspectiveDown = exports.lightOut = exports.lightIn = exports.flipY = exports.flipX = exports.flip = exports.fadeIn = exports.rightBig = exports.leftBig = exports.right = exports.left = exports.upBig = exports.up = exports.downBig = exports.down = exports.expanseRight = exports.expanseLeft = exports.expanseDown = exports.expanseUp = exports.bounceRight = exports.bounceLeft = exports.bounceUp = exports.bounceDown = exports.bounce = exports.vanishin = exports.vanishout = exports.puffmein = exports.puffmeout = undefined;
+exports.ExpanseUp = exports.ExpanseDown = exports.ExpanseRight = exports.ExpanseLeft = exports.VanishOut = exports.VanishIn = exports.PuffOut = exports.PuffIn = exports.PLeft = exports.PRight = exports.PUp = exports.PDown = exports.Hatch = exports.Entrance = exports.ExpandUp = exports.StarWars = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = undefined;
 
 var _index = require('./dist/animations/bounce/index');
 
@@ -46,29 +45,8 @@ var _index17 = require('./dist/animations/expanse/index');
 
 var _index18 = _interopRequireDefault(_index17);
 
-var _styledBingo = require('./dist/animations/Bingo/styledBingo');
-
-var _styledBounce = require('./dist/animations/bounce/styledBounce');
-
-var _styledExpanse = require('./dist/animations/expanse/styledExpanse');
-
-var _styledFade = require('./dist/animations/fade/styledFade');
-
-var _styledFlip = require('./dist/animations/flip/styledFlip');
-
-var _styledLight = require('./dist/animations/lightspeed/styledLight');
-
-var _styledPerspective = require('./dist/animations/perspective/styledPerspective');
-
-var _styledSlide = require('./dist/animations/slide/styledSlide');
-
-var _styledRotate = require('./dist/animations/rotate/styledRotate');
-
-var _styledSpecial = require('./dist/animations/styledSpecial');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Exposing keyframes for explicit use.
 /**
  * @author Nitin Tulswani <tulswani19@gmail.com>
  */
@@ -125,61 +103,6 @@ var ExpanseUp = _index18.default.ExpanseUp,
     ExpanseRight = _index18.default.ExpanseRight,
     ExpanseDown = _index18.default.ExpanseDown,
     ExpanseLeft = _index18.default.ExpanseLeft;
-
-/** keyframes */
-
-exports.puffmeout = _styledBingo.puffmeout;
-exports.puffmein = _styledBingo.puffmein;
-exports.vanishout = _styledBingo.vanishout;
-exports.vanishin = _styledBingo.vanishin;
-exports.bounce = _styledBounce.bounce;
-exports.bounceDown = _styledBounce.bounceDown;
-exports.bounceUp = _styledBounce.bounceUp;
-exports.bounceLeft = _styledBounce.bounceLeft;
-exports.bounceRight = _styledBounce.bounceRight;
-exports.expanseUp = _styledExpanse.expanseUp;
-exports.expanseDown = _styledExpanse.expanseDown;
-exports.expanseLeft = _styledExpanse.expanseLeft;
-exports.expanseRight = _styledExpanse.expanseRight;
-exports.down = _styledFade.down;
-exports.downBig = _styledFade.downBig;
-exports.up = _styledFade.up;
-exports.upBig = _styledFade.upBig;
-exports.left = _styledFade.left;
-exports.right = _styledFade.right;
-exports.leftBig = _styledFade.leftBig;
-exports.rightBig = _styledFade.rightBig;
-exports.fadeIn = _styledFade.fadeIn;
-exports.flip = _styledFlip.flip;
-exports.flipX = _styledFlip.flipX;
-exports.flipY = _styledFlip.flipY;
-exports.lightIn = _styledLight.lightIn;
-exports.lightOut = _styledLight.lightOut;
-exports.perspectiveDown = _styledPerspective.perspectiveDown;
-exports.perspectiveUp = _styledPerspective.perspectiveUp;
-exports.perspectiveRight = _styledPerspective.perspectiveRight;
-exports.perspectiveLeft = _styledPerspective.perspectiveLeft;
-exports.slideUp = _styledSlide.slideUp;
-exports.slideDown = _styledSlide.slideDown;
-exports.slideLeft = _styledSlide.slideLeft;
-exports.slideRight = _styledSlide.slideRight;
-exports.rotateIn = _styledRotate.rotateIn;
-exports.rotateLeft = _styledRotate.rotateLeft;
-exports.rotateRight = _styledRotate.rotateRight;
-exports.rotateUpRight = _styledRotate.rotateUpRight;
-exports.rotateUpLeft = _styledRotate.rotateUpLeft;
-exports.flash = _styledSpecial.flash;
-exports.rollOut = _styledSpecial.rollOut;
-exports.rollIn = _styledSpecial.rollIn;
-exports.rubber = _styledSpecial.rubber;
-exports.swing = _styledSpecial.swing;
-exports.zoom = _styledSpecial.zoom;
-exports.hinge = _styledSpecial.hinge;
-exports.pulse = _styledSpecial.pulse;
-exports.expandUp = _styledSpecial.expandUp;
-exports.entrance = _styledSpecial.entrance;
-exports.hatch = _styledSpecial.hatch;
-exports.starWars = _styledSpecial.starWars;
 
 /** Animation components */
 
