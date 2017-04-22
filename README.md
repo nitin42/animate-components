@@ -47,6 +47,7 @@ Example -
 </div>
 ```
 
+**Note** - The list of all the animations is given below just remember to use **camelCase** when adding animation name to the class (not for the **React Components**).
 
 ## Docs
 Check the complete documentation [here](./docs).
