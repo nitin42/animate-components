@@ -64,7 +64,16 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
       "steps(int, start|end)",
       "cubic-bezier(n,n,n,n)"
     ]),
-    backfaceVisible: PropTypes.oneOf(["visible", "hidden"])
+    backfaceVisible: PropTypes.oneOf(["visible", "hidden"]),
+    children: (props, propName, componentName) => {
+      let prop = props[propName];
+
+      if (React.Children.count(prop) === 0) {
+        return new Error(
+          `${componentName} should have atleast a single child element to perform animation. Try again !`
+        )
+      }
+    }
   };
 
   static defaultProps = {
