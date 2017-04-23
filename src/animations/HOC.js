@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import shallowCompare from 'react-addons-shallow-compare';
 
 type Props = {
   duration: string,
@@ -113,6 +114,11 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
       }
     });
   };
+
+  // Avoid re-render (Performance bottleneck)
+  shouldComponentUpdate = (nextProps: Props, nextState: State) => {
+    return shallowCompare(this, nextProps, nextState);
+  }
 
   renderRootWithBlock = (): ?React$Element<*> => {
     const styles = Object.assign({}, this.state.styles, {
