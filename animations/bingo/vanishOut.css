@@ -13,7 +13,6 @@
     filter: blur(18px);
   }
 }
-
 .vanishOut {
   animation-name: vanishOut
 }

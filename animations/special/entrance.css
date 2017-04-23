@@ -1,38 +1,38 @@
 @keyframes entrance {
   0% {
-		transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
-		opacity: 0.1;
+    transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+    opacity: 0.1;
+  }
+
+  30% {
+    transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
+    opacity: 1;
 	}
 
-	30% {
-		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
-		opacity: 1;
-	}
+  45% {
+    transform: scale(0.98);
+    opacity: 1;
+  }
 
-	45% {
-		transform: scale(0.98);
-		opacity: 1;
-	}
+  60% {
+    transform: scale(1.01);
+    opacity: 1;
+  }
 
-	60% {
-		transform: scale(1.01);
-		opacity: 1;
-	}
+  75% {
+    transform: scale(0.99);
+    opacity: 1;
+  }
 
-	75% {
-		transform: scale(0.99);
-		opacity: 1;
-	}
+  90% {
+    transform: scale(1.01);
+    opacity: 1;
+  }
 
-	90% {
-		transform: scale(1.01);
-		opacity: 1;
-	}
-
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .entrance {
