@@ -38,5 +38,12 @@ You can nest one or more components to do multistep animations. For example -
 </Entrance>
 ```
 
+### I want to use css instead
+You can also use minified copy of css which is available via cdn.
+
+```html
+  <link rel="stylesheet" href="https://unpkg.com/animate-components@0.7.2/css/animate-components.min.css">
+```
+
 ### Transitions support
 Handling transitions via `animate-components` is currently not supported. Hopefully in next release ? 
