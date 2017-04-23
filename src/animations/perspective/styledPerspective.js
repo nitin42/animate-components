@@ -57,8 +57,8 @@ const perspectiveLeft = keyframes`
 `
 
 export {
-	perspectiveDown,
-	perspectiveUp,
-	perspectiveRight,
-	perspectiveLeft
+  perspectiveDown,
+  perspectiveUp,
+  perspectiveRight,
+  perspectiveLeft
 }

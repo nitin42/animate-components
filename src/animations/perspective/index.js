@@ -7,10 +7,10 @@ import HOC from '../HOC';
 import type { Components } from '../../../types';
 
 const PObj: Components = {
-	PDown: HOC('PDown', perspectiveDown),
-	PUp: HOC('PUp', perspectiveUp),
-	PRight: HOC('PRight', perspectiveRight),
-	PLeft: HOC('PLeft', perspectiveLeft)
+  PDown: HOC('PDown', perspectiveDown),
+  PUp: HOC('PUp', perspectiveUp),
+  PRight: HOC('PRight', perspectiveRight),
+  PLeft: HOC('PLeft', perspectiveLeft)
 }
 
 export default PObj;

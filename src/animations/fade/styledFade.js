@@ -2,11 +2,11 @@ import { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
   0% {
-  	opacity: 0;
+    opacity: 0;
   }
 
   100% {
-  	opacity: 1;
+    opacity: 1;
   }
 `;
 
@@ -89,29 +89,29 @@ const downBig = keyframes`
 `;
 
 const up = keyframes`
-	from {
-		opacity: 0;
-		transform: translate3d(0, 100%, 0);
-	}
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
 
-	to {
-		opacity: 1;
+  to {
+    opacity: 1;
     -ms-transform: none;
-		transform: none;
-	}
+    transform: none;
+  }
 `;
 
 const upBig = keyframes`
-	from {
-		opacity: 0;
-		transform: translate3d(0, 2000px, 0);
-	}
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
 
-	to {
-		opacity: 1;
+  to {
+    opacity: 1;
     -ms-transform: none;
-		transform: none;
-	}
+    transform: none;
+  }
 `;
 
 export { fadeIn, left, down, downBig, leftBig, right, rightBig, up, upBig };
