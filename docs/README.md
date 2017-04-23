@@ -1,5 +1,6 @@
 <p align="center">
   <img src="https://gyazo.com/c57e246144694b222556194f6b59acc7.png" />
+  <img width="190" height="190" src="https://i.gyazo.com/77e6485fda8ebca210cc22c613cdcf45.gif" />
 </p>
 
 <br/>
