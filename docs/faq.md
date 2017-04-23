@@ -42,7 +42,7 @@ You can nest one or more components to do multistep animations. For example -
 You can also use minified copy of css which is available via cdn.
 
 ```html
-  <link rel="stylesheet" href="https://unpkg.com/animate-components@0.7.2/css/animate-components.min.css">
+<link rel="stylesheet" href="https://unpkg.com/animate-components@0.7.2/css/animate-components.min.css">
 ```
 
 ### Transitions support
