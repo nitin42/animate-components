@@ -106,6 +106,11 @@ it('calls renderRootWithInline method (by default when no display props are pass
 	wrapper.instance().renderRootWithInline();
 });
 
+it('calls shouldComponentUpdate lifecycle method for avoiding re-render of the component', () => {
+	const wrapper = shallow(<Bounce />);
+	wrapper.instance().shouldComponentUpdate();
+});
+
 it('component holds it state (defined) when no props are passed', () => {
 	const wrapper = shallow(<Bounce />);
 
