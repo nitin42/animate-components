@@ -51,7 +51,6 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
       "inherit"
     ]),
     fillMode: PropTypes.oneOf(["none", "forwards", "backwards", "both"]),
-    iterations: PropTypes.oneOf(["int", "infinite"]),
     playState: PropTypes.oneOf(["paused", "running"]),
     timingFunction: PropTypes.oneOf([
       "linear",
@@ -70,9 +69,9 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
 
       if (React.Children.count(prop) === 0) {
         return new Error(
-          `${componentName} should have atleast a single child element to perform animation. Try again !`
-        )
-      }
+          `${ComposedComponent} should have atleast a single child element to perform the animation.`
+        );
+      } else { return; }
     }
   };
 
