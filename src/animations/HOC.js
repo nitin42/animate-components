@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 type Props = {
   duration: string,
@@ -40,6 +41,32 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
     styles: {}
   };
 
+  static propTypes = {
+    direction: PropTypes.oneOf([
+      "normal",
+      "reverse",
+      "alternate",
+      "alternate-reverse",
+      "initial",
+      "inherit"
+    ]),
+    fillMode: PropTypes.oneOf(["none", "forwards", "backwards", "both"]),
+    iterations: PropTypes.oneOf(["int", "infinite"]),
+    playState: PropTypes.oneOf(["paused", "running"]),
+    timingFunction: PropTypes.oneOf([
+      "linear",
+      "ease",
+      "ease-in",
+      "ease-out",
+      "ease-in-out",
+      "step-start",
+      "step-end",
+      "steps(int, start|end)",
+      "cubic-bezier(n,n,n,n)"
+    ]),
+    backfaceVisible: PropTypes.oneOf(["visible", "hidden"])
+  };
+
   static defaultProps = {
     duration: "1s",
     timingFunction: "ease",
@@ -77,7 +104,7 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
         backfaceVisibility: `${backfaceVisible}`
       }
     });
-  }
+  };
 
   renderRootWithBlock = (): ?React$Element<*> => {
     const styles = Object.assign({}, this.state.styles, {
