@@ -95,3 +95,5 @@ Example -
 ```
 
 Add class `animate` to the element you want to animate.
+
+**Note** - Remember to use **camelCase** convention when adding animation name to the classes.
