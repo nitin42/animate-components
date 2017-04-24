@@ -14,7 +14,7 @@ store = (props: Props) => {
   setState({...props});
 }
 ```
-* **Performance bottleneck** by avoiding re-rendering.
+* **Performance bottleneck** (avoiding re-rendering) by shallow comparing the nextProps and nextState.
 * Props validation.
 ### Animations
 Keyframe rules for all the components are defined using [styled-components](https://github.com/styled-components/styled-components). 
