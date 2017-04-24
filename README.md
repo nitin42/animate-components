@@ -8,7 +8,7 @@
 	<img src="https://i.gyazo.com/64801677fb24b4492eb0b90870ead297.gif" />
 </p>
 
-> ***Elemental components for animation in React***
+> ***Elemental components for doing animations in React***
 
 ## Install
 
