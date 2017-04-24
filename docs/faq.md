@@ -46,4 +46,4 @@ You can also use minified copy of css which is available via cdn.
 ```
 
 ### Transitions support
-Handling transitions via `animate-components` is currently not supported. Hopefully in next release ? 
+Handling transitions via `animate-components` is currently not supported. Hopefully in next future ? 
