@@ -8,7 +8,7 @@
 	<img src="https://i.gyazo.com/64801677fb24b4492eb0b90870ead297.gif" />
 </p>
 
-> ***Elemental components for animation in React***
+> ***Elemental components for doing animations in React***
 
 ## Install
 
@@ -47,7 +47,7 @@ Example -
 </div>
 ```
 
-**Note** - The list of all the animations is given below just remember to use **camelCase** when adding animation name to the class (not for the **React Components**).
+**Note** - The list of all the animations is given below just remember to use **camelCase** convention when adding animation name to the class (not for the **React Components**).
 
 ## Docs
 Check the complete documentation [here](./docs).

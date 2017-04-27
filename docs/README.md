@@ -13,5 +13,7 @@ This is the `animate-components` documentation.
 
 * [Usage](./usage.md)
 * [API reference](./api.md)
-* [FAQ](faq.md)
+* [Details](./details.md)
+* [FAQ](./faq.md)
+* [Examples](./example.md)
 * [Contributing](../CONTRIBUTING.md)
