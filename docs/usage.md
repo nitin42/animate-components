@@ -73,7 +73,7 @@ Specifies whether the animation is running or paused.
 ### block
 Specifies whether to render the component and its children in `<div>` wrapper with the display `display: block`.
 
-```javascript
+```html
 
 <Entrance block>
   <h1>
@@ -82,6 +82,19 @@ Specifies whether to render the component and its children in `<div>` wrapper wi
 </Entrance>
 
 ```
+
+### Multistep animations
+Yes, you can also perform multistep animations with `animate-components` (new release [V0.8.0]()). 
+
+Example - 
+
+```html
+<Merge one={{ name: fadeIn, dr: '2s' }} two={{ name: slideUp, dr: '2s', tf: 'ease-in' }}>
+  <h1>Tired of hello world!</h1>
+<Merge/>
+```
+
+See the full api for `<Merge />` component [here]().
 
 ### Using CSS 
 You can also use minified copy of the css file which is available via cdn or you can manually download and specify the stylesheet.
