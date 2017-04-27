@@ -84,7 +84,7 @@ Specifies whether to render the component and its children in `<div>` wrapper wi
 ```
 
 ### Multistep animations
-Yes, you can also perform multistep animations with `animate-components` (new release [V0.8.0]()). 
+Yes, you can also perform multistep animations with `animate-components` (new release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)). 
 
 Example - 
 
