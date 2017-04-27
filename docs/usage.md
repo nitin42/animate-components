@@ -91,7 +91,7 @@ Example -
 ```html
 <Merge one={{ name: fadeIn, dr: '2s' }} two={{ name: slideUp, dr: '2s', tf: 'ease-in' }}>
   <h1>Tired of hello world!</h1>
-<Merge/>
+</Merge>
 ```
 
 See the full api for `<Merge />` component [here](https://github.com/nitin42/animate-components/blob/master/docs/api.md).
