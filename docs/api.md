@@ -18,7 +18,7 @@
 
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
-| **name**      | string | '' |
+| **name**      | string | " " |
 | **tf**      | string      |   ease |
 | **dr** | string      |    1s |
 | **block** | boolean      |    |
