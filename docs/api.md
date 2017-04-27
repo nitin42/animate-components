@@ -27,7 +27,7 @@
 ```javascript
 import { fadeIn, slideUp } from 'animate-components';
 
-<Merge one={{ name: fadeIn, dr: "2s", tf: "ease" }} two={{ name: slideUp, dr: "2s", tf: "ease" }}>
+<Merge one={{ name: fadeIn, dr: '2s', tf: 'ease' }} two={{ name: slideUp, dr: '2s', tf: 'ease' }}>
   <h1>Hello World</h1>
 </Merge>
 ```
