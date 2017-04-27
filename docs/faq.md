@@ -39,7 +39,7 @@ class App extends React.Component {
     return (
       <Merge one={{ name: fadeIn, dr: '2s', tf: 'ease-in' }} two={{ name: slideUp, dr: '2s', tf: 'ease-out' }} inline>
         <h1>Hello World!</h1>
-      </Entrance>
+      </Merge>
     );
   }
 }
