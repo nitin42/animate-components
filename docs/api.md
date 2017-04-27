@@ -1,6 +1,6 @@
 # API Reference
 
-#### Props
+#### Props for animation component
 
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
@@ -12,6 +12,15 @@
 | **backfaceVisible** | string      |    visible |
 | **fillMode** | string      |    none |
 | **playState** | string      |    running |
+| **block** | boolean      |    |
+
+#### Props for `<Merge />` component
+
+| Props        | Type           | Default  |
+| ------------- |:-------------:| -----:|
+| **name**      | string | '' |
+| **tf**      | string      |   ease |
+| **dr** | string      |    1s |
 | **block** | boolean      |    |
 
 Read more about the `block` prop [here](faq.md)
