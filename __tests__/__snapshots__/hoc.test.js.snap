@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`High Order Component should render the children with the props 1`] = `
+<span
+  style={
+    Object {
+      "animation": "UNeSH 2s ease 0s 1 normal none running",
+      "backfaceVisibility": "visible",
+      "display": "inline-block",
+    }
+  }
+>
+  <h1>
+    Hello World!
+  </h1>
+</span>
+`;
