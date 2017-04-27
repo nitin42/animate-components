@@ -4,6 +4,8 @@
 
 [include]
 .*/node_modules/styled-components/.*
+.*/node_modules/react-addons-shallow-compare/.*
+.*/node_modules/prop-types/.*
 [libs]
 
 [options]
