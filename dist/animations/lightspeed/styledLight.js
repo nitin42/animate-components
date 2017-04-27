@@ -1,12 +1,12 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 exports.lightOut = exports.lightIn = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\tfrom {\n\t\ttransform: translate3d(100%, 0, 0) skew(-30deg);\n\t\topacity: 0;\n\t}\n\n\t40% {\n\t\ttransform: skew(20deg);\n\t\topacity: 1;\n\t}\n\n\t80% {\n\t\ttransform: skew(-5deg);\n\t\topacity: 1;\n\t}\n\n\tto {\n\t\ttransform: none;\n\t\topacity: 1;\n\t}\n'], ['\n\tfrom {\n\t\ttransform: translate3d(100%, 0, 0) skew(-30deg);\n\t\topacity: 0;\n\t}\n\n\t40% {\n\t\ttransform: skew(20deg);\n\t\topacity: 1;\n\t}\n\n\t80% {\n\t\ttransform: skew(-5deg);\n\t\topacity: 1;\n\t}\n\n\tto {\n\t\ttransform: none;\n\t\topacity: 1;\n\t}\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n\tfrom {\n\t\topacity: 1;\n\t}\n\t\n\tto {\n\t\ttransform: translate3d(100%, 0, 0) skew(30deg);\n\t\topacity: 0;\n\t}\n'], ['\n\tfrom {\n\t\topacity: 1;\n\t}\n\t\n\tto {\n\t\ttransform: translate3d(100%, 0, 0) skew(30deg);\n\t\topacity: 0;\n\t}\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  from {\n    transform: translate3d(100%, 0, 0) skew(-30deg);\n    opacity: 0;\n  }\n\n  40% {\n    -ms-transform: skew(20deg);\n    transform: skew(20deg);\n    opacity: 1;\n  }\n\n  80% {\n    -ms-transform: skew(-5deg);\n    transform: skew(-5deg);\n    opacity: 1;\n  }\n\n  to {\n    -ms-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n'], ['\n  from {\n    transform: translate3d(100%, 0, 0) skew(-30deg);\n    opacity: 0;\n  }\n\n  40% {\n    -ms-transform: skew(20deg);\n    transform: skew(20deg);\n    opacity: 1;\n  }\n\n  80% {\n    -ms-transform: skew(-5deg);\n    transform: skew(-5deg);\n    opacity: 1;\n  }\n\n  to {\n    -ms-transform: none;\n    transform: none;\n    opacity: 1;\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  from {\n    opacity: 1;\n  }\n\n  to {\n    transform: translate3d(100%, 0, 0) skew(30deg);\n    opacity: 0;\n  }\n'], ['\n  from {\n    opacity: 1;\n  }\n\n  to {\n    transform: translate3d(100%, 0, 0) skew(30deg);\n    opacity: 0;\n  }\n']);
 
 var _styledComponents = require('styled-components');
 

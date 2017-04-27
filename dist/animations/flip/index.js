@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _styledFlip = require('./styledFlip');
@@ -14,9 +14,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Flip animation components
 var flipObj = {
-	Flip: (0, _HOC2.default)('Flip', _styledFlip.flip),
-	FlipX: (0, _HOC2.default)('FlipX', _styledFlip.flipX),
-	FlipY: (0, _HOC2.default)('FlipY', _styledFlip.flipY)
+  Flip: (0, _HOC2.default)('Flip', _styledFlip.flip),
+  FlipX: (0, _HOC2.default)('FlipX', _styledFlip.flipX),
+  FlipY: (0, _HOC2.default)('FlipY', _styledFlip.flipY)
 };
 
 exports.default = flipObj;

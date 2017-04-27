@@ -1,14 +1,14 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 exports.slideRight = exports.slideLeft = exports.slideUp = exports.slideDown = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\tfrom {\n\t\ttransform: translate3d(0, -100%, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n'], ['\n\tfrom {\n\t\ttransform: translate3d(0, -100%, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n\tfrom {\n\t\ttransform: translate3d(0, 100%, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n'], ['\n\tfrom {\n\t\ttransform: translate3d(0, 100%, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n\tfrom {\n\t\ttransform: translate3d(-100%, 0, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n'], ['\n\tfrom {\n\t\ttransform: translate3d(-100%, 0, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n\tfrom {\n\t\ttransform: translate3d(100%, 0, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n'], ['\n\tfrom {\n\t\ttransform: translate3d(100%, 0, 0);\n\t}\n\n\tto {\n\t\ttransform: translate3d(0, 0, 0);\n\t}\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  from {\n    transform: translate3d(0, -100%, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n'], ['\n  from {\n    transform: translate3d(0, -100%, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  from {\n    transform: translate3d(0, 100%, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n'], ['\n  from {\n    transform: translate3d(0, 100%, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  from {\n    transform: translate3d(-100%, 0, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n'], ['\n  from {\n    transform: translate3d(-100%, 0, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  from {\n    transform: translate3d(100%, 0, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n'], ['\n  from {\n    transform: translate3d(100%, 0, 0);\n  }\n\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n']);
 
 var _styledComponents = require('styled-components');
 
