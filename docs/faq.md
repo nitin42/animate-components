@@ -27,6 +27,32 @@ This will give the output
 </div>
 ```
 
+Same goes with the `<Merge />` component. (renders `block` element by default)
+
+```javascript
+import React from 'react';
+
+import { fadeIn, slideUp } from 'animate-components';
+
+class App extends React.Component {
+  render () {
+    return (
+      <Merge one={{ name: fadeIn, dr: '2s', tf: 'ease-in' }} two={{ name: slideUp, dr: '2s', tf: 'ease-out' }} inline>
+        <h1>Hello World!</h1>
+      </Entrance>
+    );
+  }
+}
+```
+
+This will give the output
+
+```html
+<span data-reactroot="" style="display: inline-block; animation: dVMtpd 2s ease-in, bcCCNc 2s ease-in; backface-visibility: visible;">
+  <h1>Hello</h1>
+</span>
+```
+
 ### Multistep animations 
 You can nest one or more components to do multistep animations. It works but it is not the most efficient way to perform the multistep animations (I am working on it). For example - 
 
