@@ -56,7 +56,7 @@ This will give the output
 ### Multistep animations 
 With the new release (V0.8.0), `animate-components` now supports multistep animations.
 
-Refer to the [api]() for multistep animations for more info.
+Refer to the [api](https://github.com/nitin42/animate-components/blob/master/docs/api.md) for multistep animations for more info.
 
 ### I want to use css instead
 You can also use minified copy of css which is available via cdn.
