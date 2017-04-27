@@ -54,15 +54,9 @@ This will give the output
 ```
 
 ### Multistep animations 
-You can nest one or more components to do multistep animations. It works but it is not the most efficient way to perform the multistep animations (I am working on it). For example - 
+With the new release (V0.8.0), `animate-components` now supports multistep animations.
 
-```javascript
-<Entrance>
-  <FadeIn duration="2s" delay="2s">
-    <h1>Hello World</h1>
-  </FadeIn>
-</Entrance>
-```
+Refer to the [api]() for multistep animations for more info.
 
 ### I want to use css instead
 You can also use minified copy of css which is available via cdn.
