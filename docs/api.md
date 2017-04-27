@@ -60,7 +60,7 @@ import { fadeIn } from 'animate-components';
 
 To use `<Merge />`,
 
-```javascript
+``` javascript
 import { Merge } from 'animate-components';
 
 let App = () => {
