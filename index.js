@@ -1,52 +1,74 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ExpanseUp = exports.ExpanseDown = exports.ExpanseRight = exports.ExpanseLeft = exports.VanishOut = exports.VanishIn = exports.PuffOut = exports.PuffIn = exports.PLeft = exports.PRight = exports.PUp = exports.PDown = exports.Hatch = exports.Entrance = exports.ExpandUp = exports.StarWars = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = undefined;
+exports.expanseRight = exports.expanseLeft = exports.expanseUp = undefined;
+exports.expanseDown = exports.vanishin = exports.vanishout = exports.puffmeout = exports.puffmein = exports.perspectiveRight = exports.perspectiveLeft = exports.perspectiveUp = exports.perspectiveDown = exports.slideUp = exports.slideRight = exports.slideLeft = exports.slideDown = exports.starWars = exports.hatch = exports.entrance = exports.expandUp = exports.pulse = exports.hinge = exports.zoom = exports.swing = exports.rubber = exports.rollIn = exports.rollOut = exports.flash = exports.rotateUpRight = exports.rotateUpLeft = exports.rotateRight = exports.rotateLeft = exports.rotateIn = exports.lightOut = exports.lightIn = exports.flipY = exports.flipX = exports.flip = exports.upBig = exports.up = exports.right = exports.rightBig = exports.leftBig = exports.downBig = exports.down = exports.left = exports.fadeIn = exports.bounceUp = exports.bounceRight = exports.bounceLeft = exports.bounceDown = exports.bounce = exports.ExpanseUp = exports.ExpanseDown = exports.ExpanseRight = exports.ExpanseLeft = exports.VanishOut = exports.VanishIn = exports.PuffOut = exports.PuffIn = exports.PLeft = exports.PRight = exports.PUp = exports.PDown = exports.Hatch = exports.Entrance = exports.ExpandUp = exports.StarWars = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = undefined;
 
-var _index = require('./dist/animations/bounce/index');
+var _index = require("./dist/animations/bounce/index");
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = require('./dist/animations/fade/index');
+var _index3 = require("./dist/animations/fade/index");
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _index5 = require('./dist/animations/flip/index');
+var _index5 = require("./dist/animations/flip/index");
 
 var _index6 = _interopRequireDefault(_index5);
 
-var _index7 = require('./dist/animations/lightspeed/index');
+var _index7 = require("./dist/animations/lightspeed/index");
 
 var _index8 = _interopRequireDefault(_index7);
 
-var _index9 = require('./dist/animations/rotate/index');
+var _index9 = require("./dist/animations/rotate/index");
 
 var _index10 = _interopRequireDefault(_index9);
 
-var _special = require('./dist/animations/special');
+var _special = require("./dist/animations/special");
 
 var _special2 = _interopRequireDefault(_special);
 
-var _index11 = require('./dist/animations/slide/index');
+var _index11 = require("./dist/animations/slide/index");
 
 var _index12 = _interopRequireDefault(_index11);
 
-var _index13 = require('./dist/animations/perspective/index');
+var _index13 = require("./dist/animations/perspective/index");
 
 var _index14 = _interopRequireDefault(_index13);
 
-var _index15 = require('./dist/animations/Bingo/index');
+var _index15 = require("./dist/animations/Bingo/index");
 
 var _index16 = _interopRequireDefault(_index15);
 
-var _index17 = require('./dist/animations/expanse/index');
+var _index17 = require("./dist/animations/expanse/index");
 
 var _index18 = _interopRequireDefault(_index17);
 
+var _styledBounce = require("./dist/animations/bounce/styledBounce");
+
+var _styledFade = require("./dist/animations/fade/styledFade");
+
+var _styledFlip = require("./dist/animations/flip/styledFlip");
+
+var _styledLight = require("./dist/animations/lightspeed/styledLight");
+
+var _styledRotate = require("./dist/animations/rotate/styledRotate");
+
+var _styledSpecial = require("./dist/animations/styledSpecial");
+
+var _styledSlide = require("./dist/animations/slide/styledSlide");
+
+var _styledPerspective = require("./dist/animations/perspective/styledPerspective");
+
+var _styledBingo = require("./dist/animations/Bingo/styledBingo");
+
+var _styledExpanse = require("./dist/animations/expanse/styledExpanse");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Keyframes rules for <Merge />
 /**
  * @author Nitin Tulswani <tulswani19@gmail.com>
  */
@@ -157,3 +179,55 @@ exports.ExpanseLeft = ExpanseLeft;
 exports.ExpanseRight = ExpanseRight;
 exports.ExpanseDown = ExpanseDown;
 exports.ExpanseUp = ExpanseUp;
+exports.bounce = _styledBounce.bounce;
+exports.bounceDown = _styledBounce.bounceDown;
+exports.bounceLeft = _styledBounce.bounceLeft;
+exports.bounceRight = _styledBounce.bounceRight;
+exports.bounceUp = _styledBounce.bounceUp;
+exports.fadeIn = _styledFade.fadeIn;
+exports.left = _styledFade.left;
+exports.down = _styledFade.down;
+exports.downBig = _styledFade.downBig;
+exports.leftBig = _styledFade.leftBig;
+exports.rightBig = _styledFade.rightBig;
+exports.right = _styledFade.right;
+exports.up = _styledFade.up;
+exports.upBig = _styledFade.upBig;
+exports.flip = _styledFlip.flip;
+exports.flipX = _styledFlip.flipX;
+exports.flipY = _styledFlip.flipY;
+exports.lightIn = _styledLight.lightIn;
+exports.lightOut = _styledLight.lightOut;
+exports.rotateIn = _styledRotate.rotateIn;
+exports.rotateLeft = _styledRotate.rotateLeft;
+exports.rotateRight = _styledRotate.rotateRight;
+exports.rotateUpLeft = _styledRotate.rotateUpLeft;
+exports.rotateUpRight = _styledRotate.rotateUpRight;
+exports.flash = _styledSpecial.flash;
+exports.rollOut = _styledSpecial.rollOut;
+exports.rollIn = _styledSpecial.rollIn;
+exports.rubber = _styledSpecial.rubber;
+exports.swing = _styledSpecial.swing;
+exports.zoom = _styledSpecial.zoom;
+exports.hinge = _styledSpecial.hinge;
+exports.pulse = _styledSpecial.pulse;
+exports.expandUp = _styledSpecial.expandUp;
+exports.entrance = _styledSpecial.entrance;
+exports.hatch = _styledSpecial.hatch;
+exports.starWars = _styledSpecial.starWars;
+exports.slideDown = _styledSlide.slideDown;
+exports.slideLeft = _styledSlide.slideLeft;
+exports.slideRight = _styledSlide.slideRight;
+exports.slideUp = _styledSlide.slideUp;
+exports.perspectiveDown = _styledPerspective.perspectiveDown;
+exports.perspectiveUp = _styledPerspective.perspectiveUp;
+exports.perspectiveLeft = _styledPerspective.perspectiveLeft;
+exports.perspectiveRight = _styledPerspective.perspectiveRight;
+exports.puffmein = _styledBingo.puffmein;
+exports.puffmeout = _styledBingo.puffmeout;
+exports.vanishout = _styledBingo.vanishout;
+exports.vanishin = _styledBingo.vanishin;
+exports.expanseDown = _styledExpanse.expanseDown;
+exports.expanseUp = _styledExpanse.expanseUp;
+exports.expanseLeft = _styledExpanse.expanseLeft;
+exports.expanseRight = _styledExpanse.expanseRight;
