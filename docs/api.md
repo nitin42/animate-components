@@ -46,7 +46,7 @@ Read more about the `block` prop [here](faq.md)
 
 ## Importing animation components and animations
 
-To use animation component, import any component like this
+To use any animation component,
 
 ```javascript
 import { FadeIn } from 'animate-components';
