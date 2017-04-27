@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import shallowCompare from 'react-addons-shallow-compare';
+import shallowCompare from "react-addons-shallow-compare";
 
 type Props = {
   duration: string,
@@ -60,19 +60,19 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
       "ease-out",
       "ease-in-out",
       "step-start",
-      "step-end",
-      "steps(int, start|end)",
-      "cubic-bezier(n,n,n,n)"
+      "step-end"
     ]),
     backfaceVisible: PropTypes.oneOf(["visible", "hidden"]),
     children: (props, propName, componentName) => {
       let prop = props[propName];
 
       if (React.Children.count(prop) === 0) {
-        return new Error(
-          `${ComposedComponent} should have atleast a single child element to perform the animation.`
+        console.error(
+          `Warning: ${ComposedComponent} should have atleast a single child element.`
         );
-      } else { return; }
+      } else {
+        return;
+      }
     }
   };
 
@@ -106,10 +106,7 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
     this.setState({
       styles: {
         // All the animations have vendor prefixes so just simply setState.
-        animation: `
-            ${AnimationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction}
-            ${fillMode} ${playState}
-          `,
+        animation: `${AnimationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState}`,
         backfaceVisibility: `${backfaceVisible}`
       }
     });
@@ -118,7 +115,7 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
   // Avoid re-render (Performance bottleneck)
   shouldComponentUpdate = (nextProps: Props, nextState: State) => {
     return shallowCompare(this, nextProps, nextState);
-  }
+  };
 
   renderRootWithBlock = (): ?React$Element<*> => {
     const styles = Object.assign({}, this.state.styles, {
