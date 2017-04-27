@@ -18,11 +18,26 @@
 
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
-| **name**      | string | " " |
-| **tf (timingFunction)**      | string      |   ease |
-| **dr (duration)** | string      |    1s |
+| **one**      | object | { name: "", dr: "2s", tf: "ease" } |
+| **two**      | object      |   { name: "", dr: "2s", tf: "ease" } |
 | **block** | boolean      |    |
 
-> Note - Currently you can only pass three props to `<Merge />` component.
+`<Merge />`
+
+```html
+<Merge one={{ name: "", dr: "2s", tf: "ease" }} two={{ name: "", dr: "2s", tf: "ease" }}>
+  <h1>Hello World</h1>
+</Merge>
+```
+
+`one` && `two` (object)
+
+```
+name: [string] [''],
+dr: [string] ['2s'],
+tf: [string] ['ease']
+```
+
+> Note - Currently you can only pass three props to `<Merge />` component. (will support more in next release)
 
 Read more about the `block` prop [here](faq.md)
