@@ -19,8 +19,10 @@
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
 | **name**      | string | " " |
-| **tf**      | string      |   ease |
-| **dr** | string      |    1s |
+| **tf (timingFunction)**      | string      |   ease |
+| **dr (duration)** | string      |    1s |
 | **block** | boolean      |    |
+
+> Note - Currently you can only pass three props to `<Merge />` component.
 
 Read more about the `block` prop [here](faq.md)
