@@ -33,9 +33,9 @@
 `one` && `two` (object)
 
 ```
-name: [string] [''],
-dr: [string] ['2s'],
-tf: [string] ['ease']
+name: [animation-name] [string] [''],
+dr: [animation-duration] [string] ['2s'],
+tf: [animation-timing-function] [string] ['ease']
 ```
 
 > Note - Currently you can only pass three props to `<Merge />` component. (will support more in next release)
