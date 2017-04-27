@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.expanseRight = exports.expanseLeft = exports.expanseUp = undefined;
+exports.Merge = exports.expanseRight = exports.expanseLeft = exports.expanseUp = undefined;
 exports.expanseDown = exports.vanishin = exports.vanishout = exports.puffmeout = exports.puffmein = exports.perspectiveRight = exports.perspectiveLeft = exports.perspectiveUp = exports.perspectiveDown = exports.slideUp = exports.slideRight = exports.slideLeft = exports.slideDown = exports.starWars = exports.hatch = exports.entrance = exports.expandUp = exports.pulse = exports.hinge = exports.zoom = exports.swing = exports.rubber = exports.rollIn = exports.rollOut = exports.flash = exports.rotateUpRight = exports.rotateUpLeft = exports.rotateRight = exports.rotateLeft = exports.rotateIn = exports.lightOut = exports.lightIn = exports.flipY = exports.flipX = exports.flip = exports.upBig = exports.up = exports.right = exports.rightBig = exports.leftBig = exports.downBig = exports.down = exports.left = exports.fadeIn = exports.bounceUp = exports.bounceRight = exports.bounceLeft = exports.bounceDown = exports.bounce = exports.ExpanseUp = exports.ExpanseDown = exports.ExpanseRight = exports.ExpanseLeft = exports.VanishOut = exports.VanishIn = exports.PuffOut = exports.PuffIn = exports.PLeft = exports.PRight = exports.PUp = exports.PDown = exports.Hatch = exports.Entrance = exports.ExpandUp = exports.StarWars = exports.SlideRight = exports.SlideLeft = exports.SlideDown = exports.SlideUp = exports.Pulse = exports.Hinge = exports.Zoom = exports.Swing = exports.Rubber = exports.RollIn = exports.RollOut = exports.Flash = exports.RotateUpLeft = exports.RotateUpRight = exports.RotateLeft = exports.RotateRight = exports.RotateIn = exports.LightIn = exports.LightOut = exports.FlipY = exports.FlipX = exports.Flip = exports.FadeInRightBig = exports.FadeInLeftBig = exports.FadeInUpBig = exports.FadeInDown = exports.FadeInLeft = exports.FadeInRight = exports.FadeInUp = exports.FadeIn = exports.BounceDown = exports.BounceLeft = exports.BounceRight = exports.BounceUp = exports.Bounce = undefined;
 
 var _index = require("./dist/animations/bounce/index");
@@ -46,6 +46,10 @@ var _index17 = require("./dist/animations/expanse/index");
 
 var _index18 = _interopRequireDefault(_index17);
 
+var _merge = require("./dist/animations/merge");
+
+var _merge2 = _interopRequireDefault(_merge);
+
 var _styledBounce = require("./dist/animations/bounce/styledBounce");
 
 var _styledFade = require("./dist/animations/fade/styledFade");
@@ -69,16 +73,16 @@ var _styledExpanse = require("./dist/animations/expanse/styledExpanse");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Keyframes rules for <Merge />
-/**
- * @author Nitin Tulswani <tulswani19@gmail.com>
- */
-
-// Animation Component.
 var Bounce = _index2.default.Bounce,
     BounceUp = _index2.default.BounceUp,
     BounceRight = _index2.default.BounceRight,
     BounceLeft = _index2.default.BounceLeft,
-    BounceDown = _index2.default.BounceDown;
+    BounceDown = _index2.default.BounceDown; /**
+                                              * @author Nitin Tulswani <tulswani19@gmail.com>
+                                              */
+
+// Animation Component.
+
 var FadeIn = _index4.default.FadeIn,
     FadeInUp = _index4.default.FadeInUp,
     FadeInRight = _index4.default.FadeInRight,
@@ -231,3 +235,4 @@ exports.expanseDown = _styledExpanse.expanseDown;
 exports.expanseUp = _styledExpanse.expanseUp;
 exports.expanseLeft = _styledExpanse.expanseLeft;
 exports.expanseRight = _styledExpanse.expanseRight;
+exports.Merge = _merge2.default;
