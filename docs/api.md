@@ -44,7 +44,7 @@ tf: [animation-timing-function] [string] ['ease']
 
 Read more about the `block` prop [here](faq.md)
 
-## Importing animation component and animations
+## Importing animation components and animations
 
 To use animation component, import any component like this
 
