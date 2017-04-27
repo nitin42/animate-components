@@ -55,7 +55,7 @@ import { FadeIn } from 'animate-components';
 To use animation name in `<Merge />` component or for any other use cases, this follows camelCase convention.
 
 ```javascript
-import {fadeIn} from 'animate-components';
+import { fadeIn } from 'animate-components';
 ```
 
 To use `<Merge />`,
