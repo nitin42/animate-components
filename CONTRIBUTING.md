@@ -110,7 +110,7 @@ yarn build
 ```
 
 ### Running the animations
-To check wether the animations and its properties are working, there is a [starter kit(lazily configured)](https://github.com/nitin42/animate-components/tree/master/starter). Example - 
+To check wether the animations and its properties are working, there is a [starter kit](https://github.com/nitin42/animate-components/tree/master/starter)(lazily configured). Example - 
 
 ```javascript
 // ./starter/App.js
