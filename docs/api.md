@@ -32,8 +32,6 @@ import { fadeIn, slideUp } from 'animate-components';
 </Merge>
 ```
 
-`one` && `two` (object)
-
 ```
 name -> animation-name
 dr -> animation-duration
