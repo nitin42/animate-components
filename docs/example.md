@@ -35,7 +35,7 @@ render () {
 render () {
   return (
     <Merge one={{ name: fadeIn, dr: '2s' }} two={{ name: slideUp, dr: '2s', tf: 'ease-in' }}>
-      <h1>Tired of hello world!</h1>
+      <h1>Hello world!</h1>
     </Merge>
   );
 }
