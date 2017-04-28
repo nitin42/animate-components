@@ -53,12 +53,10 @@ import { FadeIn } from 'animate-components';
 ```
 
 To use animation name (keyframe rules) in `<Merge />` component or for any other use cases
-
+> Follows camelCase convention.
 ```javascript
 import { fadeIn } from 'animate-components';
 ```
-
-> Follows camelCase convention.
 
 To use `<Merge />`,
 
