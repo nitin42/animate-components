@@ -47,7 +47,7 @@ Example -
 </div>
 ```
 
-**Note** - The list of all the animations is given below just remember to use **camelCase** convention when adding animation name to the class (not for the **React Components**).
+> Note - The list of all the animations is given below just remember to use **camelCase** convention when adding animation name to the class (not for the **React Components**). You should use [animate.css](https://daneden.github.io/animate.css/) instead for trying animations like **Bounce**, **Fade**, **Flip**, **lightspeed** and **Rotate**.
 
 ## Docs
 Check the complete documentation [here](./docs).
