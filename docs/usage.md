@@ -71,7 +71,7 @@ Specifies whether the animation is running or paused.
 
 ```
 ### block
-Specifies whether to render the component and its children in `<div>` wrapper with the display `display: block`.
+Wraps the children in `<div>` with the display `display: block`.
 
 ```html
 
