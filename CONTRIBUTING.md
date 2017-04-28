@@ -110,7 +110,7 @@ yarn build
 ```
 
 ### Running the animations
-To check wether the animations and its properties are working, there is a [starter kit](). Example - 
+To check wether the animations and its properties are working, there is a [starter kit](lazily configured). Example - 
 
 ```javascript
 // ./starter/App.js
