@@ -27,7 +27,7 @@ yarn add animate-components --save
 **bower**
 
 ```
-bower install animate-components --save
+bower install animate-components
 ```
 
 or use a cdn version hosted by [unpkg](https://unpkg.com/#/)
