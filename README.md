@@ -21,7 +21,7 @@ npm install animate-components --save
 **yarn**
 
 ```
-yarn add install animate-components --save
+yarn add animate-components --save
 ```
 
 **bower**
