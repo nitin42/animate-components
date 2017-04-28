@@ -40,7 +40,7 @@ dr -> animation-duration
 tf -> animation-timing-function
 ```
 
-> Note - Currently you can only pass three props to `<Merge />` component. (will support more in next release)
+> Note - Currently you can only pass three options to the props `one` and `two` of `<Merge />` component. (will support more in next release)
 
 Read more about the `block` prop [here](faq.md)
 
