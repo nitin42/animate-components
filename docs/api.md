@@ -58,7 +58,7 @@ To use animation name (keyframe rules) in `<Merge />` component or for any other
 import { fadeIn } from 'animate-components';
 ```
 
-To use `<Merge />`,
+To use `<Merge />` component,
 
 ``` javascript
 import { Merge } from 'animate-components';
