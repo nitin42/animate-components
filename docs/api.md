@@ -35,9 +35,9 @@ import { fadeIn, slideUp } from 'animate-components';
 `one` && `two` (object)
 
 ```
-name: [animation-name] [string] [''],
-dr: [animation-duration] [string] ['2s'],
-tf: [animation-timing-function] [string] ['ease']
+name -> [animation-name]
+dr -> [animation-duration]
+tf -> [animation-timing-function]
 ```
 
 > Note - Currently you can only pass three props to `<Merge />` component. (will support more in next release)
