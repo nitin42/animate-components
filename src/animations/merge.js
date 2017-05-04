@@ -8,6 +8,7 @@ import { names, duration, timingFunction, propValidators } from '../utils/mergeV
 
 // <Merge one two inline />
 
+// Custom validators for props
 const validators = {
   prop: PropTypes.objectOf(
     (propValue, key, componentName, location, propFullName) => {
@@ -65,12 +66,12 @@ class Merge extends Component<DefaultProps, Props, State> {
   componentDidMount = () => {
     this.store(this.props);
   };
-
+  
+  // This may be fragmented in future to update each animate property individually or on user actions.
   store = (props: Props) => {
     // <Merge one={} two={} />
     const { one, two } = props;
 
-    // Not destructuring, same keys causes collision. (difficulties with defaultProps)
     this.setState({
       styles: {
         animation: `${one["name"] || ""} ${one["dr"] || "2s"} ${one["tf"] || "ease-in"}, ${two["name"] || ""} ${two["dr"] || "2s"} ${two["tf"] || "ease-in"}`,
