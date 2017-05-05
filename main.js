@@ -13,6 +13,7 @@ import slideObj from "./dist/animations/slide/index";
 import PObj from "./dist/animations/perspective/index";
 import bingoObj from "./dist/animations/Bingo/index";
 import expanseObj from "./dist/animations/expanse/index";
+
 import Merge from "./dist/animations/merge";
 
 // Keyframes rules for <Merge />
