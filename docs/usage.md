@@ -71,7 +71,7 @@ Specifies whether the animation is running or paused.
 
 ```
 ### as
-Now you can render the animation component using any element by using the prop `as`.
+An element type to render as using the prop `as`.
 
 ```javascript
 
