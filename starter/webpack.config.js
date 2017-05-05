@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const { join, resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const VENDOR = ["react", "react-dom", "styled-components"];
+const VENDOR = ["react", "react-dom", "styled-components", "html-tags", "prop-types", "react-addons-shallow-compare"];
 
 module.exports = {
   entry: {
@@ -14,15 +14,14 @@ module.exports = {
     vendor: VENDOR
   },
   output: {
-    filename: "[name].[hash].js",
+    filename: "[name].js",
     path: resolve(__dirname, "build"),
     publicPath: "/"
   },
   devServer: {
-    hot: true,
-    contentBase: resolve(__dirname, "build"),
     publicPath: "/",
-    noInfo: true
+    noInfo: true,
+    historyApiFallback: true
   },
   stats: {
     chunks: true,
@@ -34,12 +33,12 @@ module.exports = {
     version: true,
     warnings: true
   },
-  devtool: "inline-source-map",
+  devtool: "eval",
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /__tests__/, /docs/, /coverage/],
         use: ["babel-loader"]
       },
       {
