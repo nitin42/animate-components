@@ -1,8 +1,10 @@
 // @flow
 
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import shallowCompare from "react-addons-shallow-compare";
+import React, { PureComponent } from "react";
+
+import { hocValidators, verifyTags, children } from "../utils/propsValidator";
+
+import { getElementType, computeElementType } from "../mods/getElementType";
 
 type Props = {
   duration: string,
@@ -13,6 +15,7 @@ type Props = {
   backfaceVisible: string,
   fillMode: string,
   playState: string,
+  as: string,
   children: React$Element<*>
 };
 
@@ -24,7 +27,8 @@ type DefaultProps = {
   iterations: string,
   backfaceVisible: string,
   fillMode: string,
-  playState: string
+  playState: string,
+  as: string
 };
 
 type State = {
@@ -37,43 +41,19 @@ type State = {
  * @param {string} keyframes - Keyframes defined for the animation
  */
 let HOC = (ComposedComponent: string, AnimationName: string) => class
-  extends Component<DefaultProps, Props, State> {
+  extends PureComponent<DefaultProps, Props, State> {
   state = {
     styles: {}
   };
 
   static propTypes = {
-    direction: PropTypes.oneOf([
-      "normal",
-      "reverse",
-      "alternate",
-      "alternate-reverse",
-      "initial",
-      "inherit"
-    ]),
-    fillMode: PropTypes.oneOf(["none", "forwards", "backwards", "both"]),
-    playState: PropTypes.oneOf(["paused", "running"]),
-    timingFunction: PropTypes.oneOf([
-      "linear",
-      "ease",
-      "ease-in",
-      "ease-out",
-      "ease-in-out",
-      "step-start",
-      "step-end"
-    ]),
-    backfaceVisible: PropTypes.oneOf(["visible", "hidden"]),
-    children: (props, propName, componentName) => {
-      let prop = props[propName];
-
-      if (React.Children.count(prop) === 0) {
-        console.error(
-          `Warning: ${ComposedComponent} should have atleast a single child element.`
-        );
-      } else {
-        return;
-      }
-    }
+    direction: hocValidators.direction,
+    fillMode: hocValidators.fillMode,
+    playState: hocValidators.playState,
+    timingFunction: hocValidators.timingFunction,
+    backfaceVisible: hocValidators.backfaceVisible,
+    as: verifyTags(ComposedComponent),
+    children: children(ComposedComponent)
   };
 
   static defaultProps = {
@@ -84,7 +64,8 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
     iterations: "1",
     backfaceVisible: "visible",
     fillMode: "none",
-    playState: "running"
+    playState: "running",
+    as: "div"
   };
 
   componentDidMount = () => {
@@ -112,38 +93,18 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
     });
   };
 
-  // Avoid re-render (Performance bottleneck)
-  shouldComponentUpdate = (nextProps: Props, nextState: State) => {
-    return shallowCompare(this, nextProps, nextState);
-  };
-
-  renderRootWithBlock = (): ?React$Element<*> => {
-    const styles = Object.assign({}, this.state.styles, {
-      display: "block"
-    });
-    return (
-      <div style={styles}>
-        {this.props.children}
-      </div>
+  render(): ?React$Element<any> {
+    const ElementType = getElementType(
+      ComposedComponent,
+      this.props,
+      computeElementType(this.props)
     );
-  };
-
-  renderRootWithInline = (): ?React$Element<*> => {
-    const styles = Object.assign({}, this.state.styles, {
-      display: "inline-block"
-    });
 
     return (
-      <span style={styles}>
+      <ElementType style={this.state.styles}>
         {this.props.children}
-      </span>
+      </ElementType>
     );
-  };
-
-  render(): ?React$Element<*> {
-    return this.props.block
-      ? this.renderRootWithBlock()
-      : this.renderRootWithInline();
   }
 };
 
