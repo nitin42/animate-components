@@ -1,16 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import {
-	FadeIn,
-	Rotate
-} from '../main';
+import Merge from "../src/animations/merge";
+
+import { fadeIn, slideUp } from "../main";
+import { FadeIn, RotateIn } from "../main";
 
 export default class App extends Component {
-	render () {
-		return (
-			<FadeIn duration="3s">
-				<h1>Hello World</h1>
-			</FadeIn>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <Merge two={{ name: fadeIn }} one={{ name: slideUp }} as="h1111">
+          Hello
+        </Merge>
+        <RotateIn duration="7s" as="h2">
+          World
+        </RotateIn>
+      </div>
+    );
+  }
 }
