@@ -70,17 +70,22 @@ Specifies whether the animation is running or paused.
 <Entrance playState="running">
 
 ```
-### block
-Wraps the children in `<div>` with the display `display: block`.
+### as
+Now you can render the animation component using any element by using the prop `as`.
+
+```javascript
+
+<Entrance duration="3s" as="h1">
+  Hello World
+</Entrance>
+```
+
+outputs
 
 ```html
-
-<Entrance block>
-  <h1>
-    Hello World
-  </h1>
-</Entrance>
-
+<h1 style={...} other={...}>
+  Hello World
+</h1>
 ```
 
 ### Multistep animations
