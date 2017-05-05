@@ -12,7 +12,7 @@
 | **backfaceVisible** | string      |    visible |
 | **fillMode** | string      |    none |
 | **playState** | string      |    running |
-| **block** | boolean      |    |
+| **as** | string      | div   |
 
 #### Props for `<Merge />` component
 
@@ -20,7 +20,7 @@
 | ------------- |:-------------:| -----:|
 | **one**      | object | { name: "", dr: "2s", tf: "ease" } |
 | **two**      | object      |   { name: "", dr: "2s", tf: "ease" } |
-| **block** | boolean      |    |
+| **as** | string      |   div |
 
 `<Merge />`
 
@@ -68,4 +68,22 @@ let App = () => {
     </Merge>
   );
 }
+```
+
+## An element type to render as (string)
+
+Use prop `as` to render the component with any element (valid). Eg - 
+
+```javascript
+<FadeIn duration="3s" as="h2">
+  Hello World
+</FadeIn>
+```
+
+outputs
+
+```html
+<h2 style={...} other={...}>
+  Hello World
+</h2>
 ```
