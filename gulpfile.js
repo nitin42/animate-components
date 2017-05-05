@@ -4,8 +4,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
-const header = require('gulp-header');
-const sequence = require('run-sequence');
 
 const cssnano = require('cssnano');
 
