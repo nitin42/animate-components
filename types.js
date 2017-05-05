@@ -1,6 +1,6 @@
 // @flow
 
-export type component = function;
+export type component = Function;
 
 // Animation components object
 export type Components = {
