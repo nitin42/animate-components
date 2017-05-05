@@ -1,11 +1,16 @@
 [ignore]
 .*/node_modules/.*
 .*/index.js
+.*/__tests__/.*
+.*/css/.*
+.*/animations/.*
+.*/coverage/.*
+.*/starter/.*
 
 [include]
 .*/node_modules/styled-components/.*
-.*/node_modules/react-addons-shallow-compare/.*
 .*/node_modules/prop-types/.*
+
 [libs]
 
 [options]
