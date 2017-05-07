@@ -27,8 +27,6 @@ render () {
   );
 ```
 
-> Note - By default the component performs the animation with **inline display** (will be discontinued in the future). This may not work well where you have a group of elements. So it is recommended to use prop **`block`**.
-
 ### Multistep animations
 
 ```javascript
