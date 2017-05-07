@@ -47,7 +47,7 @@ Example -
 </div>
 ```
 
-> Note - The list of all the animations is given below just remember to use **camelCase** convention when adding animation name to the class (not for the **React Components**). I'd prefer [animate.css](https://daneden.github.io/animate.css/) instead for trying animations like **Bounce**, **Fade**, **Flip**, **lightspeed** and **Rotate** if you don't use the components.
+> Note - The list of all the animations is given below just remember to use **camelCase** convention when adding animation name to the class (not for the **React Components**). 
 
 ## Docs
 Check the complete documentation [here](./docs).
@@ -136,3 +136,9 @@ Below is a list of all available animations.
 * `ExpanseDown`
 * `ExpanseLeft`
 * `ExpanseRight`
+
+## Other animation libraries
+
+* [Animate.css](https://daneden.github.io/animate.css/)
+* [CSShake](http://elrumordelaluz.github.io/csshake/#1)
+* [Magic](https://minimamente.com/example/magic_animations/)
