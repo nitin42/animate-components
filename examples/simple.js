@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { FadeIn } from 'animate-components';
+import { FadeIn } from "animate-components";
 
 let App = () => {
   return (
@@ -10,6 +10,6 @@ let App = () => {
       </FadeIn>
     </div>
   );
-}
+};
 
-export default App
+export default App;
