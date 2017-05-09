@@ -3,18 +3,31 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+/**
+  Validators for animation properties
+*/
+
+/**
+  animation-name
+*/
 var names = function names(key, propValue) {
   if (key === "name" && typeof propValue[key] !== "string") {
-    console.error("Warning: Animation name should be type string.");
+    console.error("Warning: Failed propType. Prop value for animation name should be a string.");
   }
 };
 
+/**
+  animation-duration
+*/
 var duration = function duration(key, propValue) {
   if (key === "dr" && typeof propValue[key] !== "string") {
-    console.error("Warning: Animation duration should be type string. For eg - '2s'");
+    console.error("Warning: Failed propType. Prop value for animation duration should be a string. For eg - '2s'");
   }
 };
 
+/**
+  animation-timing-function
+*/
 var timingFunction = function timingFunction(key, propValue) {
   if (key === "tf" && typeof propValue[key] === "string") {
     var arr = ["linear", "ease", "ease-in", "ease-out", "ease-in-out", "step-start", "step-end"];
@@ -23,12 +36,15 @@ var timingFunction = function timingFunction(key, propValue) {
 
     return arr.includes(propValue[key]) ? null : console.error(err);
   } else if (key === "tf" && typeof propValue[key] !== "string") {
-    console.error("Warning: tf value should be string type. For eg - 'ease-out'");
+    console.error("Warning: Failed propType. Prop value for tf should be a string. For eg - 'ease-out'");
   }
 };
 
+/**
+  <Merge one={{...}} two={{...}}> Check the prop values for the keys
+*/
 var propValidators = function propValidators(key) {
-  var keys = ['name', 'dr', 'tf'];
+  var keys = ["name", "dr", "tf"];
   var err = "Warning: Unknown prop '" + key + "' passed to the Merge component.";
 
   return keys.includes(key) ? null : console.error(err);

@@ -10,15 +10,11 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require("prop-types");
+var _propsValidator = require("../utils/propsValidator");
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
+var _getElementType = require("../mods/getElementType");
 
-var _reactAddonsShallowCompare = require("react-addons-shallow-compare");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
-var _mergeValidators = require("../utils/mergeValidators");
+var _getElementType2 = _interopRequireDefault(_getElementType);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28,22 +24,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-// <Merge one two inline />
-
-var validators = {
-  prop: _propTypes2.default.objectOf(function (propValue, key, componentName, location, propFullName) {
-    (0, _mergeValidators.names)(key, propValue);
-    (0, _mergeValidators.duration)(key, propValue);
-    (0, _mergeValidators.timingFunction)(key, propValue);
-    (0, _mergeValidators.propValidators)(key);
-  })
-};
-
 /**
  * Merge Component
  */
-var Merge = function (_Component) {
-  _inherits(Merge, _Component);
+var Merge = function (_PureComponent) {
+  _inherits(Merge, _PureComponent);
 
   function Merge() {
     var _ref;
@@ -60,73 +45,56 @@ var Merge = function (_Component) {
       styles: {}
     }, _this.componentDidMount = function () {
       _this.store(_this.props);
+    }, _this.returnAnimation = function (prop) {
+      return (prop["name"] || "") + " " + (prop["dr"] || "2s") + " " + (prop["tf"] || "ease-in");
     }, _this.store = function (props) {
-      // <Merge one={} two={} />
       var one = props.one,
           two = props.two;
 
-      // Not destructuring, same keys causes collision. (difficulties with defaultProps)
 
       _this.setState({
         styles: {
-          animation: (one["name"] || "") + " " + (one["dr"] || "2s") + " " + (one["tf"] || "ease-in") + ", " + (two["name"] || "") + " " + (two["dr"] || "2s") + " " + (two["tf"] || "ease-in"),
+          animation: "" + (_this.returnAnimation(one), _this.returnAnimation(two)),
+
           // For some animations like rotate and flip.
           backfaceVisibility: "visible"
         }
       });
-    }, _this.shouldComponentUpdate = function (nextProps, nextState) {
-      return (0, _reactAddonsShallowCompare2.default)(_this, nextProps, nextState);
-    }, _this.renderRootWithBlock = function () {
-      var styles = Object.assign({}, _this.state.styles, {
-        display: "block"
-      });
-      return _react2.default.createElement(
-        "div",
-        { style: styles },
-        _this.props.children
-      );
-    }, _this.renderRootWithInline = function () {
-      var styles = Object.assign({}, _this.state.styles, {
-        display: "inline-block"
-      });
-
-      return _react2.default.createElement(
-        "span",
-        { style: styles },
-        _this.props.children
-      );
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  // ?
-
-
-  // Performance bottleneck (avoid re-render)
+  // Also returns default props (will be moved)
 
 
   _createClass(Merge, [{
     key: "render",
     value: function render() {
-      return this.props.inline ? this.renderRootWithInline() : this.renderRootWithBlock();
+      var ElementType = (0, _getElementType2.default)(Merge, this.props);
+
+      var styles = this.state.styles;
+      var children = this.props.children;
+
+
+      return _react2.default.createElement(
+        ElementType,
+        { style: styles },
+        children
+      );
     }
   }]);
 
   return Merge;
-}(_react.Component);
+}(_react.PureComponent);
 
 Merge.defaultProps = {
   one: {},
-  two: {}
+  two: {},
+  as: "div"
 };
 Merge.propTypes = {
-  one: validators.prop,
-  two: validators.prop,
-  children: function children(props, propName, componentName) {
-    var prop = props[propName];
-
-    if (_react2.default.Children.count(prop) === 0) {
-      return new Error("Merge component should have atleast a single child element.");
-    }
-  }
+  one: _propsValidator.validators.prop,
+  two: _propsValidator.validators.prop,
+  as: (0, _propsValidator.verifyTags)("Merge"),
+  children: (0, _propsValidator.children)("Merge")
 };
 exports.default = Merge;
