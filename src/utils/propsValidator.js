@@ -55,7 +55,7 @@ const hocValidators = {
 let verifyTags = ComposedComponent => {
   return (props, propName, componentName) => {
     let prop = props[propName];
-    const err = `Warning: ${prop} passed to ${ComposedComponent} component is not a valid HTML tag.`;
+    const err = `Warning: '${prop}' passed to '${ComposedComponent}' component is not a valid html tag.`;
     return checkTag.includes(prop) ? null : console.error(err);
   };
 };
@@ -68,7 +68,7 @@ let children = ComposedComponent => {
     let prop = props[propName];
     if (Children.count(prop) === 0) {
       console.error(
-        `Warning: ${ComposedComponent} should have atleast a single child element.`
+        `Warning: '${ComposedComponent}' should have atleast a single child element.`
       );
     }
   };

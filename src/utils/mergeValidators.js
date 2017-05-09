@@ -7,7 +7,7 @@
 */
 let names = (key, propValue) => {
   if (key === "name" && typeof propValue[key] !== "string") {
-    console.error(`Error: Invalid type. Prop value for animation name should be a string.`);
+    console.error(`Warning: Failed propType. Prop value for animation name should be a string.`);
   }
 };
 
@@ -17,7 +17,7 @@ let names = (key, propValue) => {
 let duration = (key, propValue) => {
   if (key === "dr" && typeof propValue[key] !== "string") {
     console.error(
-      `Error: Invalid type. Prop value for animation duration should be a string. For eg - '2s'`
+      `Warning: Failed propType. Prop value for animation duration should be a string. For eg - '2s'`
     );
   }
 };
@@ -37,12 +37,12 @@ let timingFunction = (key, propValue) => {
       "step-end"
     ];
 
-    const err = `Error: Invalid timing Function '${propValue[key]}' passed to the Merge component. The prop value for 'tf' should be one of ["linear", "ease", "ease-in", "ease-out", "ease-in-out", "step-start", "step-end"]. Note steps(#, start|end) is currently not supported.`;
+    const err = `Warning: Invalid timing Function '${propValue[key]}' passed to the Merge component. The prop value for 'tf' should be one of ["linear", "ease", "ease-in", "ease-out", "ease-in-out", "step-start", "step-end"]. Note steps(#, start|end) is currently not supported.`;
 
     return arr.includes(propValue[key]) ? null : console.error(err);
   } else if (key === "tf" && typeof propValue[key] !== "string") {
     console.error(
-      `Error: Invalid type. Prop value for tf should be a string. For eg - 'ease-out'`
+      `Warning: Failed propType. Prop value for tf should be a string. For eg - 'ease-out'`
     );
   }
 };
