@@ -10,19 +10,16 @@ let computeElementType = props => {
 /**
   Returns the element type for the Component
 */
-let getElementType = (Component, props, defaults) => {
+let getElementType = (Component, props) => {
   const { defaultProps = {} } = Component;
 
   if (props.as && props.as !== defaultProps.as) return props.as;
 
-  // computeElementType (High Order Component)
-  if (defaults) {
-    const computedElement = defaults();
-    if (computedElement) return computedElement;
-  }
+  const computedElement = computeElementType(props);
+  return computedElement ? computedElement : null;
 
   // Redundant ?
   return defaultProps.as || "div";
 };
 
-export { getElementType, computeElementType };
+export default getElementType;
