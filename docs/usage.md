@@ -102,7 +102,7 @@ Example -
 See the full api for `<Merge />` component [here](https://github.com/nitin42/animate-components/blob/master/docs/api.md).
 
 ### Using CSS 
-You can also use minified copy of the css file which is available via cdn or you can manually download and specify the stylesheet.
+You can also use minified copy of the css file which is available via cdn or you can manually download and specify the stylesheet in your html.
 
 Example - 
 
