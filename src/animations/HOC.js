@@ -4,7 +4,7 @@ import React, { PureComponent } from "react";
 
 import { hocValidators, verifyTags, children } from "../utils/propsValidator";
 
-import { getElementType, computeElementType } from "../mods/getElementType";
+import getElementType from "../mods/getElementType";
 
 type Props = {
   duration: string,
@@ -86,7 +86,6 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
 
     this.setState({
       styles: {
-        // All the animations have vendor prefixes so just simply setState.
         animation: `${AnimationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState}`,
         backfaceVisibility: `${backfaceVisible}`
       }
@@ -94,15 +93,14 @@ let HOC = (ComposedComponent: string, AnimationName: string) => class
   };
 
   render(): ?React$Element<any> {
-    const ElementType = getElementType(
-      ComposedComponent,
-      this.props,
-      computeElementType(this.props)
-    );
+    const ElementType = getElementType(ComposedComponent, this.props);
+
+    const { styles } = this.state;
+    const { children } = this.props;
 
     return (
-      <ElementType style={this.state.styles}>
-        {this.props.children}
+      <ElementType style={styles}>
+        {children}
       </ElementType>
     );
   }
