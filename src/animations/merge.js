@@ -4,7 +4,7 @@ import React, { PureComponent } from "react";
 
 import { validators, verifyTags, children } from "../utils/propsValidator";
 
-import { getElementType, computeElementType } from "../mods/getElementType";
+import getElementType from "../mods/getElementType";
 
 type Props = {
   one: Object,
@@ -48,14 +48,18 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
     this.store(this.props);
   };
 
+  // Also returns default props (will be moved)
+  returnAnimation = (prop: Props) => {
+    return `${prop["name"] || ""} ${prop["dr"] || "2s"} ${prop["tf"] || "ease-in"}`;
+  };
+
   store = (props: Props) => {
-    // <Merge one={} two={} />
     const { one, two } = props;
 
-    // Not destructuring, same keys causes collision. (difficulties with defaultProps)
     this.setState({
       styles: {
-        animation: `${one["name"] || ""} ${one["dr"] || "2s"} ${one["tf"] || "ease-in"}, ${two["name"] || ""} ${two["dr"] || "2s"} ${two["tf"] || "ease-in"}`,
+        animation: `${(this.returnAnimation(one), this.returnAnimation(two))}`,
+
         // For some animations like rotate and flip.
         backfaceVisibility: "visible"
       }
@@ -63,15 +67,14 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
   };
 
   render(): ?React$Element<any> {
-    const ElementType = getElementType(
-      Merge,
-      this.props,
-      computeElementType(this.props)
-    );
+    const ElementType = getElementType(Merge, this.props);
+
+    const { styles } = this.state;
+    const { children } = this.props;
 
     return (
-      <ElementType style={this.state.styles}>
-        {this.props.children}
+      <ElementType style={styles}>
+        {children}
       </ElementType>
     );
   }
