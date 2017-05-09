@@ -1,17 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`High Order Component should render the children with the props 1`] = `
-<span
+exports[`High Order Component wraps the children under div (default) 1`] = `
+
+
+<div
   style={
     Object {
       "animation": "UNeSH 2s ease 0s 1 normal none running",
       "backfaceVisibility": "visible",
-      "display": "inline-block",
     }
   }
 >
-  <h1>
-    Hello World!
-  </h1>
-</span>
+  Hello World!
+</div>
+`;
+
+exports[`High Order Component wraps the children under h1 element 1`] = `
+
+
+<h1
+  style={
+    Object {
+      "animation": "UNeSH 2s ease 0s 1 normal none running",
+      "backfaceVisibility": "visible",
+    }
+  }
+>
+  Hello World!
+</h1>
+`;
+
+exports[`Matches keyframes created by styled-components and default props 1`] = `
+
+
+<div
+  style={
+    Object {
+      "animation": "UNeSH 2s ease 0s 1 normal none running",
+      "backfaceVisibility": "visible",
+    }
+  }
+>
+  Hello World!
+</div>
 `;

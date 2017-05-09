@@ -1,17 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Merge component should render its children with props 1`] = `
+exports[`animates the children and render the div (default) element 1`] = `[Function]`;
+
+exports[`animates the children and render the h1 element 1`] = `[Function]`;
+
+exports[`matches the keyframes created by styled-components and default props 1`] = `
+
+
 <div
   style={
     Object {
-      "animation": "bcCCNc 2s ease-in, dVMtpd 2s ease-in",
+      "animation": "bGJZDZ 2s ease-in",
       "backfaceVisibility": "visible",
-      "display": "block",
     }
   }
 >
-  <h1>
-    Hello World
-  </h1>
+  <p>
+    Hello
+  </p>
 </div>
 `;
