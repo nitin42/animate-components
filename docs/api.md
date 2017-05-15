@@ -31,12 +31,9 @@ import { fadeIn, slideUp } from 'animate-components';
   <h1>Hello World</h1>
 </Merge>
 ```
-
-```
-name -> animation-name
-dr -> animation-duration
-tf -> animation-timing-function
-```
+* **name** - name of the animation
+* **dr** - duration of the animation
+* **tf** - timing function
 
 Read more about the `block` prop [here](faq.md)
 
@@ -48,8 +45,8 @@ To use any animation component,
 import { FadeIn } from 'animate-components';
 ```
 
-To use animation name (keyframe rules) in `<Merge />` component or for any other use cases
-> Follows camelCase convention.
+To use animation name (keyframe rules) in `<Merge />` component or for any other use case
+> camelCase convention.
 ```javascript
 import { fadeIn } from 'animate-components';
 ```
@@ -70,7 +67,7 @@ let App = () => {
 
 ## An element type to render as (string)
 
-Use prop `as` to render the component with any element (valid). Eg - 
+Use prop `as` to render the component with any element (valid). Eg -
 
 ```javascript
 <FadeIn duration="3s" as="h2">
