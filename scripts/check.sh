@@ -10,16 +10,6 @@ build() {
   fi
 }
 
-gulp() {
-  echo "Bundling css files...\n"
-  yarn gulp >&-
-  if [ $? -eq 0 ]; then
-    echo "✅  Bundled and minified all the css files.\n"
-  else
-    echo "⚠️  Errors while bundling.\n"
-  fi
-}
-
 flow() {
   echo "Typechecking the required files..."
   yarn flow >&-
@@ -28,7 +18,6 @@ flow() {
 
 main() {
   build
-  gulp
   flow
 }
 
