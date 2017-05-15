@@ -35,8 +35,6 @@ import { fadeIn, slideUp } from 'animate-components';
 * **dr** - duration of the animation
 * **tf** - timing function
 
-Read more about the `block` prop [here](faq.md)
-
 ## Importing animation components and animations
 
 To use any animation component,
