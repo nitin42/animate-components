@@ -24,31 +24,6 @@ npm install animate-components --save
 yarn add animate-components --save
 ```
 
-**bower**
-
-```
-bower install animate-components
-```
-
-or use a cdn version hosted by [unpkg](https://unpkg.com/#/)
-
-```html
-<head>
-  <link rel="stylesheet" href="https://unpkg.com/animate-components@0.7.2/css/animate-components.min.css">
-</head>
-```
-and then add class or className `animate` to the element you want to animate. 
-
-Example - 
-
-```html
-<div className="animate fadeIn">
-  <h1>Hello World</h1>
-</div>
-```
-
-> Note - The list of all the animations is given below just remember to use **camelCase** convention when adding animation name to the class (not for the **React Components**). 
-
 ## Docs
 Check the complete documentation [here](./docs).
 
@@ -137,7 +112,7 @@ Below is a list of all available animations.
 * `ExpanseLeft`
 * `ExpanseRight`
 
-## Other animation libraries
+## Other animation libraries (css)
 
 * [Animate.css](https://daneden.github.io/animate.css/)
 * [CSShake](http://elrumordelaluz.github.io/csshake/#1)
