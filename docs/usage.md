@@ -89,7 +89,7 @@ outputs
 ```
 
 ### Multistep animations
-Yes, you can also perform multistep animations with `animate-components` (new release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)). 
+Yes, you can also perform multistep animations with `animate-components` (release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)). 
 
 Example - 
 
@@ -100,18 +100,3 @@ Example -
 ```
 
 See the full api for `<Merge />` component [here](https://github.com/nitin42/animate-components/blob/master/docs/api.md).
-
-### Using CSS 
-You can also use minified copy of the css file which is available via cdn or you can manually download and specify the stylesheet in your html.
-
-Example - 
-
-```html
-<div className="animate entrance">
-  <h1>Hello World</h1>
-</div>
-```
-
-Add class `animate` to the element you want to animate.
-
-**Note** - Remember to use **camelCase** convention when adding animation name to the classes.
