@@ -24,6 +24,8 @@ npm install animate-components --save
 yarn add animate-components --save
 ```
 
+> Note - Big changes are coming 😉 . But they will be compatible with the older API levels. So you can still you use the older version of animate-components. 
+
 ## Docs
 Check the complete documentation [here](./docs).
 
