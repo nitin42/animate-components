@@ -12,7 +12,7 @@ import {
   expandUp,
   entrance,
   hatch,
-  starWars
+  starWars,
 } from './styledSpecial';
 
 import type { Components } from '../../types';
@@ -20,7 +20,7 @@ import type { Components } from '../../types';
 import HOC from './HOC';
 
 // Special animation components
-const specialObj: Components  = {
+const specialObj: Components = {
   Flash: HOC('Flash', flash),
   RollOut: HOC('RollOut', rollOut),
   RollIn: HOC('RollIn', rollIn),
@@ -32,7 +32,7 @@ const specialObj: Components  = {
   ExpandUp: HOC('ExpandUp', expandUp),
   Entrance: HOC('Entrance', entrance),
   Hatch: HOC('Hatch', hatch),
-  StarWars: HOC('StarWars', starWars)
+  StarWars: HOC('StarWars', starWars),
 };
 
 export default specialObj;
