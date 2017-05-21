@@ -34,7 +34,7 @@ const expanseDown = keyframes`
     -ms-transform: scale(1) translate(0%, 0%);
     transform: scale(1) translate(0%, 0%);
   }
-`
+`;
 
 const expanseLeft = keyframes`
   0% {
@@ -76,5 +76,5 @@ export {
   expanseUp,
   expanseDown,
   expanseLeft,
-  expanseRight
-}
+  expanseRight,
+};

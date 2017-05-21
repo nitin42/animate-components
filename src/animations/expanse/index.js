@@ -10,7 +10,7 @@ const expanseObj: Components = {
   ExpanseUp: HOC('ExpanseUp', expanseUp),
   ExpanseDown: HOC('ExpanseDown', expanseDown),
   ExpanseLeft: HOC('ExpanseLeft', expanseLeft),
-  ExpanseRight: HOC('ExpanseRight', expanseRight)
-}
+  ExpanseRight: HOC('ExpanseRight', expanseRight),
+};
 
 export default expanseObj;
