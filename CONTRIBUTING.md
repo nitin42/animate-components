@@ -37,7 +37,7 @@ Export the component like this,
 
 import { newAnimation } from './styledNewAnimation';
 
-import HOC from './HOC'; // High Order Component
+import HOC from '../../containers/HOC'; // High Order Component
 
 export default HOC('NewAnimation', newAnimation); // Creates the component
 ```
