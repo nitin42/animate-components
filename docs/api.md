@@ -79,9 +79,9 @@ outputs
 </h2>
 ```
 
-## Validates DOM Nesting
+## Validate DOM Nesting
 
-Animate Components validates the DOM nesting of the elements. For eg -
+Animate Components validate the DOM nesting of the elements. For eg -
 
 ```javascript
 <FadeIn duration="3s" as="h1">
