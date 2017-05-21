@@ -63,7 +63,7 @@ let App = () => {
 
 ## An element type to render as (string)
 
-Use prop `as` to render the component with any element (valid). Eg -
+Use prop `as` to render the component with any element. Eg -
 
 ```javascript
 <FadeIn duration="3s" as="h2">
