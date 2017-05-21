@@ -122,6 +122,7 @@ const Heading = styled.h1`
 ### Usage with Aphrodite
 ```javascript
 import { fadeIn } from 'animate-components';
+
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
@@ -132,7 +133,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-### Usage with Glamor
+### Usage with glamor
 ```javascript
 import { fadeIn } from 'animate-components';
 
