@@ -18,8 +18,8 @@
 
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
-| **one**      | object | { name: "", duration: "2s", timingFunction: "ease-in" } |
-| **two**      | object      |   { name: "", duration: "3s", timingFunction: "ease-out" } |
+| **one**      | object | { name: "", dr: "2s", tf: "ease" } |
+| **two**      | object      |   { name: "", dr: "2s", tf: "ease" } |
 | **as** | string      |   div |
 
 `<Merge />`
@@ -27,12 +27,15 @@
 ```javascript
 import { fadeIn, slideUp } from 'animate-components';
 
-<Merge one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }} two={{ name: slideUp, duration: '2s', timingFunction: 'ease-out' }}>
+<Merge one={{ name: fadeIn, dr: '2s', tf: 'ease' }} two={{ name: slideUp, dr: '2s', tf: 'ease' }}>
   <h1>Hello World</h1>
 </Merge>
 ```
+* **name** - name of the animation
+* **dr** - duration of the animation
+* **tf** - timing function
 
-## Importing animation components and keyframes
+## Importing animation components and animations
 
 To use any animation component,
 
@@ -40,13 +43,13 @@ To use any animation component,
 import { FadeIn } from 'animate-components';
 ```
 
-To use animation name (keyframes) in `<Merge />` component or for any other use case
+To use animation name (keyframe rules) in `<Merge />` component or for any other use case
 > camelCase convention.
 ```javascript
 import { fadeIn } from 'animate-components';
 ```
 
-To import `<Merge />` component,
+To use `<Merge />` component,
 
 ``` javascript
 import { Merge } from 'animate-components';
@@ -77,15 +80,3 @@ outputs
   Hello World
 </h2>
 ```
-
-## Validates DOM Nesting
-
-Animate Components validates the DOM nesting of the elements. For eg -
-
-```javascript
-<FadeIn duration="3s" as="h1">
-  <h1>Hello World!</h1>
-</FadeIn>
-```
-
-Here the children type and the one passed to prop `as` is **'h1'**. To avoid this nesting problem, the prop value for `as` will change back to `div`.
