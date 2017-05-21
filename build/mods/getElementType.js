@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getElementType=function(a,b){var c=a.defaultProps,d=c===void 0?{}:c;return b.as&&b.as!==d.as?b.as:d.as||'div'};exports.default=getElementType;

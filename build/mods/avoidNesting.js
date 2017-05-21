@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var avoidNest=function(a,b){var c=a;if(!b)return c;if('div'===c)return c;var d=b.type;return d===c&&(c='div'),c};exports.default=avoidNest;
