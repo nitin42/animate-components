@@ -1,15 +1,12 @@
 [ignore]
 .*/node_modules/.*
-.*/index.js
 .*/__tests__/.*
-.*/css/.*
-.*/animations/.*
-.*/coverage/.*
 .*/starter/.*
 
 [include]
 .*/node_modules/styled-components/.*
 .*/node_modules/prop-types/.*
+.*/src/.*
 
 [libs]
 
