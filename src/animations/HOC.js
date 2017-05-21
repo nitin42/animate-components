@@ -1,10 +1,13 @@
 // @flow
 
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 
-import { hocValidators, verifyTags, children } from "../utils/propsValidator";
+import { hocValidators, verifyTags, children } from '../utils/propsValidator';
 
-import getElementType from "../mods/getElementType";
+import getElementType from '../mods/getElementType';
+import avoidNest from '../mods/avoidNesting';
+
+import { derive } from '../utils/state';
 
 type Props = {
   duration: string,
@@ -15,8 +18,9 @@ type Props = {
   backfaceVisible: string,
   fillMode: string,
   playState: string,
+  forceInterpolate: Object,
+  children: Object,
   as: string,
-  children: React$Element<*>
 };
 
 type DefaultProps = {
@@ -35,75 +39,67 @@ type State = {
   styles: Object
 };
 
-/**
- * High Order Component
- * @param {string} componentName - Name of the animation component
- * @param {string} keyframes - Keyframes defined for the animation
- */
-let HOC = (ComposedComponent: string, AnimationName: string) => class
+// Pure Component (implicit shallow compare)
+const HOC = (ComposedComponent: string, AnimationName: string) => class
   extends PureComponent<DefaultProps, Props, State> {
-  state = {
-    styles: {}
+    static defaultProps = {
+      duration: '1s',
+      timingFunction: 'ease',
+      delay: '0s',
+      direction: 'normal',
+      iterations: '1',
+      backfaceVisible: 'visible',
+      fillMode: 'none',
+      playState: 'running',
+      as: 'div',
+    };
+
+    static propTypes = {
+      direction: hocValidators.direction,
+      fillMode: hocValidators.fillMode,
+      playState: hocValidators.playState,
+      timingFunction: hocValidators.timingFunction,
+      backfaceVisible: hocValidators.backfaceVisible,
+      as: verifyTags(ComposedComponent),
+      forceInterpolate: hocValidators.forceInterpolate,
+      children: children(ComposedComponent),
+    };
+
+    state = {
+      styles: {},
+    };
+
+    componentDidMount = () => {
+      this.store(this.props);
+    };
+
+    store = (props: Props) => {
+      // Keyframes Interpolation and Force Interpolation
+      const deriveInterpolation = derive(props, AnimationName);
+
+      this.setState({
+        styles: {
+          animation: `${deriveInterpolation}`,
+          backfaceVisibility: `${props.backfaceVisible}`,
+        },
+      });
+    };
+
+    render(): ?React$Element<any> {
+      const ElementType = getElementType(ComposedComponent, this.props);
+
+      const { styles } = this.state;
+      const { children } = this.props;
+
+      // Validates the DOM nesting of elements.
+      const NormalizedComponent = avoidNest(ElementType, children);
+
+      return React.createElement(
+        NormalizedComponent,
+        { style: styles },
+        children,
+      );
+    }
   };
-
-  static propTypes = {
-    direction: hocValidators.direction,
-    fillMode: hocValidators.fillMode,
-    playState: hocValidators.playState,
-    timingFunction: hocValidators.timingFunction,
-    backfaceVisible: hocValidators.backfaceVisible,
-    as: verifyTags(ComposedComponent),
-    children: children(ComposedComponent)
-  };
-
-  static defaultProps = {
-    duration: "1s",
-    timingFunction: "ease",
-    delay: "0s",
-    direction: "normal",
-    iterations: "1",
-    backfaceVisible: "visible",
-    fillMode: "none",
-    playState: "running",
-    as: "div"
-  };
-
-  componentDidMount = () => {
-    this.store(this.props);
-  };
-
-  store = (props: Props) => {
-    const {
-      duration,
-      timingFunction,
-      delay,
-      direction,
-      iterations,
-      backfaceVisible,
-      fillMode,
-      playState
-    } = props;
-
-    this.setState({
-      styles: {
-        animation: `${AnimationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState}`,
-        backfaceVisibility: `${backfaceVisible}`
-      }
-    });
-  };
-
-  render(): ?React$Element<any> {
-    const ElementType = getElementType(ComposedComponent, this.props);
-
-    const { styles } = this.state;
-    const { children } = this.props;
-
-    return (
-      <ElementType style={styles}>
-        {children}
-      </ElementType>
-    );
-  }
-};
 
 export default HOC;
