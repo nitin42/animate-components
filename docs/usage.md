@@ -94,7 +94,7 @@ Yes, you can also perform multistep animations with `animate-components` (releas
 Example - 
 
 ```html
-<Merge one={{ name: fadeIn, dr: '2s' }} two={{ name: slideUp, dr: '2s', tf: 'ease-in' }}>
+<Merge one={{ name: fadeIn, duration: '2s' }} two={{ name: slideUp, duration: '2s', timingFunction: 'ease-in' }}>
   <h1>Tired of hello world!</h1>
 </Merge>
 ```
