@@ -88,9 +88,4 @@ const vanishin = keyframes`
   }
 `;
 
-export {
-  puffmeout,
-  puffmein,
-  vanishin,
-  vanishout
-}
+export { puffmeout, puffmein, vanishin, vanishout };
