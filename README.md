@@ -1,7 +1,6 @@
 # Animate Components
 ![downloads](https://img.shields.io/badge/downloads-3k-brightgreen.svg)
 ![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?maxAge=2592000)
-![dependencies](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)
 ![version](https://img.shields.io/badge/animate--components-0.9.0-brightgreen.svg)
 
 <p align="center">
@@ -23,8 +22,6 @@ npm install animate-components --save
 ```
 yarn add animate-components --save
 ```
-
-> Note - Big changes are coming. But they will be compatible with the older API levels. So you can still you use the older version of animate-components 😉 
 
 ## Docs
 Check the complete documentation [here](./docs).
