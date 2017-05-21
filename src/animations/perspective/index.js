@@ -10,7 +10,7 @@ const PObj: Components = {
   PDown: HOC('PDown', perspectiveDown),
   PUp: HOC('PUp', perspectiveUp),
   PRight: HOC('PRight', perspectiveRight),
-  PLeft: HOC('PLeft', perspectiveLeft)
-}
+  PLeft: HOC('PLeft', perspectiveLeft),
+};
 
 export default PObj;

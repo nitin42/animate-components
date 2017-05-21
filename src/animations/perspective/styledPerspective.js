@@ -26,7 +26,7 @@ const perspectiveUp = keyframes`
     transform-origin: 0 0;
     transform: perspective(800px) rotateX(180deg);
   }
-`
+`;
 
 const perspectiveRight = keyframes`
   0% {
@@ -40,7 +40,7 @@ const perspectiveRight = keyframes`
     transform-origin: 100% 0;
     transform: perspective(800px) rotateY(180deg);
   }
-`
+`;
 
 const perspectiveLeft = keyframes`
   0% {
@@ -54,11 +54,11 @@ const perspectiveLeft = keyframes`
     transform-origin: 0 0;
     transform: perspective(800px) rotateY(-180deg);
   }
-`
+`;
 
 export {
   perspectiveDown,
   perspectiveUp,
   perspectiveRight,
-  perspectiveLeft
-}
+  perspectiveLeft,
+};
