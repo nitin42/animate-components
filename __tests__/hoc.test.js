@@ -4,7 +4,7 @@ import { keyframes } from "styled-components";
 import "jest-styled-components";
 import { shallow } from "enzyme";
 
-import HOC from "../src/animations/HOC";
+import HOC from "../src/containers/HOC";
 
 const sample = keyframes`
 	0% {

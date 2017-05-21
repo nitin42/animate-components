@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import "jest-styled-components";
 import { shallow } from "enzyme";
 
-import Merge from "../src/animations/merge";
+import Merge from "../src/containers/merge";
 
 import { left, bounce } from "../index";
 

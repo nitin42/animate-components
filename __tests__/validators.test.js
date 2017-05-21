@@ -1,7 +1,7 @@
 import React from "react";
 import { keyframes } from "styled-components";
 
-import Merge from "../src/animations/merge";
+import Merge from "../src/containers/merge";
 
 import getElementType from "../src/mods/getElementType";
 
@@ -14,7 +14,7 @@ import {
 
 import { left, bounce } from "../index";
 
-import HOC from "../src/animations/HOC";
+import HOC from "../src/containers/HOC";
 
 const sample = keyframes`
 	0% {
