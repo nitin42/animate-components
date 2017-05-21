@@ -52,7 +52,7 @@ If you want to create multiple animation components, create a single object and 
 
 import {newAnimation, newAnimationTwo, newAnimationThree } from './styledNewAnimation';
 
-import HOC from './HOC';
+import HOC from '../../containers/HOC';
 
 const newAnimationObj = {
   NewAnimation: HOC('NewAnimation', newAnimation),
@@ -63,7 +63,7 @@ const newAnimationObj = {
 export default newAnimationObj;
 ```
 
-## Typechecking with Flow
+### Typechecking with Flow
 Add type annotations to your components.
 
 ```javascript
@@ -86,9 +86,11 @@ export default newAnimationObj;
 
 Run `yarn flow`
 
-## ESLint
+### ESLint
 Run `yarn lint`.
 
+### All In One
+Run `yarn builder`. This will check the type, lint and build errors.
 
 ### Running the animations
 There is a small [starter kit](https://github.com/nitin42/animate-components/tree/master/starter) kit for testing the animations.
