@@ -1,6 +1,6 @@
 {
   "name": "animate-components",
-  "version": "0.9.1",
+  "version": "0.9.8",
   "description": "Elemental components for animations in React",
   "keywords": [
     "react",
@@ -13,33 +13,32 @@
     "renderer",
     "block",
     "renderer",
-    "styled"
+    "styled",
+    "custom elements"
   ],
   "main": "index.js",
   "scripts": {
     "flow": "flow --quiet",
-    "prebuild": "rm -rf dist",
-    "build": "babel src -d dist && babel main.js --out-file index.js",
+    "prebuild": "rm -rf build",
     "test": "jest --watch",
     "coverage": "jest --coverage",
-    "gulp": "./node_modules/.bin/gulp",
-    "builder": "./scripts/check.sh",
-    "start": "./node_modules/.bin/webpack-dev-server --watch --open --config ./starter/webpack.config.js"
+    "builder": "node ./scripts/check.js",
+    "start": "./node_modules/.bin/webpack-dev-server --watch --open --config ./starter/webpack.config.js",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "build": "babel src -d build"
   },
   "files": [
-    "dist",
-    "index.js",
-    "css/animate-components.min.css"
+    "build",
+    "index.js"
   ],
   "author": "Nitin Tulswani <tulswani19@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "animate-components": "0.9.6",
     "html-tags": "^1.1.1",
     "prop-types": "^15.5.8",
     "react": "^15.4.2",
-    "react-addons-shallow-compare": "^15.5.2",
     "react-dom": "^15.4.2",
-    "shallow-compare": "^1.2.1",
     "styled-components": "^1.4.4"
   },
   "jest": {
@@ -48,15 +47,23 @@
   "homepage": "https://github.com/nitin42/animate-components",
   "devDependencies": {
     "autoprefixer": "^6.7.7",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babili": "^0.0.12",
     "chalk": "^1.1.3",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",
     "enzyme": "^2.8.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-flowtype": "^2.33.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "flow-bin": "^0.42.0",
     "gulp": "^3.9.1",
@@ -74,9 +81,9 @@
     "jsdoc": "^3.4.3",
     "postcss-loader": "^1.3.3",
     "react-addons-test-utils": "^15.5.1",
+    "react-dev-utils": "^1.0.1",
     "react-hot-loader": "^1.3.1",
     "react-test-renderer": "^15.5.4",
-    "shelljs": "^0.7.7",
     "sinon": "^2.2.0",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
