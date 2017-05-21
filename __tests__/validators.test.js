@@ -12,7 +12,7 @@ import {
   children
 } from "../src/utils/propsValidator";
 
-import { left, bounce } from "../main";
+import { left, bounce } from "../index";
 
 import HOC from "../src/animations/HOC";
 

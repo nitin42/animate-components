@@ -5,7 +5,7 @@ import { shallow } from "enzyme";
 
 import Merge from "../src/animations/merge";
 
-import { left, bounce } from "../main";
+import { left, bounce } from "../index";
 
 const renderh1 = (
   <Merge one={{ name: left }} two={{ name: bounce }} as="h1">
