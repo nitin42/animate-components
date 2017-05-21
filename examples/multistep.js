@@ -6,8 +6,8 @@ let App = () => {
   return (
     <div>
       <Merge
-        one={{ name: fadeIn, dr: "3s", tf: "ease-in" }}
-        two={{ name: slideUp, dr: "2s", tf: "ease-out" }}
+        one={{ name: fadeIn, duration: "3s", timingFunction: "ease-in" }}
+        two={{ name: slideUp, duration: "2s", timingFunction: "ease-out" }}
       >
         <p>Hello world!</p>
       </Merge>
