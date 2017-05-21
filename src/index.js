@@ -84,7 +84,7 @@ import {
   expanseRight,
 } from './animations/expanse/styledExpanse';
 
-import Merge from './animations/merge';
+import Merge from './containers/merge';
 
 // Keyframes rules for <Merge />
 
