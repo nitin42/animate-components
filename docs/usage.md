@@ -117,13 +117,6 @@ const Heading = styled.h1`
     transform: ${fadeIn}
   }
 `
-let App = () => {
-  return (
-    <div>
-      <Name>Drogba</Name>
-    </div>
-  );
-}
 ```
 
 ### Usage with Aphrodite
@@ -137,16 +130,6 @@ const styles = StyleSheet.create({
     animationDuration: '1s'
   }
 });
-
-let App = () => {
-  return (
-    <div>
-      <h1 className={css(styles.Fade)}>
-        Hello World
-      </h1>
-    </div>
-  );
-};
 ```
 
 ### Usage with Glamor
@@ -165,12 +148,4 @@ let rule = css({
     transform: fadeIn
   }
 });
-
-let App = () => {
-  return (
-    <div>
-      <h1 {...rule}>Hello</h1>
-    </div>
-  );
-};
 ```
