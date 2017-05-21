@@ -1,20 +1,23 @@
 // @flow
 
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 
-import { validators, verifyTags, children } from "../utils/propsValidator";
+import getElementType from '../mods/getElementType';
+import avoidNest from '../mods/avoidNesting';
 
-import getElementType from "../mods/getElementType";
+import { validators, verifyTags, children } from '../utils/propsValidator';
+
+import { returnAnimation } from '../utils/state';
+
+type State = {
+  styles: Object
+};
 
 type Props = {
   one: Object,
   two: Object,
+  children: Object,
   as: string,
-  children: React$Element<*>
-};
-
-type State = {
-  styles: Object
 };
 
 type DefaultProps = {
@@ -23,34 +26,29 @@ type DefaultProps = {
   as: string
 };
 
-/**
- * Merge Component
- */
+// Pure Component (implicit shallow compare)
 class Merge extends PureComponent<DefaultProps, Props, State> {
-  state = {
-    styles: {}
-  };
+  static displayName = 'Merge';
 
   static defaultProps = {
     one: {},
     two: {},
-    as: "div"
+    as: 'div',
   };
 
   static propTypes = {
     one: validators.prop,
     two: validators.prop,
-    as: verifyTags("Merge"),
-    children: children("Merge")
+    as: verifyTags('Merge'),
+    children: children('Merge'),
+  };
+
+  state = {
+    styles: {},
   };
 
   componentDidMount = () => {
     this.store(this.props);
-  };
-
-  // Also returns default props (will be moved)
-  returnAnimation = (prop: Props) => {
-    return `${prop["name"] || ""} ${prop["dr"] || "2s"} ${prop["tf"] || "ease-in"}`;
   };
 
   store = (props: Props) => {
@@ -58,11 +56,11 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
 
     this.setState({
       styles: {
-        animation: `${(this.returnAnimation(one), this.returnAnimation(two))}`,
+        animation: `${(returnAnimation(one), returnAnimation(two))}`,
 
         // For some animations like rotate and flip.
-        backfaceVisibility: "visible"
-      }
+        backfaceVisibility: 'visible',
+      },
     });
   };
 
@@ -72,10 +70,13 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
     const { styles } = this.state;
     const { children } = this.props;
 
-    return (
-      <ElementType style={styles}>
-        {children}
-      </ElementType>
+    // Validates the DOM nesting of elements.
+    const NormalizedComponent = avoidNest(ElementType, children);
+
+    return React.createElement(
+      NormalizedComponent,
+      { style: styles },
+      children,
     );
   }
 }
