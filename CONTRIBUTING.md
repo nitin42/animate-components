@@ -71,7 +71,7 @@ Add type annotations to your components.
 
 import {newAnimation, newAnimationTwo, newAnimationThree } from './styledNewAnimation';
 
-import HOC from './HOC';
+import HOC from '../../containers/HOC';
 
 import type { Components } from '../../../types';
 
