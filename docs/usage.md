@@ -100,3 +100,77 @@ Example -
 ```
 
 See the full api for `<Merge />` component [here](https://github.com/nitin42/animate-components/blob/master/docs/api.md).
+
+### Usage with styled-components
+```javascript
+import { fadeIn } from 'animate-components';
+
+import styled from 'styled-components';
+
+const Heading = styled.h1`
+  font-size: 1.2em;
+  margin-left: 10px;
+  color: yellow;
+  transition: color 3s;
+  &:hover {
+    color: red;
+    transform: ${fadeIn}
+  }
+`
+let App = () => {
+  return (
+    <div>
+      <Name>Drogba</Name>
+    </div>
+  );
+}
+```
+
+### Usage with Aphrodite
+```javascript
+import { fadeIn } from 'animate-components';
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+  Fade: {
+    animationName: fadeIn,
+    animationDuration: '1s'
+  }
+});
+
+let App = () => {
+  return (
+    <div>
+      <h1 className={css(styles.Fade)}>
+        Hello World
+      </h1>
+    </div>
+  );
+};
+```
+
+### Usage with Glamor
+```javascript
+import { fadeIn } from 'animate-components';
+
+import { css } from 'glamor';
+
+let rule = css({
+  fontSize: '1.2em',
+  marginLeft: '10px',
+  color: 'yellow',
+  transition: 'color 3s',
+  ':hover': {
+    color: 'red',
+    transform: fadeIn
+  }
+});
+
+let App = () => {
+  return (
+    <div>
+      <h1 {...rule}>Hello</h1>
+    </div>
+  );
+};
+```
