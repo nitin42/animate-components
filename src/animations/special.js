@@ -17,7 +17,7 @@ import {
 
 import type { Components } from '../../types';
 
-import HOC from './HOC';
+import HOC from '../containers/HOC';
 
 // Special animation components
 const specialObj: Components = {

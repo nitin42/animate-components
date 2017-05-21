@@ -2,7 +2,7 @@
 
 import { expanseUp, expanseDown, expanseLeft, expanseRight } from './styledExpanse';
 
-import HOC from '../HOC';
+import HOC from '../../containers/HOC';
 
 import type { Components } from '../../../types';
 

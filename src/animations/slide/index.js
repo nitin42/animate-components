@@ -2,7 +2,7 @@
 
 import { slideUp, slideDown, slideLeft, slideRight } from './styledSlide';
 
-import HOC from '../HOC';
+import HOC from '../../containers/HOC';
 
 import type { Components } from '../../../types';
 

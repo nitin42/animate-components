@@ -2,7 +2,7 @@
 
 import { puffmeout, puffmein, vanishout, vanishin } from './styledBingo';
 
-import HOC from '../HOC';
+import HOC from '../../containers/HOC';
 
 import type { Components } from '../../../types';
 

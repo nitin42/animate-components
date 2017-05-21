@@ -8,7 +8,7 @@ import {
   rotateUpLeft,
 } from './styledRotate';
 
-import HOC from '../HOC';
+import HOC from '../../containers/HOC';
 
 import type { Components } from '../../../types';
 
