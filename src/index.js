@@ -1,94 +1,38 @@
 // Animation Component.
 import bounceObj from './animations/bounce/index';
-import {
-  bounce,
-  bounceDown,
-  bounceLeft,
-  bounceRight,
-  bounceUp,
-} from './animations/bounce/styledBounce';
+import Bouncing from './animations/bounce/styledBounce';
 
 import fadeObj from './animations/fade/index';
-import {
-  fadeIn,
-  left,
-  down,
-  downBig,
-  leftBig,
-  rightBig,
-  right,
-  up,
-  upBig,
-} from './animations/fade/styledFade';
+import Fade from './animations/fade/styledFade';
 
 import flipObj from './animations/flip/index';
-import { flip, flipX, flipY } from './animations/flip/styledFlip';
+import Flippy from './animations/flip/styledFlip';
 
 import lightObj from './animations/lightspeed/index';
-import { lightIn, lightOut } from './animations/lightspeed/styledLight';
+import Light from './animations/lightspeed/styledLight';
 
 import rotateObj from './animations/rotate/index';
-import {
-  rotateIn,
-  rotateLeft,
-  rotateRight,
-  rotateUpLeft,
-  rotateUpRight,
-} from './animations/rotate/styledRotate';
+import Rotate from './animations/rotate/styledRotate';
 
 import specialObj from './animations/special';
-import {
-  flash,
-  rollOut,
-  rollIn,
-  rubber,
-  swing,
-  zoom,
-  hinge,
-  pulse,
-  expandUp,
-  entrance,
-  hatch,
-  starWars,
-} from './animations/styledSpecial';
+import Special from './animations/styledSpecial';
 
 import slideObj from './animations/slide/index';
-import {
-  slideDown,
-  slideLeft,
-  slideRight,
-  slideUp,
-} from './animations/slide/styledSlide';
+import Slide from './animations/slide/styledSlide';
 
 import PObj from './animations/perspective/index';
-import {
-  perspectiveDown,
-  perspectiveUp,
-  perspectiveLeft,
-  perspectiveRight,
-} from './animations/perspective/styledPerspective';
+import Perspective from './animations/perspective/styledPerspective';
 
 import bingoObj from './animations/Bingo/index';
-import {
-  puffmein,
-  puffmeout,
-  vanishout,
-  vanishin,
-} from './animations/Bingo/styledBingo';
+import Bingo from './animations/Bingo/styledBingo';
 
 import expanseObj from './animations/expanse/index';
-import {
-  expanseDown,
-  expanseUp,
-  expanseLeft,
-  expanseRight,
-} from './animations/expanse/styledExpanse';
+import Expanse from './animations/expanse/styledExpanse';
 
 import Merge from './containers/merge';
 
-// Keyframes rules for <Merge />
-
 const { Bounce, BounceUp, BounceRight, BounceLeft, BounceDown } = bounceObj;
+const { bounce, bounceDown, bounceUp, bounceLeft, bounceRight } = Bouncing;
 
 const {
   FadeIn,
@@ -100,10 +44,23 @@ const {
   FadeInRightBig,
   FadeInLeftBig,
 } = fadeObj;
+const {
+  fadeIn,
+  left,
+  leftBig,
+  right,
+  rightBig,
+  down,
+  downBig,
+  up,
+  upBig,
+} = Fade;
 
 const { Flip, FlipX, FlipY } = flipObj;
+const { flip, flipX, flipY } = Flippy;
 
 const { LightOut, LightIn } = lightObj;
+const { lightIn, lightOut } = Light;
 
 const {
   RotateIn,
@@ -112,6 +69,13 @@ const {
   RotateUpRight,
   RotateUpLeft,
 } = rotateObj;
+const {
+  rotateIn,
+  rotateRight,
+  rotateLeft,
+  rotateUpLeft,
+  rotateUpRight,
+} = Rotate;
 
 const {
   Flash,
@@ -127,14 +91,37 @@ const {
   Hatch,
   StarWars,
 } = specialObj;
+const {
+  flash,
+  rollOut,
+  rollIn,
+  rubber,
+  swing,
+  zoom,
+  hinge,
+  pulse,
+  expandUp,
+  entrance,
+  hatch,
+  starWars,
+} = Special;
 
 const { SlideUp, SlideRight, SlideLeft, SlideDown } = slideObj;
+const { slideUp, slideDown, slideLeft, slideRight } = Slide;
 
 const { PDown, PUp, PRight, PLeft } = PObj;
+const {
+  perspectiveDown,
+  perspectiveUp,
+  perspectiveRight,
+  perspectiveLeft,
+} = Perspective;
 
 const { PuffOut, PuffIn, VanishOut, VanishIn } = bingoObj;
+const { puffmeout, puffmein, vanishin, vanishout } = Bingo;
 
 const { ExpanseUp, ExpanseRight, ExpanseDown, ExpanseLeft } = expanseObj;
+const { expanseUp, expanseRight, expanseDown, expanseLeft } = Expanse;
 
 /** Animation components */
 export {
