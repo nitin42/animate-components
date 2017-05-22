@@ -7,7 +7,7 @@ import { hocValidators, verifyTags, children } from '../utils/propsValidator';
 import getElementType from '../mods/getElementType';
 import avoidNest from '../mods/avoidNesting';
 
-import { derive } from '../utils/state';
+import derive from '../utils/state';
 
 type Props = {
   duration: string,

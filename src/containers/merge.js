@@ -7,8 +7,6 @@ import avoidNest from '../mods/avoidNesting';
 
 import { validators, verifyTags, children } from '../utils/propsValidator';
 
-import { returnAnimation } from '../utils/state';
-
 type State = {
   styles: Object
 };
@@ -27,7 +25,7 @@ type DefaultProps = {
 };
 
 // Pure Component (implicit shallow compare)
-class Merge extends PureComponent<DefaultProps, Props, State> {
+export default class Merge extends PureComponent<DefaultProps, Props, State> {
   static displayName = 'Merge';
 
   static defaultProps = {
@@ -56,7 +54,7 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
 
     this.setState({
       styles: {
-        animation: `${(returnAnimation(one), returnAnimation(two))}`,
+        animation: `${one.name || ''} ${one.duration || '1s'} ${one.timingFunction || 'ease'}, ${two.name || ''} ${two.duration || '1s'} ${two.timingFunction || 'ease'}`,
 
         // For some animations like rotate and flip.
         backfaceVisibility: 'visible',
@@ -80,5 +78,3 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
     );
   }
 }
-
-export default Merge;
