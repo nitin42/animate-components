@@ -92,7 +92,7 @@ Animate Components validate the DOM nesting of the elements. For eg -
 Here the children type and the one passed to prop `as` is **'h1'**. To avoid this nesting problem, the prop value for `as` will change back to `div`.
 
 ## Force interpolation of animations
-Pass **steps(steps, start|end)** using forceInterpolate prop. For example - 
+Pass **steps(steps, start|end)** using `forceInterpolate` prop. For example - 
 
 ```javascript
 <FadeIn duration="3s" forceInterpolate={{ steps: 4, direction: "start" }} as="h1">
