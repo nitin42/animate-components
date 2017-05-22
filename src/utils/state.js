@@ -20,6 +20,4 @@ const derive = (props, AnimationName) => {
   return `${AnimationName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState}`;
 };
 
-const returnAnimation = prop => `${prop.name || ''} ${prop.duration || '2s'} ${prop.timingFunction || 'ease-in'}`;
-
-export { derive, returnAnimation };
+export default derive;
