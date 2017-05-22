@@ -23,6 +23,16 @@ npm install animate-components --save
 yarn add animate-components --save
 ```
 
+## Features
+
+* Component based.
+* Supports all the animation properties
+* Use with styled-components, Aphrodite and glamor
+* Create a new animation using `<Merge />`
+* Isolated keyframes
+* Validate DOM nesting
+* Element type rendering of components using `as` prop.
+
 ## Docs
 Check the complete documentation [here](./docs).
 
