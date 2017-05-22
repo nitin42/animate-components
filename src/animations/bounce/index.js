@@ -1,12 +1,6 @@
 // @flow
 
-import {
-  bounce,
-  bounceDown,
-  bounceUp,
-  bounceLeft,
-  bounceRight,
-} from './styledBounce';
+import Bouncing from './styledBounce';
 
 import HOC from '../../containers/HOC';
 
@@ -14,11 +8,11 @@ import type { Components } from '../../../types';
 
 // Bounce animation components
 const bounceObj: Components = {
-  Bounce: HOC('Bounce', bounce),
-  BounceDown: HOC('BounceDown', bounceDown),
-  BounceUp: HOC('BounceUp', bounceUp),
-  BounceLeft: HOC('BounceLeft', bounceLeft),
-  BounceRight: HOC('BounceRight', bounceRight),
+  Bounce: HOC('Bounce', Bouncing.bounce),
+  BounceDown: HOC('BounceDown', Bouncing.bounceDown),
+  BounceUp: HOC('BounceUp', Bouncing.bounceUp),
+  BounceLeft: HOC('BounceLeft', Bouncing.bounceLeft),
+  BounceRight: HOC('BounceRight', Bouncing.bounceRight),
 };
 
 export default bounceObj;

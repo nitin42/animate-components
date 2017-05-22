@@ -1,12 +1,6 @@
 // @flow
 
-import {
-  rotateIn,
-  rotateLeft,
-  rotateRight,
-  rotateUpRight,
-  rotateUpLeft,
-} from './styledRotate';
+import Rotate from './styledRotate';
 
 import HOC from '../../containers/HOC';
 
@@ -14,11 +8,11 @@ import type { Components } from '../../../types';
 
 // Rotating animation components
 const rotateObj: Components = {
-  RotateIn: HOC('RotateIn', rotateIn),
-  RotateLeft: HOC('RotateLeft', rotateLeft),
-  RotateRight: HOC('RotateRight', rotateRight),
-  RotateUpLeft: HOC('RotateUpLeft', rotateUpLeft),
-  RotateUpRight: HOC('RotateUpRight', rotateUpRight),
+  RotateIn: HOC('RotateIn', Rotate.rotateIn),
+  RotateLeft: HOC('RotateLeft', Rotate.rotateLeft),
+  RotateRight: HOC('RotateRight', Rotate.rotateRight),
+  RotateUpLeft: HOC('RotateUpLeft', Rotate.rotateUpLeft),
+  RotateUpRight: HOC('RotateUpRight', Rotate.rotateUpRight),
 };
 
 export default rotateObj;

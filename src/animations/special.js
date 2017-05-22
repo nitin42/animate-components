@@ -1,19 +1,6 @@
 // @flow
 
-import {
-  flash,
-  rollOut,
-  rollIn,
-  rubber,
-  swing,
-  zoom,
-  hinge,
-  pulse,
-  expandUp,
-  entrance,
-  hatch,
-  starWars,
-} from './styledSpecial';
+import Special from './styledSpecial';
 
 import type { Components } from '../../types';
 
@@ -21,18 +8,18 @@ import HOC from '../containers/HOC';
 
 // Special animation components
 const specialObj: Components = {
-  Flash: HOC('Flash', flash),
-  RollOut: HOC('RollOut', rollOut),
-  RollIn: HOC('RollIn', rollIn),
-  Rubber: HOC('Rubber', rubber),
-  Swing: HOC('Swing', swing),
-  Zoom: HOC('Zoom', zoom),
-  Hinge: HOC('Hinge', hinge),
-  Pulse: HOC('Pulse', pulse),
-  ExpandUp: HOC('ExpandUp', expandUp),
-  Entrance: HOC('Entrance', entrance),
-  Hatch: HOC('Hatch', hatch),
-  StarWars: HOC('StarWars', starWars),
+  Flash: HOC('Flash', Special.flash),
+  RollOut: HOC('RollOut', Special.rollOut),
+  RollIn: HOC('RollIn', Special.rollIn),
+  Rubber: HOC('Rubber', Special.rubber),
+  Swing: HOC('Swing', Special.swing),
+  Zoom: HOC('Zoom', Special.zoom),
+  Hinge: HOC('Hinge', Special.hinge),
+  Pulse: HOC('Pulse', Special.pulse),
+  ExpandUp: HOC('ExpandUp', Special.expandUp),
+  Entrance: HOC('Entrance', Special.entrance),
+  Hatch: HOC('Hatch', Special.hatch),
+  StarWars: HOC('StarWars', Special.starWars),
 };
 
 export default specialObj;
