@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const { join, resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const VENDOR = ["react", "react-dom", "styled-components", "html-tags", "prop-types", "react-addons-shallow-compare"];
+const VENDOR = ["react", "react-dom", "styled-components", "html-tags", "prop-types"];
 
 module.exports = {
   entry: {
