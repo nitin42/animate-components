@@ -12,30 +12,28 @@
 | **backfaceVisible** | string      |    visible |
 | **fillMode** | string      |    none |
 | **playState** | string      |    running |
+| **forceInterpolate** | object      |    {} |
 | **as** | string      | div   |
 
 #### Props for `<Merge />` component
 
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
-| **one**      | object | { name: "", dr: "2s", tf: "ease" } |
-| **two**      | object      |   { name: "", dr: "2s", tf: "ease" } |
+| **one**      | object | { name: "", duration: "2s", timingFunction: "ease-in" } |
+| **two**      | object      |   { name: "", duration: "3s", timingFunction: "ease-out" } |
 | **as** | string      |   div |
 
-`<Merge />`
+`<Merge />` (Experimenting)
 
 ```javascript
 import { fadeIn, slideUp } from 'animate-components';
 
-<Merge one={{ name: fadeIn, dr: '2s', tf: 'ease' }} two={{ name: slideUp, dr: '2s', tf: 'ease' }}>
+<Merge one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }} two={{ name: slideUp, duration: '2s', timingFunction: 'ease-out' }}>
   <h1>Hello World</h1>
 </Merge>
 ```
-* **name** - name of the animation
-* **dr** - duration of the animation
-* **tf** - timing function
 
-## Importing animation components and animations
+## Importing animation components and keyframes
 
 To use any animation component,
 
@@ -43,13 +41,13 @@ To use any animation component,
 import { FadeIn } from 'animate-components';
 ```
 
-To use animation name (keyframe rules) in `<Merge />` component or for any other use case
+To use animation name (keyframes) in `<Merge />` component or for any other use case
 > camelCase convention.
 ```javascript
 import { fadeIn } from 'animate-components';
 ```
 
-To use `<Merge />` component,
+To import `<Merge />` component,
 
 ``` javascript
 import { Merge } from 'animate-components';
@@ -65,7 +63,7 @@ let App = () => {
 
 ## An element type to render as (string)
 
-Use prop `as` to render the component with any element (valid). Eg -
+Use prop `as` to render the component with any element. Eg -
 
 ```javascript
 <FadeIn duration="3s" as="h2">
@@ -79,4 +77,25 @@ outputs
 <h2 style={...} other={...}>
   Hello World
 </h2>
+```
+
+## Validate DOM Nesting
+
+Animate Components validate the DOM nesting of the elements. For eg -
+
+```javascript
+<FadeIn duration="3s" as="h1">
+  <h1>Hello World!</h1>
+</FadeIn>
+```
+
+Here the children type and the one passed to prop `as` is **'h1'**. To avoid this nesting problem, the prop value for `as` will change back to `div`.
+
+## Force interpolation of animations
+Pass **steps(steps, start|end)** using forceInterpolate prop. For example - 
+
+```javascript
+<FadeIn duration="3s" forceInterpolate={{ steps: 4, direction: "start" }} as="h1">
+  Hello World! 
+</FadeIn>
 ```

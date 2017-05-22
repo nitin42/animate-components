@@ -1,8 +1,7 @@
 # Animate Components
 ![downloads](https://img.shields.io/badge/downloads-3k-brightgreen.svg)
 ![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?maxAge=2592000)
-![dependencies](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)
-![version](https://img.shields.io/badge/animate--components-0.9.0-brightgreen.svg)
+![version](https://img.shields.io/badge/animate--components-1.0.0-brightgreen.svg)
 
 <p align="center">
 	<img src="https://i.gyazo.com/64801677fb24b4492eb0b90870ead297.gif" />
@@ -24,7 +23,15 @@ npm install animate-components --save
 yarn add animate-components --save
 ```
 
-> Note - Big changes are coming 😉 . But they will be compatible with the older API levels. So you can still you use the older version of animate-components. 
+## Features
+
+* Component based.
+* Supports all the animation properties
+* Use with styled-components, Aphrodite and glamor
+* Create a new animation using `<Merge />` (Experimenting)
+* Isolated keyframes
+* Validate DOM nesting
+* Element type rendering of components using `as` prop.
 
 ## Docs
 Check the complete documentation [here](./docs).

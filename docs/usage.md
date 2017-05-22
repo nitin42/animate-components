@@ -94,9 +94,59 @@ Yes, you can also perform multistep animations with `animate-components` (releas
 Example - 
 
 ```html
-<Merge one={{ name: fadeIn, dr: '2s' }} two={{ name: slideUp, dr: '2s', tf: 'ease-in' }}>
+<Merge one={{ name: fadeIn, duration: '2s' }} two={{ name: slideUp, duration: '2s', timingFunction: 'ease-in' }}>
   <h1>Tired of hello world!</h1>
 </Merge>
 ```
 
 See the full api for `<Merge />` component [here](https://github.com/nitin42/animate-components/blob/master/docs/api.md).
+
+### Usage with styled-components
+```javascript
+import { fadeIn } from 'animate-components';
+
+import styled from 'styled-components';
+
+const Heading = styled.h1`
+  font-size: 1.2em;
+  margin-left: 10px;
+  color: yellow;
+  transition: color 3s;
+  &:hover {
+    color: red;
+    transform: ${fadeIn}
+  }
+`
+```
+
+### Usage with Aphrodite
+```javascript
+import { fadeIn } from 'animate-components';
+
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+  Fade: {
+    animationName: fadeIn,
+    animationDuration: '1s'
+  }
+});
+```
+
+### Usage with glamor
+```javascript
+import { fadeIn } from 'animate-components';
+
+import { css } from 'glamor';
+
+let rule = css({
+  fontSize: '1.2em',
+  marginLeft: '10px',
+  color: 'yellow',
+  transition: 'color 3s',
+  ':hover': {
+    color: 'red',
+    transform: fadeIn
+  }
+});
+```
