@@ -33,6 +33,11 @@ yarn add animate-components --save
 * Validate DOM nesting
 * Element type rendering of components using `as` prop.
 
+## Caveats
+
+* No cdn yet
+* Build size (large but no so much, ~60KB)
+
 ## Docs
 Check the complete documentation [here](./docs).
 
