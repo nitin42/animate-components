@@ -24,6 +24,22 @@ type DefaultProps = {
   as: string
 };
 
+function setAttr(prop) {
+  return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
+}
+
+function update(state, props) {
+  const { one, two } = props;
+  const properties = `${setAttr(one)}, ${setAttr(two)}`;
+
+  return {
+    styles: {
+      animation: properties,
+      backfaceVisibility: 'visible',
+    },
+  };
+}
+
 // Pure Component (implicit shallow compare)
 export default class Merge extends PureComponent<DefaultProps, Props, State> {
   static displayName = 'Merge';
@@ -46,20 +62,7 @@ export default class Merge extends PureComponent<DefaultProps, Props, State> {
   };
 
   componentDidMount = () => {
-    this.store(this.props);
-  };
-
-  store = (props: Props) => {
-    const { one, two } = props;
-
-    this.setState({
-      styles: {
-        animation: `${one.name || ''} ${one.duration || '1s'} ${one.timingFunction || 'ease'}, ${two.name || ''} ${two.duration || '1s'} ${two.timingFunction || 'ease'}`,
-
-        // For some animations like rotate and flip.
-        backfaceVisibility: 'visible',
-      },
-    });
+    this.setState(update);
   };
 
   render(): ?React$Element<any> {
