@@ -36,7 +36,7 @@ yarn add animate-components --save
 ## Caveats
 
 * No cdn yet
-* Build size (large but no so much, ~60KB)
+* Build size (~60KB)
 
 ## Docs
 Check the complete documentation [here](./docs).
