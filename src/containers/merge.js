@@ -7,6 +7,22 @@ import avoidNest from '../mods/avoidNesting';
 
 import { validators, verifyTags, children } from '../utils/propsValidator';
 
+function setAttr(prop) {
+  return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
+}
+
+function update(state, props) {
+  const { one, two } = props;
+  const properties = `${setAttr(one)}, ${setAttr(two)}`;
+
+  return {
+    styles: {
+      animation: properties,
+      backfaceVisibility: 'visible',
+    },
+  };
+}
+
 type State = {
   styles: Object
 };
@@ -23,22 +39,6 @@ type DefaultProps = {
   two: Object,
   as: string
 };
-
-function setAttr(prop) {
-  return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
-}
-
-function update(state, props) {
-  const { one, two } = props;
-  const properties = `${setAttr(one)}, ${setAttr(two)}`;
-
-  return {
-    styles: {
-      animation: properties,
-      backfaceVisibility: 'visible',
-    },
-  };
-}
 
 // Pure Component (implicit shallow compare)
 export default class Merge extends PureComponent<DefaultProps, Props, State> {
