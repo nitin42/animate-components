@@ -23,7 +23,7 @@
 | **two**      | object      |   { name: "", duration: "3s", timingFunction: "ease-out" } |
 | **as** | string      |   div |
 
-`<Merge />` (Experimenting)
+`<Merge />` 
 
 ```javascript
 import { fadeIn, slideUp } from 'animate-components';
