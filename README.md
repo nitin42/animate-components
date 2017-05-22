@@ -28,7 +28,7 @@ yarn add animate-components --save
 * Component based.
 * Supports all the animation properties
 * Use with styled-components, Aphrodite and glamor
-* Create a new animation using `<Merge />`
+* Create a new animation using `<Merge />` (Experimenting)
 * Isolated keyframes
 * Validate DOM nesting
 * Element type rendering of components using `as` prop.
