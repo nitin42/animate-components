@@ -7,7 +7,7 @@ let App = () => {
     <div>
       <Merge
         one={{ name: fadeIn, duration: '3s', timingFunction: 'ease-in' }}
-        two={{ name: slideDown, duration: '1s', timingFunction: 'ease-out' }}
+        two={{ name: slideDown, timingFunction: 'ease-out' }}
         as="h1"
       >
         hello World
