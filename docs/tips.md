@@ -10,7 +10,7 @@ Say you want to animate some elements but you don't want all the elements to sta
 
 Merge two animations using `<Merge />` to create one.
 
-```javascript
+```html
 <Merge
   one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }}
   two={{ name: slideUp, duration: '3s', timingFunction: 'ease-out' }}
@@ -24,7 +24,7 @@ Merge two animations using `<Merge />` to create one.
 
 Pass steps(step, start|end) to animation component using prop `forceInterpolate`.
 
-```javascript
+```html
 <FadeIn forceInterpolate={{ steps: '4', direction: 'start' }}>
   Hello
 </FadeIn>
@@ -34,7 +34,7 @@ Pass steps(step, start|end) to animation component using prop `forceInterpolate`
 
 Use prop `as` to render as an element type.
 
-```javascript
+```html
 <FadeIn as="h2">
   Hello
 </FadeIn>
