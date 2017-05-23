@@ -15,5 +15,5 @@ This is the `animate-components` documentation.
 * [API reference](./api.md)
 * [Performance](./performance.md)
 * [Examples](./example.md)
-* [tips](./tips.md)
+* [Tips](./tips.md)
 * [Contributing](../CONTRIBUTING.md)
