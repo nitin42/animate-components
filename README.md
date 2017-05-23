@@ -36,6 +36,7 @@ yarn add animate-components --save
 ## Caveats
 
 * Build size (~60KB)
+* problem in overriding props for an element (currently working on this).
 
 ## Docs
 Check the complete documentation [here](./docs).
