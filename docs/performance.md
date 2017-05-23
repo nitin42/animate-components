@@ -1,6 +1,6 @@
 # Performance
 
-Animating most of the properties is a performance concern. But Animate Components uses some combination that can be animated safely like - 
+Animating most of the properties is a performance concern. But Animate Components uses some combinations that can be animated safely like - 
 
 * **translate()**
 
