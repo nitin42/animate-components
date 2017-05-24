@@ -1,4 +1,4 @@
 {
-	"presets": ["babili", "es2015", "react"],
+	"presets": ["es2015", "react", "babili"],
 	"plugins": ["transform-class-properties"]
 }
