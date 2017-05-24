@@ -1,34 +1,19 @@
 import React from "react";
 
-import { fadeIn, slideDown, Merge, FadeIn, PuffIn, Bounce,  } from "../index";
+import { fadeIn, slideDown, Merge, FadeIn, PuffIn, Bounce } from "../index";
 
-let App = () => {
-  return (
-    <div>
-      <Merge
-        one={{ name: fadeIn, duration: '3s', timingFunction: 'ease-in' }}
-        two={{ name: slideDown, timingFunction: 'ease-out' }}
-        as="h1"
-      >
-        hello World
-      </Merge>
-      <br/>
-      <FadeIn
-        duration="3s"
-        forceInterpolate={{ steps: 4, direction: 'start'}}
-        as="h1"
-      >
-        Hello World
-      </FadeIn>
-      <br/>
-      <FadeIn
-        duration="5s"
-        as="h3"
-      >
-        Bye Bye
-      </FadeIn>
-    </div>
-  );
-};
+import "./index.css";
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <FadeIn className="main" duration="4s" as="h1" style={{ color: 'blue' }}>
+          Hello World!  
+        </FadeIn>
+      </div>
+    );
+  }
+}
 
 export default App;
