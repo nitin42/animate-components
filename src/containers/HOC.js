@@ -1,8 +1,9 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import { attributes, shouldNotBeUndefined } from 'react-attributes';
 
-import { hocValidators, verifyTags, children } from '../utils/propsValidator';
+import { hocValidators, verifyTags } from '../utils/propsValidator';
 
 import getElementType from '../mods/getElementType';
 import avoidNest from '../mods/avoidNesting';
@@ -62,7 +63,6 @@ const HOC = (ComposedComponent: string, AnimationName: string) => class
       backfaceVisible: hocValidators.backfaceVisible,
       as: verifyTags(ComposedComponent),
       forceInterpolate: hocValidators.forceInterpolate,
-      children: children(ComposedComponent),
     };
 
     state = {
@@ -78,10 +78,10 @@ const HOC = (ComposedComponent: string, AnimationName: string) => class
       const deriveInterpolation = derive(props, AnimationName);
 
       this.setState({
-        styles: {
+        styles: Object.assign({
           animation: `${deriveInterpolation}`,
           backfaceVisibility: `${props.backfaceVisible}`,
-        },
+        }, this.props.style || {}),
       });
     };
 
@@ -94,10 +94,13 @@ const HOC = (ComposedComponent: string, AnimationName: string) => class
       // Validates the DOM nesting of elements.
       const NormalizedComponent = avoidNest(ElementType, children);
 
-      return React.createElement(
-        NormalizedComponent,
-        { style: styles },
-        children,
+      // Add rest of the props except component props(html-elements)
+      const reactHtmlAttributes = attributes(this.props);
+
+      return (
+        <NormalizedComponent style={styles} {...shouldNotBeUndefined(reactHtmlAttributes)}>
+          {this.props.children}
+        </NormalizedComponent>
       );
     }
   };
