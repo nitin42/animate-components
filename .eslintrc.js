@@ -14,6 +14,8 @@ module.exports = {
       "consistent-return": 0,
       "react/no-unused-prop-types": 0,
       "react/require-default-props": 0,
-      "no-shadow": 0
+      "no-shadow": 0,
+      "react/prop-types": 0,
+      "react/jsx-filename-extension": 0
     }
 };
