@@ -25,18 +25,18 @@ yarn add animate-components --save
 
 ## Features
 
-* Component based.
+* Component based
 * Supports all the animation properties
 * Use with styled-components, Aphrodite and glamor
 * Create a new animation using `<Merge />`
 * Isolated keyframes
 * Validate DOM nesting
-* Element type rendering of components using `as` prop.
+* Element type rendering of components using `as` prop
+* Add all the html attributes supported by React along with component props.
 
 ## Caveats
 
 * Build size (~60KB)
-* problem in overriding props for an element (currently working on this).
 
 ## Docs
 Check the complete documentation [here](./docs).
