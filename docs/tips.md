@@ -1,0 +1,41 @@
+# Some tips
+
+### Negative Animation Delay
+
+Say you want to animate some elements but you don't want all the elements to start at the exact same position. Use negative delay for those elements.
+
+`animation-delay: -2s`
+
+### Merge two animations
+
+Merge two animations using `<Merge />` to create one.
+
+```html
+<Merge
+  one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }}
+  two={{ name: slideUp, duration: '3s', timingFunction: 'ease-out' }}
+  as="h1
+>
+  Hello world!
+</Merge>
+```
+
+### Force interpolations
+
+Pass steps(step, start|end) to animation component using prop `forceInterpolate`.
+
+```html
+<FadeIn forceInterpolate={{ steps: '4', direction: 'start' }}>
+  Hello
+</FadeIn>
+```
+
+### Render as an element type
+
+Use prop `as` to render as an element type.
+
+```html
+<FadeIn as="h2">
+  Hello
+</FadeIn>
+```
