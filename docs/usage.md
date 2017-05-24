@@ -1,8 +1,22 @@
 # Usage
+Let's take an example - 
 
-<p align="center">
-	<img src="https://gyazo.com/9fc95209d4a04c636b7af98711cd0df3.png" />
-</p>
+```javascript
+import React, { Component } from 'react';
+
+import { Entrance } from 'animate-components';
+
+class App extends Component {
+  render () {
+    return (
+      <Entrance duration='4s' timingFunction='ease-in' as='h1'>
+        Hello World
+      </Entrance>
+    )
+  }
+}
+
+```
 
 The animation component can takes these props:
 
@@ -87,6 +101,8 @@ outputs
   Hello World
 </h1>
 ```
+
+> Note - You can also pass all the [html attributes](https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes) supported by React to the animation component along with the component props. Check [this](https://github.com/nitin42/animate-components/blob/master/examples/App.js) example.
 
 ### Multistep animations
 Yes, you can also perform multistep animations with `animate-components` (release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)). 
