@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import { attributes, shouldNotBeUndefined } from 'react-attributes';
 
 import getElementType from '../mods/getElementType';
 import avoidNest from '../mods/avoidNesting';
@@ -33,10 +34,10 @@ function update(state, props) {
   const properties = `${setAttr(one)}, ${setAttr(two)}`;
 
   return {
-    styles: {
-      animation: properties,
+    styles: Object.assign({
+      animation: `${properties}`,
       backfaceVisibility: 'visible',
-    },
+    }, props.style || {}),
   };
 }
 
@@ -54,7 +55,7 @@ export default class Merge extends PureComponent<DefaultProps, Props, State> {
     one: validators.prop,
     two: validators.prop,
     as: verifyTags('Merge'),
-    children: children('Merge'),
+    children: children(Merge),
   };
 
   state = {
@@ -74,10 +75,13 @@ export default class Merge extends PureComponent<DefaultProps, Props, State> {
     // Validates the DOM nesting of elements.
     const NormalizedComponent = avoidNest(ElementType, children);
 
-    return React.createElement(
-      NormalizedComponent,
-      { style: styles },
-      children,
+    // Add rest of the props except component props(html-elements)
+    const reactHtmlAttributes = attributes(this.props);
+
+    return (
+      <NormalizedComponent style={styles} {...shouldNotBeUndefined(reactHtmlAttributes)}>
+        {this.props.children}
+      </NormalizedComponent>
     );
   }
 }
