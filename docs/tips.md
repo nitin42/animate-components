@@ -45,7 +45,8 @@ Use prop `as` to render as an element type.
 ```javascript
 <FadeIn 
   className="main" 
-  as="a" href="https://www.github.com" 
+  as="a" 
+  href="https://www.github.com" 
   target="_blank" 
   duration="3s" 
   timingFunction="ease-in"
