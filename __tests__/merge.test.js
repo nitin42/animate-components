@@ -14,7 +14,7 @@ const renderh1 = (
 );
 
 const defaultRender = (
-  <Merge one={{ name: left }} two={{ name: bounce }}>
+  <Merge one={{ name: left }} two={{ name: bounce }} className="main">
     <p>Hello</p>
   </Merge>
 );
@@ -49,7 +49,7 @@ it("updates the styles when the component mounts", () => {
 
   // Implicitly calls the returnAnimation()
   expect(wrapper.state("styles")).toEqual({
-    animation: "bGJZDZ 2s ease-in",
+    animation: "fRXJaB 1s ease, bGJZDZ 1s ease",
     backfaceVisibility: "visible"
   });
 });
