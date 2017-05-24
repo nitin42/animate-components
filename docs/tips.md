@@ -39,3 +39,18 @@ Use prop `as` to render as an element type.
   Hello
 </FadeIn>
 ```
+
+### Using html attributes along with the component props
+
+```javascript
+<FadeIn 
+  className="main" 
+  as="a" href="https://www.github.com" 
+  target="_blank" 
+  duration="3s" 
+  timingFunction="ease-in"
+>
+  Click here to redirect
+</FadeIn>
+
+```
