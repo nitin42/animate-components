@@ -12,15 +12,16 @@
 | **backfaceVisible** | string      |    visible |
 | **fillMode** | string      |    none |
 | **playState** | string      |    running |
-| **forceInterpolate** | object      |    {} |
+| **forceInterpolate** | object      |    { } |
 | **as** | string      | div   |
+
 
 #### Props for `<Merge />` component
 
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
-| **one**      | object | { name: "", duration: "2s", timingFunction: "ease-in" } |
-| **two**      | object      |   { name: "", duration: "3s", timingFunction: "ease-out" } |
+| **one**      | object | { name: " ", duration: "2s", timingFunction: "ease-in" } |
+| **two**      | object      |   { name: " ", duration: "3s", timingFunction: "ease-out" } |
 | **as** | string      |   div |
 
 `<Merge />` 
@@ -28,26 +29,31 @@
 ```javascript
 import { fadeIn, slideUp } from 'animate-components';
 
-<Merge one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }} two={{ name: slideUp, duration: '2s', timingFunction: 'ease-out' }}>
+<Merge 
+  one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }} 
+  two={{ name: slideUp, duration: '2s', timingFunction: 'ease-out' }}
+>
   <h1>Hello World</h1>
 </Merge>
 ```
 
+**You can also pass all the [html attributes](https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes) supported by React to the animation component along with above props for the component. Check [this](https://github.com/nitin42/animate-components/blob/master/examples/App.js) example.**
+
 ## Importing animation components and keyframes
 
-To use any animation component,
+Import animation component,
 
 ```javascript
 import { FadeIn } from 'animate-components';
 ```
 
-To use animation name (keyframes) in `<Merge />` component or for any other use case
-> camelCase convention.
+Import keyframes (useful if you're using `<Merge />` component). Follows camelCase convention 
+
 ```javascript
 import { fadeIn } from 'animate-components';
 ```
 
-To import `<Merge />` component,
+Import `<Merge />` component,
 
 ``` javascript
 import { Merge } from 'animate-components';
@@ -63,7 +69,7 @@ let App = () => {
 
 ## An element type to render as (string)
 
-Use prop `as` to render the component with any element. Eg -
+An element type to render as. Eg -
 
 ```javascript
 <FadeIn duration="3s" as="h2">
@@ -81,7 +87,7 @@ outputs
 
 ## Validate DOM Nesting
 
-Animate Components validate the DOM nesting of the elements. For eg -
+Animate Components validate the DOM nesting of the elements by comparing the prop `as` and the child type. For eg -
 
 ```javascript
 <FadeIn duration="3s" as="h1">
