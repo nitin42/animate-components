@@ -22,6 +22,7 @@ type Props = {
   forceInterpolate: Object,
   children: Object,
   as: string,
+  style: Object
 };
 
 type DefaultProps = {
@@ -40,9 +41,8 @@ type State = {
   styles: Object
 };
 
-// Pure Component (implicit shallow compare)
-const HOC = (ComposedComponent: string, AnimationName: string) => class
-  extends PureComponent<DefaultProps, Props, State> {
+function HOC(ComposedComponent: string, AnimationName: string) {
+  class _Animation extends PureComponent<DefaultProps, Props, State> {
     static defaultProps = {
       duration: '1s',
       timingFunction: 'ease',
@@ -53,16 +53,6 @@ const HOC = (ComposedComponent: string, AnimationName: string) => class
       fillMode: 'none',
       playState: 'running',
       as: 'div',
-    };
-
-    static propTypes = {
-      direction: hocValidators.direction,
-      fillMode: hocValidators.fillMode,
-      playState: hocValidators.playState,
-      timingFunction: hocValidators.timingFunction,
-      backfaceVisible: hocValidators.backfaceVisible,
-      as: verifyTags(ComposedComponent),
-      forceInterpolate: hocValidators.forceInterpolate,
     };
 
     state = {
@@ -103,6 +93,19 @@ const HOC = (ComposedComponent: string, AnimationName: string) => class
         </NormalizedComponent>
       );
     }
+  }
+
+  _Animation.propTypes = {
+    direction: hocValidators.direction,
+    fillMode: hocValidators.fillMode,
+    playState: hocValidators.playState,
+    timingFunction: hocValidators.timingFunction,
+    backfaceVisible: hocValidators.backfaceVisible,
+    as: verifyTags(ComposedComponent),
+    forceInterpolate: hocValidators.forceInterpolate,
   };
+
+  return _Animation;
+}
 
 export default HOC;
