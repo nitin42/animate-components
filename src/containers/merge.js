@@ -1,12 +1,19 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { attributes, shouldNotBeUndefined } from 'react-attributes';
+import checkTag from 'html-tags';
 
 import getElementType from '../mods/getElementType';
 import avoidNest from '../mods/avoidNesting';
 
-import { validators, verifyTags, children } from '../utils/propsValidator';
+import {
+  names,
+  duration,
+  timingFunction,
+  propValidators
+} from '../utils/keyValidators';
 
 type State = {
   styles: Object
@@ -26,6 +33,33 @@ type DefaultProps = {
   as: string
 };
 
+const validators = {
+  prop: PropTypes.objectOf(
+    (propValue, key) => {
+      names(key, propValue);
+      duration(key, propValue);
+      timingFunction(key, propValue);
+      propValidators(key);
+    },
+  ),
+};
+
+const propTypes = {
+  one: validators.prop,
+  two: validators.prop,
+  as: function (props, propName) {
+    const prop = props[propName];
+    const err = `Warning: '${prop}' passed to 'Merge' component is not a valid html tag.`;
+    return checkTag.includes(prop) ? null : console.error(err);
+  },
+  children: function (props, propName) {
+    const prop = props[propName];
+    if (React.Children.count(prop) === 0) {
+      console.error(`Warning: 'Merge' should have atleast a single child element.`);
+    }
+  }
+};
+
 function setAttr(prop) {
   return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
 }
@@ -43,7 +77,7 @@ function update(state, props) {
 }
 
 // Pure Component (implicit shallow compare)
-export default class Merge extends PureComponent<DefaultProps, Props, State> {
+class Merge extends PureComponent<DefaultProps, Props, State> {
   static displayName = 'Merge';
 
   static defaultProps = {
@@ -80,9 +114,6 @@ export default class Merge extends PureComponent<DefaultProps, Props, State> {
   }
 }
 
-Merge.propTypes = {
-  one: validators.prop,
-  two: validators.prop,
-  as: verifyTags('Merge'),
-  children: children('Merge'),
-};
+Merge.propTypes = propTypes;
+
+export default Merge;

@@ -1,14 +1,15 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { attributes, shouldNotBeUndefined } from 'react-attributes';
-
-import { hocValidators, verifyTags } from '../utils/propsValidator';
+import checkTag from 'html-tags';
 
 import getElementType from '../mods/getElementType';
 import avoidNest from '../mods/avoidNesting';
 
 import derive from '../utils/state';
+import { direction, interpolateValidators } from '../utils/keyValidators';
 
 type Props = {
   duration: string,
@@ -40,6 +41,42 @@ type DefaultProps = {
 type State = {
   styles: Object
 };
+
+function setTypes (ComposedComponent) {
+  return {
+    direction: PropTypes.oneOf([
+      'normal',
+      'reverse',
+      'alternate',
+      'alternate-reverse',
+      'initial',
+      'inherit',
+    ]),
+    fillMode: PropTypes.oneOf(['none', 'forwards', 'backwards', 'both']),
+    playState: PropTypes.oneOf(['paused', 'running']),
+    timingFunction: PropTypes.oneOf([
+      'linear',
+      'ease',
+      'ease-in',
+      'ease-out',
+      'ease-in-out',
+      'step-start',
+      'step-end',
+    ]),
+    backfaceVisible: PropTypes.oneOf(['visible', 'hidden']),
+    as: function (props, propName) {
+      const prop = props[propName];
+      const err = `Warning: '${prop}' passed to '${ComposedComponent}' component is not a valid html tag.`;
+      return checkTag.includes(prop) ? null : console.error(err);
+    },
+    forceInterpolate: PropTypes.objectOf(
+      (propValue, key) => {
+        direction(key, propValue);
+        interpolateValidators(key);
+      },
+    ),
+  };
+}
 
 function HOC(ComposedComponent: string, AnimationName: string) {
   class _Animation extends PureComponent<DefaultProps, Props, State> {
@@ -95,15 +132,7 @@ function HOC(ComposedComponent: string, AnimationName: string) {
     }
   }
 
-  _Animation.propTypes = {
-    direction: hocValidators.direction,
-    fillMode: hocValidators.fillMode,
-    playState: hocValidators.playState,
-    timingFunction: hocValidators.timingFunction,
-    backfaceVisible: hocValidators.backfaceVisible,
-    as: verifyTags(ComposedComponent),
-    forceInterpolate: hocValidators.forceInterpolate,
-  };
+  _Animation.propTypes = setTypes(ComposedComponent);
 
   return _Animation;
 }
