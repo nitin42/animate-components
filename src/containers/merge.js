@@ -17,6 +17,7 @@ type Props = {
   two: Object,
   children: Object,
   as: string,
+  style: Object
 };
 
 type DefaultProps = {
@@ -51,13 +52,6 @@ export default class Merge extends PureComponent<DefaultProps, Props, State> {
     as: 'div',
   };
 
-  static propTypes = {
-    one: validators.prop,
-    two: validators.prop,
-    as: verifyTags('Merge'),
-    children: children(Merge),
-  };
-
   state = {
     styles: {},
   };
@@ -85,3 +79,10 @@ export default class Merge extends PureComponent<DefaultProps, Props, State> {
     );
   }
 }
+
+Merge.propTypes = {
+  one: validators.prop,
+  two: validators.prop,
+  as: verifyTags('Merge'),
+  children: children('Merge'),
+};
