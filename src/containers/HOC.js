@@ -42,7 +42,7 @@ type State = {
   styles: Object
 };
 
-function setTypes (ComposedComponent) {
+function setTypes(ComposedComponent) {
   return {
     direction: PropTypes.oneOf([
       'normal',

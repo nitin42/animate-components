@@ -12,7 +12,7 @@ import {
   names,
   duration,
   timingFunction,
-  propValidators
+  propValidators,
 } from '../utils/keyValidators';
 
 type State = {
@@ -55,9 +55,9 @@ const propTypes = {
   children: function (props, propName) {
     const prop = props[propName];
     if (React.Children.count(prop) === 0) {
-      console.error(`Warning: 'Merge' should have atleast a single child element.`);
+      console.error('Warning: \'Merge\' should have atleast a single child element.');
     }
-  }
+  },
 };
 
 function setAttr(prop) {
