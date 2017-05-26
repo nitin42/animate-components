@@ -1,6 +1,6 @@
 {
   "name": "animate-components",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Elemental components for animations in React",
   "keywords": [
     "react",
@@ -37,7 +37,7 @@
     "html-tags": "^1.1.1",
     "prop-types": "^15.5.8",
     "react": "^15.4.2",
-    "react-attributes": "^0.0.5",
+    "react-attributes": "^0.0.8",
     "react-dom": "^15.4.2",
     "styled-components": "^1.4.4"
   },
