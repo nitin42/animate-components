@@ -34,10 +34,6 @@ yarn add animate-components --save
 * Element type rendering of components using `as` prop
 * Add all the html attributes supported by React along with component props.
 
-## Caveats
-
-* Build size (~60KB)
-
 ## Docs
 Check the complete documentation [here](./docs).
 
