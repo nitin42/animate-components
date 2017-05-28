@@ -80,6 +80,8 @@ function setTypes(ComposedComponent) {
 
 function HOC(ComposedComponent: string, AnimationName: string) {
   class _Animation extends PureComponent<DefaultProps, Props, State> {
+    static displayName = `${ComposedComponent}`;
+
     static defaultProps = {
       duration: '1s',
       timingFunction: 'ease',
