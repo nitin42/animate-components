@@ -20,7 +20,7 @@ npm install animate-components --save
 **yarn**
 
 ```
-yarn add animate-components --save
+yarn add animate-components
 ```
 
 ## Features
