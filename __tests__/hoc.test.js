@@ -18,7 +18,7 @@ const sample = keyframes`
 
 const Sample = HOC("Sample", sample);
 
-const redundComponent = (
+const sampleComponent = (
   <Sample duration="2s">
     Hello World!
   </Sample>
@@ -40,24 +40,24 @@ it("High Order Component wraps the children under h1 element", () => {
 });
 
 it("High Order Component wraps the children under div (default)", () => {
-  const tree = renderer.create(redundComponent).toJSON();
+  const tree = renderer.create(sampleComponent).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 it("Matches keyframes created by styled-components and default props", () => {
-  const tree = renderer.create(redundComponent).toJSON();
+  const tree = renderer.create(sampleComponent).toJSON();
 
   expect(tree).toMatchStyledComponentsSnapshot();
 });
 
 it("High Order Component calls componentDidMount lifecycle method", () => {
-  const wrapper = shallow(redundComponent);
+  const wrapper = shallow(sampleComponent);
   wrapper.instance().componentDidMount();
 	// Also calls store() method when component mounts.
 });
 
 it("High Order Component updates the styles when the component mounts", () => {
-  const wrapper = shallow(redundComponent);
+  const wrapper = shallow(sampleComponent);
   wrapper.instance().componentDidMount();
 
   expect(wrapper.state("styles")).toEqual({

@@ -5,13 +5,6 @@ import Merge from "../src/containers/merge";
 
 import getElementType from "../src/mods/getElementType";
 
-import {
-  hocValidators,
-  validators,
-  verifyTags,
-  children
-} from "../src/utils/propsValidator";
-
 import { left, bounce } from "../index";
 
 import HOC from "../src/containers/HOC";
