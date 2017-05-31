@@ -122,6 +122,7 @@ See the full api for `<Merge />` component [here](https://github.com/nitin42/ani
 
 ### Usage with styled-components
 ```javascript
+
 import { fadeIn } from 'animate-components';
 
 import styled from 'styled-components';
@@ -135,7 +136,30 @@ const Heading = styled.h1`
     color: red;
     transform: ${fadeIn}
   }
-`
+`;
+
+```
+
+Or if you are using `<Merge />` component, 
+
+```javascript
+
+const animationOne = keyframes`
+ ...some rules
+`;
+
+const animationTwo = keyframes`
+ ...some rules
+`;
+
+<Merge
+  one={{ name: animationOne, duration: '4s' }}
+  two={{ name: animationTwo, duration: '2s' }}
+  as='h1'
+>
+  Hello World
+</Merge>
+
 ```
 
 ### Usage with Aphrodite

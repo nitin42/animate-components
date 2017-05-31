@@ -20,7 +20,7 @@ npm install animate-components --save
 **yarn**
 
 ```
-yarn add animate-components --save
+yarn add animate-components
 ```
 
 ## Features
@@ -33,10 +33,6 @@ yarn add animate-components --save
 * Validate DOM nesting
 * Element type rendering of components using `as` prop
 * Add all the html attributes supported by React along with component props.
-
-## Caveats
-
-* Build size (~60KB)
 
 ## Docs
 Check the complete documentation [here](./docs).
