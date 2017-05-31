@@ -9,7 +9,6 @@ const Expanse = {
       -ms-transform: scale(.2) translate(0%, -200%);
       transform: scale(.2) translate(0%, -200%);
     }
-
     100% {
       opacity: 1;
       -ms-transform-origin: 50% 0%;
@@ -18,7 +17,6 @@ const Expanse = {
       transform: scale(1) translate(0%, 0%);
     }
   `,
-
   expanseDown: keyframes`
     0% {
       opacity: 0;
@@ -27,7 +25,6 @@ const Expanse = {
       -ms-transform: scale(.2) translate(0%, 200%);
       transform: scale(.2) translate(0%, 200%);
     }
-
     100% {
       opacity: 1;
       -ms-transform-origin: 50% 100%;
@@ -36,7 +33,6 @@ const Expanse = {
       transform: scale(1) translate(0%, 0%);
     }
   `,
-
   expanseLeft: keyframes`
     0% {
       opacity: 0;
@@ -45,7 +41,6 @@ const Expanse = {
       -ms-transform: scale(.2) translate(-200%, 0%);
       transform: scale(.2) translate(-200%, 0%);
     }
-
     100% {
       opacity: 1;
       -ms-transform-origin: 0% 50%;
@@ -54,7 +49,6 @@ const Expanse = {
       transform: scale(1) translate(0%, 0%);
     }
   `,
-
   expanseRight: keyframes`
     0% {
       opacity: 0;
@@ -63,7 +57,6 @@ const Expanse = {
       -ms-transform: scale(.2) translate(200%, 0%);
       transform: scale(.2) translate(200%, 0%);
     }
-
     100% {
       opacity: 1;
       -ms-transform-origin: 100% 50%;

@@ -11,7 +11,6 @@ const Bingo = {
       -webkit-filter: blur(0px);
       filter: blur(0px);
     }
-
     100% {
       opacity: 0;
       -ms-transform-origin: 50% 50%;
@@ -22,7 +21,6 @@ const Bingo = {
       filter: blur(3px);
     }
   `,
-
   puffmein: keyframes`
     0% {
       opacity: 0;
@@ -33,7 +31,6 @@ const Bingo = {
       -webkit-filter: blur(3px);
       filter: blur(3px);
     }
-
     100% {
       opacity: 1;
       -ms-transform-origin: 50% 50%;
@@ -44,7 +41,6 @@ const Bingo = {
       filter: blur(0px);
     }
   `,
-
   vanishout: keyframes`
     0% {
       opacity: 1;
@@ -55,7 +51,6 @@ const Bingo = {
       -webkit-filter: blur(0px);
       filter: blur(0px);
     }
-
     100% {
       opacity: 0;
       -ms-transform-origin: 50% 50%;
@@ -66,7 +61,6 @@ const Bingo = {
       filter: blur(18px);
     }
   `,
-
   vanishin: keyframes`
     0% {
       opacity: 0;
@@ -77,7 +71,6 @@ const Bingo = {
       -webkit-filter: blur(18px);
       filter: blur(18px);
     }
-
     100% {
       opacity: 1;
       -ms-transform-origin: 50% 50%;

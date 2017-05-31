@@ -1,9 +1,7 @@
 // @flow
 
 import Expanse from './styledExpanse';
-
 import HOC from '../../containers/HOC';
-
 import type { Components } from '../../../types';
 
 const expanseObj: Components = {

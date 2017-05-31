@@ -1,12 +1,9 @@
 // @flow
 
 import Fade from './styledFade';
-
 import HOC from '../../containers/HOC';
-
 import type { Components } from '../../../types';
 
-// fade animation components
 const fadeObj: Components = {
   FadeIn: HOC('FadeIn', Fade.fadeIn),
   FadeInDown: HOC('FadeInDown', Fade.down),

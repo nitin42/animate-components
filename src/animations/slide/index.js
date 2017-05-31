@@ -1,9 +1,7 @@
 // @flow
 
 import Slide from './styledSlide';
-
 import HOC from '../../containers/HOC';
-
 import type { Components } from '../../../types';
 
 const slideObj: Components = {

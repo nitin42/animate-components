@@ -1,12 +1,9 @@
 // @flow
 
 import Bouncing from './styledBounce';
-
 import HOC from '../../containers/HOC';
-
 import type { Components } from '../../../types';
 
-// Bounce animation components
 const bounceObj: Components = {
   Bounce: HOC('Bounce', Bouncing.bounce),
   BounceDown: HOC('BounceDown', Bouncing.bounceDown),

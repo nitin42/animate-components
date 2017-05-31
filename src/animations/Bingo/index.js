@@ -1,9 +1,7 @@
 // @flow
 
 import Bingo from './styledBingo';
-
 import HOC from '../../containers/HOC';
-
 import type { Components } from '../../../types';
 
 const bingoObj: Components = {

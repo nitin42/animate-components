@@ -1,9 +1,7 @@
 // @flow
 
 import Perspective from './styledPerspective';
-
 import HOC from '../../containers/HOC';
-
 import type { Components } from '../../../types';
 
 const PObj: Components = {
