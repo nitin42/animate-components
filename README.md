@@ -40,7 +40,7 @@ yarn add animate-components
 * Simplified and minimal API.
 * Best source for someone who is new to React (folks are already enjoying the ease of doing animations).
 * Supports element type rendering of an animation component (interesting tweak).
-* Provides isolated keyframes so that you don't have to hardcode all the curves and directly use them with css-in-js solutions like glamor, styled-components, Aphrodite etc.
+* Provides isolated keyframes so that you don't have to hardcode all the curves and directly use them with css-in-js solutions like [glamor](https://github.com/threepointone/glamor), [styled-components](https://github.com/styled-components/styled-components), [Aphrodite](https://github.com/Khan/aphrodite) etc.
 
 Enough ?
 
