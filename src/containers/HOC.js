@@ -2,8 +2,9 @@
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { attributes, shouldNotBeUndefined } from 'react-attributes';
 import checkTag from 'html-tags';
+
+import { attributes, shouldNotBeUndefined } from '../utils/attributes';
 
 import getElementType from '../mods/getElementType';
 import avoidNest from '../mods/avoidNesting';
@@ -64,9 +65,12 @@ function setTypes(ComposedComponent) {
       'step-end',
     ]),
     backfaceVisible: PropTypes.oneOf(['visible', 'hidden']),
+    /* eslint-disable object-shorthand */
+    /* eslint-disable func-names */
     as: function (props, propName) {
       const prop = props[propName];
       const err = `Warning: '${prop}' passed to '${ComposedComponent}' component is not a valid html tag.`;
+      /* eslint-disable no-console */
       return checkTag.includes(prop) ? null : console.error(err);
     },
     forceInterpolate: PropTypes.objectOf(
@@ -112,6 +116,23 @@ function HOC(ComposedComponent: string, AnimationName: string) {
 
     componentDidMount = () => {
       this.store(this.props);
+    };
+
+    componentWillReceiveProps = (nextProps: Props) => {
+      // Interpolation of new animation properties
+      const deriveInterpolationFromNextProps = derive(nextProps, AnimationName);
+
+      // Old interpolation string
+      const deriveInterpolationFromPrevProps = derive(this.props, AnimationName);
+
+      if (deriveInterpolationFromNextProps !== deriveInterpolationFromPrevProps) {
+        this.setState({
+          styles: Object.assign({
+            animation: `${deriveInterpolationFromNextProps}`,
+            backfaceVisibility: `${nextProps.backfaceVisible}`,
+          }, this.props.style || {}),
+        });
+      }
     };
 
     store = (props: Props) => {
