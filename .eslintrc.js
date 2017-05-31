@@ -16,6 +16,10 @@ module.exports = {
       "react/require-default-props": 0,
       "no-shadow": 0,
       "react/prop-types": 0,
-      "react/jsx-filename-extension": 0
+      "react/jsx-filename-extension": 0,
+      "object-shorthand": 0,
+      "func-names": 0,
+      "no-restricted-syntax": 0,
+      "no-unused-expressions": 0
     }
 };
