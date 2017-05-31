@@ -76,15 +76,15 @@ function update(state, props) {
   };
 }
 
+const defaultProps = {
+  one: {},
+  two: {},
+  as: 'div',
+};
+
 // Pure Component (implicit shallow compare)
 class Merge extends PureComponent<DefaultProps, Props, State> {
   static displayName = 'Merge';
-
-  static defaultProps = {
-    one: {},
-    two: {},
-    as: 'div',
-  };
 
   state = {
     styles: {},
@@ -115,5 +115,6 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
 }
 
 Merge.propTypes = propTypes;
+Merge.defaultProps = defaultProps;
 
 export default Merge;
