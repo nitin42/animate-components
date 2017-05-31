@@ -2,8 +2,9 @@
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { attributes, shouldNotBeUndefined } from 'react-attributes';
 import checkTag from 'html-tags';
+
+import { attributes, shouldNotBeUndefined } from '../utils/attributes';
 
 import getElementType from '../mods/getElementType';
 import avoidNest from '../mods/avoidNesting';
@@ -47,24 +48,30 @@ const validators = {
 const propTypes = {
   one: validators.prop,
   two: validators.prop,
+  /* eslint-disable object-shorthand */
+  /* eslint-disable func-names */
   as: function (props, propName) {
     const prop = props[propName];
     const err = `Warning: '${prop}' passed to 'Merge' component is not a valid html tag.`;
+    /* eslint-disable no-console */
     return checkTag.includes(prop) ? null : console.error(err);
   },
   children: function (props, propName) {
     const prop = props[propName];
+    /* eslint-disable no-console */
     if (React.Children.count(prop) === 0) {
       console.error('Warning: \'Merge\' should have atleast a single child element.');
     }
   },
 };
 
-function setAttr(prop) {
+// Single prop update
+function setAttr(prop: Object) {
   return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
 }
 
-function update(state, props) {
+// As a callback for state update
+function update(state: State, props: Props) {
   const { one, two } = props;
   const properties = `${setAttr(one)}, ${setAttr(two)}`;
 
@@ -93,6 +100,19 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
   componentDidMount = () => {
     this.setState(update);
   };
+
+  componentWillReceiveProps = (nextProps: Props) => {
+    // New state object
+    const newUpdate = update(this.state, nextProps);
+
+    // Previous state object
+    const prevUpdate = update(this.state, this.props);
+
+    // Update with setState callback
+    if (newUpdate !== prevUpdate) {
+      this.setState(newUpdate);
+    }
+  }
 
   render(): ?React$Element<any> {
     const ElementType = getElementType(Merge, this.props);
