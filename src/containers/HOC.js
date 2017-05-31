@@ -78,19 +78,21 @@ function setTypes(ComposedComponent) {
   };
 }
 
+const defaultProps = {
+  duration: '1s',
+  timingFunction: 'ease',
+  delay: '0s',
+  direction: 'normal',
+  iterations: '1',
+  backfaceVisible: 'visible',
+  fillMode: 'none',
+  playState: 'running',
+  as: 'div',
+};
+
 function HOC(ComposedComponent: string, AnimationName: string) {
   class _Animation extends PureComponent<DefaultProps, Props, State> {
-    static defaultProps = {
-      duration: '1s',
-      timingFunction: 'ease',
-      delay: '0s',
-      direction: 'normal',
-      iterations: '1',
-      backfaceVisible: 'visible',
-      fillMode: 'none',
-      playState: 'running',
-      as: 'div',
-    };
+    static displayName = `${ComposedComponent}`;
 
     state = {
       styles: {},
@@ -133,6 +135,7 @@ function HOC(ComposedComponent: string, AnimationName: string) {
   }
 
   _Animation.propTypes = setTypes(ComposedComponent);
+  _Animation.defaultProps = defaultProps;
 
   return _Animation;
 }
