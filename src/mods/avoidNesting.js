@@ -1,6 +1,4 @@
-/*
-  Avoid DOM nesting of elements
-*/
+// Avoid DOM nesting of elements
 
 const avoidNest = (elementAs, reactChildren) => {
   // No children to render. DOM nesting validated.
