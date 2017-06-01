@@ -1,4 +1,5 @@
 // Moved from `react-attributes` due to build failure.
+// Addresses https://github.com/nitin42/animate-components/issues/12
 
 // Makes sure attributes are defined and store them inside an object.
 const shouldNotBeUndefined = (obj) => {
