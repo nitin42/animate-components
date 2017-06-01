@@ -1,6 +1,7 @@
 # dependencies
 /node_modules
 build
+starter
 
 # misc
 .DS_Store
