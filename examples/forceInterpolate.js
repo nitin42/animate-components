@@ -8,7 +8,7 @@ let App = () => {
       <FadeIn
         duration="2s"
         timingFunction="ease-out"
-        forceInterpolate={{ steps: 4, direction: "start" }}
+        forceInterpolate={{ steps: 4, direction: "start" }} // steps(4, start)
       >
         <p>Hello world!</p>
       </FadeIn>

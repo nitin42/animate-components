@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { LightOut } from "../index";
-import Comp from './comp';
+import Comp from "./comp";
 import "./index.css";
 
 class App extends Component {
