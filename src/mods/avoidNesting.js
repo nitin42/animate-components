@@ -5,13 +5,13 @@ const avoidNest = (elementAs, reactChildren) => {
   let elementType = elementAs;
   if (!reactChildren) return elementType;
 
-  if (elementType === 'div') return elementType;
+  if (elementType === "div") return elementType;
 
   const { type } = reactChildren;
 
   if (type === elementType) {
     // Change to 'div' to validate DOM nesting
-    elementType = 'div';
+    elementType = "div";
     // Should log the warning for DOM nesting validation ?
   }
 

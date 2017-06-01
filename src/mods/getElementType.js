@@ -9,7 +9,7 @@ const getElementType = (Component, props) => {
   // return computedElement ? computedElement : null;
   //
   // // Redundant ?
-  return defaultProps.as || 'div';
+  return defaultProps.as || "div";
 };
 
 export default getElementType;
