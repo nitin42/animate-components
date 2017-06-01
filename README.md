@@ -33,6 +33,7 @@ yarn add animate-components
 * Validate DOM nesting
 * Element type rendering of components using `as` prop
 * Add all the html attributes supported by React along with component props.
+* Render a component in isolation and apply animations on it. 
 
 ## Why ?
 
