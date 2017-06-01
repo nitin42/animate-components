@@ -46,16 +46,20 @@ const validators = {
 };
 
 const propTypes = {
+  /* eslint-disable react/no-unused-prop-types */
   one: validators.prop,
+  /* eslint-disable react/no-unused-prop-types */
   two: validators.prop,
   /* eslint-disable object-shorthand */
   /* eslint-disable func-names */
+  /* eslint-disable react/no-unused-prop-types */
   as: function (props, propName) {
     const prop = props[propName];
     const err = `Warning: '${prop}' passed to 'Merge' component is not a valid html tag.`;
     /* eslint-disable no-console */
     return checkTag.includes(prop) ? null : console.error(err);
   },
+  /* eslint-disable react/require-default-props */
   children: function (props, propName) {
     const prop = props[propName];
     /* eslint-disable no-console */
