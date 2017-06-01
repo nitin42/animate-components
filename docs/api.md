@@ -14,6 +14,8 @@
 | **playState** | string      |    running |
 | **forceInterpolate** | object      |    { } |
 | **as** | string      | div   |
+| **component** | function      | -   |
+
 
 
 #### Props for `<Merge />` component
@@ -23,14 +25,15 @@
 | **one**      | object | { name: " ", duration: "2s", timingFunction: "ease-in" } |
 | **two**      | object      |   { name: " ", duration: "3s", timingFunction: "ease-out" } |
 | **as** | string      |   div |
+| **component** | function      |   - |
 
-`<Merge />` 
+`<Merge />`
 
 ```javascript
 import { fadeIn, slideUp } from 'animate-components';
 
-<Merge 
-  one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }} 
+<Merge
+  one={{ name: fadeIn, duration: '2s', timingFunction: 'ease-in' }}
   two={{ name: slideUp, duration: '2s', timingFunction: 'ease-out' }}
 >
   <h1>Hello World</h1>
@@ -47,7 +50,7 @@ Import animation component,
 import { FadeIn } from 'animate-components';
 ```
 
-Import keyframes (useful if you're using `<Merge />` component). Follows camelCase convention 
+Import keyframes (useful if you're using `<Merge />` component). Follows camelCase convention
 
 ```javascript
 import { fadeIn } from 'animate-components';
@@ -85,9 +88,9 @@ outputs
 </h2>
 ```
 
-## Validate DOM Nesting
+## DOM Nesting
 
-Animate Components validate the DOM nesting of the elements by comparing the prop `as` and the child type. For eg -
+Animate Components ratifies the DOM nesting of the elements by comparing the prop `as` and the child type. For eg -
 
 ```javascript
 <FadeIn duration="3s" as="h1">
@@ -98,10 +101,10 @@ Animate Components validate the DOM nesting of the elements by comparing the pro
 Here the children type and the one passed to prop `as` is **'h1'**. To avoid this nesting problem, the prop value for `as` will change back to `div`.
 
 ## Force interpolation of animations
-Pass **steps(steps, start|end)** using `forceInterpolate` prop. For example - 
+Pass **steps(steps, start|end)** using `forceInterpolate` prop. For example -
 
 ```javascript
 <FadeIn duration="3s" forceInterpolate={{ steps: 4, direction: "start" }} as="h1">
-  Hello World! 
+  Hello World!
 </FadeIn>
 ```
