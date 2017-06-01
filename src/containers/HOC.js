@@ -1,16 +1,16 @@
 // @flow
 
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import checkTag from 'html-tags';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import checkTag from "html-tags";
 
-import { attributes, shouldNotBeUndefined } from '../utils/attributes';
+import { attributes, shouldNotBeUndefined } from "../utils/attributes";
 
-import getElementType from '../mods/getElementType';
-import avoidNest from '../mods/avoidNesting';
+import getElementType from "../mods/getElementType";
+import avoidNest from "../mods/avoidNesting";
 
-import derive from '../utils/state';
-import { direction, interpolateValidators } from '../utils/keyValidators';
+import derive from "../utils/state";
+import { direction, interpolateValidators } from "../utils/keyValidators";
 
 type Props = {
   duration: string,
@@ -24,7 +24,8 @@ type Props = {
   forceInterpolate: Object,
   children: Object,
   as: string,
-  style: Object
+  style: Object,
+  component: Function
 };
 
 type DefaultProps = {
@@ -46,25 +47,25 @@ type State = {
 function setTypes(ComposedComponent) {
   return {
     direction: PropTypes.oneOf([
-      'normal',
-      'reverse',
-      'alternate',
-      'alternate-reverse',
-      'initial',
-      'inherit',
+      "normal",
+      "reverse",
+      "alternate",
+      "alternate-reverse",
+      "initial",
+      "inherit",
     ]),
-    fillMode: PropTypes.oneOf(['none', 'forwards', 'backwards', 'both']),
-    playState: PropTypes.oneOf(['paused', 'running']),
+    fillMode: PropTypes.oneOf(["none", "forwards", "backwards", "both"]),
+    playState: PropTypes.oneOf(["paused", "running"]),
     timingFunction: PropTypes.oneOf([
-      'linear',
-      'ease',
-      'ease-in',
-      'ease-out',
-      'ease-in-out',
-      'step-start',
-      'step-end',
+      "linear",
+      "ease",
+      "ease-in",
+      "ease-out",
+      "ease-in-out",
+      "step-start",
+      "step-end",
     ]),
-    backfaceVisible: PropTypes.oneOf(['visible', 'hidden']),
+    backfaceVisible: PropTypes.oneOf(["visible", "hidden"]),
     /* eslint-disable object-shorthand */
     /* eslint-disable func-names */
     as: function (props, propName) {
@@ -73,25 +74,24 @@ function setTypes(ComposedComponent) {
       /* eslint-disable no-console */
       return checkTag.includes(prop) ? null : console.error(err);
     },
-    forceInterpolate: PropTypes.objectOf(
-      (propValue, key) => {
-        direction(key, propValue);
-        interpolateValidators(key);
-      },
-    ),
+    forceInterpolate: PropTypes.objectOf((propValue, key) => {
+      direction(key, propValue);
+      interpolateValidators(key);
+    }),
+    component: PropTypes.func,
   };
 }
 
 const defaultProps = {
-  duration: '1s',
-  timingFunction: 'ease',
-  delay: '0s',
-  direction: 'normal',
-  iterations: '1',
-  backfaceVisible: 'visible',
-  fillMode: 'none',
-  playState: 'running',
-  as: 'div',
+  duration: "1s",
+  timingFunction: "ease",
+  delay: "0s",
+  direction: "normal",
+  iterations: "1",
+  backfaceVisible: "visible",
+  fillMode: "none",
+  playState: "running",
+  as: "div",
 };
 
 function HOC(ComposedComponent: string, AnimationName: string) {
@@ -99,15 +99,15 @@ function HOC(ComposedComponent: string, AnimationName: string) {
     static displayName = `${ComposedComponent}`;
 
     static defaultProps = {
-      duration: '1s',
-      timingFunction: 'ease',
-      delay: '0s',
-      direction: 'normal',
-      iterations: '1',
-      backfaceVisible: 'visible',
-      fillMode: 'none',
-      playState: 'running',
-      as: 'div',
+      duration: "1s",
+      timingFunction: "ease",
+      delay: "0s",
+      direction: "normal",
+      iterations: "1",
+      backfaceVisible: "visible",
+      fillMode: "none",
+      playState: "running",
+      as: "div",
     };
 
     state = {
@@ -123,14 +123,22 @@ function HOC(ComposedComponent: string, AnimationName: string) {
       const deriveInterpolationFromNextProps = derive(nextProps, AnimationName);
 
       // Old interpolation string
-      const deriveInterpolationFromPrevProps = derive(this.props, AnimationName);
+      const deriveInterpolationFromPrevProps = derive(
+        this.props,
+        AnimationName,
+      );
 
-      if (deriveInterpolationFromNextProps !== deriveInterpolationFromPrevProps) {
+      if (
+        deriveInterpolationFromNextProps !== deriveInterpolationFromPrevProps
+      ) {
         this.setState({
-          styles: Object.assign({
-            animation: `${deriveInterpolationFromNextProps}`,
-            backfaceVisibility: `${nextProps.backfaceVisible}`,
-          }, this.props.style || {}),
+          styles: Object.assign(
+            {
+              animation: `${deriveInterpolationFromNextProps}`,
+              backfaceVisibility: `${nextProps.backfaceVisible}`,
+            },
+            this.props.style || {},
+          ),
         });
       }
     };
@@ -140,10 +148,13 @@ function HOC(ComposedComponent: string, AnimationName: string) {
       const deriveInterpolation = derive(props, AnimationName);
 
       this.setState({
-        styles: Object.assign({
-          animation: `${deriveInterpolation}`,
-          backfaceVisibility: `${props.backfaceVisible}`,
-        }, this.props.style || {}),
+        styles: Object.assign(
+          {
+            animation: `${deriveInterpolation}`,
+            backfaceVisibility: `${props.backfaceVisible}`,
+          },
+          this.props.style || {},
+        ),
       });
     };
 
@@ -153,6 +164,9 @@ function HOC(ComposedComponent: string, AnimationName: string) {
       const { styles } = this.state;
       const { children } = this.props;
 
+      // Alternate, pass a component as a prop to an animation component
+      const Wrapper = this.props.component;
+
       // Validates the DOM nesting of elements.
       const NormalizedComponent = avoidNest(ElementType, children);
 
@@ -160,8 +174,11 @@ function HOC(ComposedComponent: string, AnimationName: string) {
       const reactHtmlAttributes = attributes(this.props);
 
       return (
-        <NormalizedComponent style={styles} {...shouldNotBeUndefined(reactHtmlAttributes)}>
-          {this.props.children}
+        <NormalizedComponent
+          style={styles}
+          {...shouldNotBeUndefined(reactHtmlAttributes)}
+        >
+          { Wrapper ? React.createElement(Wrapper, children) : children }
         </NormalizedComponent>
       );
     }
