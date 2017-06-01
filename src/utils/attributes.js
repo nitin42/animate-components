@@ -1,3 +1,6 @@
+// Moved from `react-attributes` due to build failure.
+
+// Makes sure attributes are defined and store them inside an object.
 const shouldNotBeUndefined = (obj) => {
   const store = {};
   /* eslint-disable no-restricted-syntax */
