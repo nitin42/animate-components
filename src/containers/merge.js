@@ -1,20 +1,20 @@
 // @flow
 
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import checkTag from 'html-tags';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import checkTag from "html-tags";
 
-import { attributes, shouldNotBeUndefined } from '../utils/attributes';
+import { attributes, shouldNotBeUndefined } from "../utils/attributes";
 
-import getElementType from '../mods/getElementType';
-import avoidNest from '../mods/avoidNesting';
+import getElementType from "../mods/getElementType";
+import avoidNest from "../mods/avoidNesting";
 
 import {
   names,
   duration,
   timingFunction,
   propValidators,
-} from '../utils/keyValidators';
+} from "../utils/keyValidators";
 
 type State = {
   styles: Object
@@ -25,7 +25,8 @@ type Props = {
   two: Object,
   children: Object,
   as: string,
-  style: Object
+  style: Object,
+  component: Function
 };
 
 type DefaultProps = {
@@ -35,14 +36,12 @@ type DefaultProps = {
 };
 
 const validators = {
-  prop: PropTypes.objectOf(
-    (propValue, key) => {
-      names(key, propValue);
-      duration(key, propValue);
-      timingFunction(key, propValue);
-      propValidators(key);
-    },
-  ),
+  prop: PropTypes.objectOf((propValue, key) => {
+    names(key, propValue);
+    duration(key, propValue);
+    timingFunction(key, propValue);
+    propValidators(key);
+  }),
 };
 
 const propTypes = {
@@ -59,19 +58,12 @@ const propTypes = {
     /* eslint-disable no-console */
     return checkTag.includes(prop) ? null : console.error(err);
   },
-  /* eslint-disable react/require-default-props */
-  children: function (props, propName) {
-    const prop = props[propName];
-    /* eslint-disable no-console */
-    if (React.Children.count(prop) === 0) {
-      console.error('Warning: \'Merge\' should have atleast a single child element.');
-    }
-  },
+  component: PropTypes.func,
 };
 
 // Single prop update
 function setAttr(prop: Object) {
-  return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
+  return `${prop.name || ""} ${prop.duration || "1s"} ${prop.timingFunction || "ease"}`;
 }
 
 // As a callback for state update
@@ -80,22 +72,25 @@ function update(state: State, props: Props) {
   const properties = `${setAttr(one)}, ${setAttr(two)}`;
 
   return {
-    styles: Object.assign({
-      animation: `${properties}`,
-      backfaceVisibility: 'visible',
-    }, props.style || {}),
+    styles: Object.assign(
+      {
+        animation: `${properties}`,
+        backfaceVisibility: "visible",
+      },
+      props.style || {},
+    ),
   };
 }
 
-const defaultProps = {
-  one: {},
-  two: {},
-  as: 'div',
-};
-
 // Pure Component (implicit shallow compare)
 class Merge extends PureComponent<DefaultProps, Props, State> {
-  static displayName = 'Merge';
+  static displayName = "Merge";
+
+  static defaultProps = {
+    one: {},
+    two: {},
+    as: "div",
+  };
 
   state = {
     styles: {},
@@ -105,24 +100,27 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
     this.setState(update);
   };
 
-  componentWillReceiveProps = (nextProps: Props) => {
-    // New state object
-    const newUpdate = update(this.state, nextProps);
-
-    // Previous state object
-    const prevUpdate = update(this.state, this.props);
-
-    // Update with setState callback
-    if (newUpdate !== prevUpdate) {
-      this.setState(newUpdate);
-    }
-  }
+  // componentWillReceiveProps = (nextProps: Props) => {
+  //   // New state object
+  //   const newUpdate = update(this.state, nextProps);
+  //
+  //   // Previous state object
+  //   const prevUpdate = update(this.state, this.props);
+  //
+  //   // Update with setState callback
+  //   if (newUpdate !== prevUpdate) {
+  //     this.setState(newUpdate);
+  //   }
+  // };
 
   render(): ?React$Element<any> {
     const ElementType = getElementType(Merge, this.props);
 
     const { styles } = this.state;
     const { children } = this.props;
+
+    // Alternate, pass a component as a prop to the Merge component
+    const Wrapper = this.props.component;
 
     // Validates the DOM nesting of elements.
     const NormalizedComponent = avoidNest(ElementType, children);
@@ -131,14 +129,16 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
     const reactHtmlAttributes = attributes(this.props);
 
     return (
-      <NormalizedComponent style={styles} {...shouldNotBeUndefined(reactHtmlAttributes)}>
-        {this.props.children}
+      <NormalizedComponent
+        style={styles}
+        {...shouldNotBeUndefined(reactHtmlAttributes)}
+      >
+        { Wrapper ? React.createElement(Wrapper, children) : children }
       </NormalizedComponent>
     );
   }
 }
 
 Merge.propTypes = propTypes;
-Merge.defaultProps = defaultProps;
 
 export default Merge;
