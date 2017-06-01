@@ -24,44 +24,62 @@ const sampleComponent = (
   </Sample>
 );
 
-it("High Order Component should be a function", () => {
-  expect(typeof HOC).toBe("function");
-});
+let App = () => {
+	return (
+		<div>
+			<p>Sign of Times</p>
+		</div>
+	);
+};
 
-it("High Order Component wraps the children under h1 element", () => {
-  const tree = renderer
-    .create(
-      <Sample duration="2s" as="h1">
-        Hello World!
-      </Sample>
-    )
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+describe('High Order Component', () => {
+	it("should be a function", () => {
+	  expect(typeof HOC).toBe("function");
+	});
 
-it("High Order Component wraps the children under div (default)", () => {
-  const tree = renderer.create(sampleComponent).toJSON();
-  expect(tree).toMatchSnapshot();
-});
+	it("wraps the children under h1 element", () => {
+	  const tree = renderer
+	    .create(
+	      <Sample duration="2s" as="h1">
+	        Hello World!
+	      </Sample>
+	    )
+	    .toJSON();
+	  expect(tree).toMatchSnapshot();
+	});
 
-it("Matches keyframes created by styled-components and default props", () => {
-  const tree = renderer.create(sampleComponent).toJSON();
+	it("renders the Component passed through component prop", () => {
+		const tree = renderer.create(
+			<Sample duration="2s" as="h1" component={App} />
+		).toJSON();
 
-  expect(tree).toMatchStyledComponentsSnapshot();
-});
+		expect(tree).toMatchSnapshot();
+	})
 
-it("High Order Component calls componentDidMount lifecycle method", () => {
-  const wrapper = shallow(sampleComponent);
-  wrapper.instance().componentDidMount();
-	// Also calls store() method when component mounts.
-});
+	it("wraps the children under div (default)", () => {
+	  const tree = renderer.create(sampleComponent).toJSON();
+	  expect(tree).toMatchSnapshot();
+	});
 
-it("High Order Component updates the styles when the component mounts", () => {
-  const wrapper = shallow(sampleComponent);
-  wrapper.instance().componentDidMount();
+	it("matches the keyframes created by styled-components and default props", () => {
+	  const tree = renderer.create(sampleComponent).toJSON();
 
-  expect(wrapper.state("styles")).toEqual({
-    animation: "UNeSH 2s ease 0s 1 normal none running",
-    backfaceVisibility: "visible"
-  });
-});
+	  expect(tree).toMatchStyledComponentsSnapshot();
+	});
+
+	it("calls componentDidMount lifecycle method", () => {
+	  const wrapper = shallow(sampleComponent);
+	  wrapper.instance().componentDidMount();
+		// Also calls store() method when component mounts.
+	});
+
+	it("updates the styles when the component mounts", () => {
+	  const wrapper = shallow(sampleComponent);
+	  wrapper.instance().componentDidMount();
+
+	  expect(wrapper.state("styles")).toEqual({
+	    animation: "UNeSH 2s ease 0s 1 normal none running",
+	    backfaceVisibility: "visible"
+	  });
+	});
+})
