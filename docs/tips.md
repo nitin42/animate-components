@@ -6,6 +6,26 @@ Say you want to animate some elements but you don't want all the elements to sta
 
 `animation-delay: -2s`
 
+### Use `component` prop
+
+Use `component` prop when you want to render a component and apply animations on it.
+
+```javascript
+// Without component prop
+<FadeIn className="main" duration="3s">
+  <div>
+    <App />
+  </div>
+</FadeIn>
+```
+
+```javascript
+// With component prop
+<FadeIn className="main" duration="3s" as="div" component={App} />
+```
+
+Both `Merge` and an animation component support `component` prop. Shorthand right ?
+
 ### Merge two animations
 
 Merge two animations using `<Merge />` to create one.
@@ -43,12 +63,12 @@ Use prop `as` to render as an element type.
 ### Using html attributes along with the component props
 
 ```javascript
-<FadeIn 
-  className="main" 
-  as="a" 
-  href="https://www.github.com" 
-  target="_blank" 
-  duration="3s" 
+<FadeIn
+  className="main"
+  as="a"
+  href="https://www.github.com"
+  target="_blank"
+  duration="3s"
   timingFunction="ease-in"
 >
   Click here to redirect
