@@ -142,7 +142,4 @@ const attributes = (props) => {
   return obj;
 };
 
-export {
-  shouldNotBeUndefined,
-  attributes,
-};
+export { shouldNotBeUndefined, attributes };

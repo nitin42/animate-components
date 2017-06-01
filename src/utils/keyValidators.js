@@ -34,7 +34,7 @@ const timingFunction = (key, propValue) => {
     const err = `
       Warning: Invalid timing Function '${propValue[key]}' passed to the Merge component. The prop
       value for 'timingFunction' should be one of ["linear", "ease", "ease-in", "ease-out", "ease-in-out",
-      "step-start", "step-end"]. Note steps(#, start|end) is currently not supported.
+      "step-start", "step-end"]. Note steps(#, start|end) is supported via forceInterpolate prop. Refer to the docs for more info.
     `;
 
     /* eslint-disable no-console */
