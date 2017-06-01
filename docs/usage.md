@@ -1,5 +1,5 @@
 # Usage
-Let's take an example - 
+Let's take an example -
 
 ```javascript
 import React, { Component } from 'react';
@@ -20,15 +20,15 @@ class App extends Component {
 
 The animation component can takes these props:
 
-### duration 
-It defines how many seconds or milliseconds an animation takes to complete one cycle.
+### duration
+It defines seconds or milliseconds an animation takes to complete one cycle.
 
 ```javascript
 
 <Entrance duration="2s">
 
 ```
-### delay 
+### delay
 Specifies a delay for the start of an animation.
 
 ```javascript
@@ -36,7 +36,7 @@ Specifies a delay for the start of an animation.
 <Entrance delay="2s">
 
 ```
-### timingFunction 
+### timingFunction
 Specifies the speed curve of the animation.
 
 ```javascript
@@ -45,7 +45,7 @@ Specifies the speed curve of the animation.
 
 ```
 ### direction
-This prop is used to let an animation run in reverse direction or alternate cycles.
+This prop lets an animation run in reverse direction or alternate cycles.
 
 ```javascript
 
@@ -61,7 +61,7 @@ Specifies the number of times an animation should run.
 
 ```
 ### backfaceVisible
-It defines whether or not an element should be visible when not facing the screen.
+This prop defines whether an element should be visible when not facing the screen or not.
 
 ```javascript
 
@@ -102,16 +102,43 @@ outputs
 </h1>
 ```
 
+### component
+A React component to render and apply animation on.
+
+```javascript
+// Component A
+
+let A = () => {
+  return (
+    <h1>
+      Clay Jansen
+    </h1>
+  );
+}
+```
+
+```javascript
+// Main component
+
+class Main extends React.Component {
+  render () {
+    return (
+      <FadeIn className="main" as="div" duration="3s" component={App} />
+    );
+  }
+}
+```
+
 > Note - You can also pass all the [html attributes](https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes) supported by React to the animation component along with the component props. Check [this](https://github.com/nitin42/animate-components/blob/master/examples/App.js) example.
 
 ### Multistep animations
-Perform multistep animation (release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)). 
+Perform multistep animation (release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)).
 
-Example - 
+Example -
 
 ```html
-<Merge 
-  one={{ name: fadeIn, duration: '2s' }} 
+<Merge
+  one={{ name: fadeIn, duration: '2s' }}
   two={{ name: slideUp, duration: '2s', timingFunction: 'ease-in' }}
 >
   <h1>Tired of hello world!</h1>
@@ -140,7 +167,7 @@ const Heading = styled.h1`
 
 ```
 
-Or if you are using `<Merge />` component, 
+Or if you are using `<Merge />` component,
 
 ```javascript
 
