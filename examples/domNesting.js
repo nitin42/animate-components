@@ -2,7 +2,7 @@ import React from "react";
 
 import { FadeIn } from "animate-components";
 
-// The FadeIn component will validate the DOM nesting if the child element tag is similar to the one passed to prop `as`
+// The FadeIn component will ratify the DOM nesting if the child element tag is similar to the one passed to prop `as`
 let App = () => {
   return (
     <div>
