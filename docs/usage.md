@@ -106,9 +106,9 @@ outputs
 A React component to render and apply animation on.
 
 ```javascript
-// Component A
+// App.js
 
-let A = () => {
+let App = () => {
   return (
     <h1>
       Clay Jansen
@@ -119,6 +119,8 @@ let A = () => {
 
 ```javascript
 // Main component
+
+import App from './App';
 
 class Main extends React.Component {
   render () {
