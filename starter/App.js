@@ -1,6 +1,6 @@
 import React from "react";
 
-import { fadeIn, slideDown, Merge, FadeIn, ExpanseUp, PuffIn, LightOut } from "../index";
+import { fadeIn, slideDown, Merge, FadeIn, ExpanseUp, PuffIn, LightOut } from "../dist/animate-components.min.js";
 
 import Comp from './comp';
 
