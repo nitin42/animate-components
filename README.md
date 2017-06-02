@@ -1,7 +1,7 @@
 # Animate Components
 ![downloads](https://img.shields.io/badge/downloads-3k-brightgreen.svg)
 ![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?maxAge=2592000)
-![version](https://img.shields.io/badge/animate--components-1.1.5-brightgreen.svg)
+![version](https://img.shields.io/badge/animate--components-1.1.7-brightgreen.svg)
 
 <p align="center">
 	<img src="https://i.gyazo.com/64801677fb24b4492eb0b90870ead297.gif" />
@@ -44,6 +44,13 @@ yarn add animate-components
 * Provides isolated keyframes so that you don't have to hardcode all the curves and directly use them with css-in-js solutions like [glamor](https://github.com/threepointone/glamor), [styled-components](https://github.com/styled-components/styled-components), [Aphrodite](https://github.com/Khan/aphrodite) etc.
 
 Enough ?
+
+## Current status
+
+* Reducing build size.
+* New animations
+
+So keep checking in 😄 !
 
 ## Docs
 Check the complete documentation [here](./docs).

@@ -106,9 +106,9 @@ outputs
 A React component to render and apply animation on.
 
 ```javascript
-// Component A
+// App.js
 
-let A = () => {
+let App = () => {
   return (
     <h1>
       Clay Jansen
@@ -120,7 +120,12 @@ let A = () => {
 ```javascript
 // Main component
 
-class Main extends React.Component {
+import React, { Component } from 'react';
+import { FadeIn } from 'animate-components';
+
+import App from './App';
+
+class Main extends Component {
   render () {
     return (
       <FadeIn className="main" as="div" duration="3s" component={App} />
