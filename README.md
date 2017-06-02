@@ -53,7 +53,7 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 
 Enough ?
 
-## Size and optimisation
+## Size 
 
 This happened to build size 😲
 
