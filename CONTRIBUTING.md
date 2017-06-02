@@ -28,7 +28,7 @@ export default newAnimation;
 
 The reason we require `styledNewAnimation.js` is to isolate the styles from the components. Makes the code readable and easy to test.
 
-Import the [high order component](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e) present in the **animation** folder. You can find it [here](https://github.com/nitin42/animate-components/blob/master/src/animations/HOC.js).
+Import the [high order component](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e) present in the **animation** folder. You can find it [here](https://github.com/nitin42/animate-components/blob/master/src/containers/HOC.js).
 
 Export the component like this,
 
@@ -86,11 +86,24 @@ export default newAnimationObj;
 
 Run `yarn flow`
 
+### Export animation component
+
+In [index.js](https://github.com/nitin42/animate-components/blob/master/src/index.js), import the object or the component created earlier (`newAnimation.js`), extract different components from the object if any and then finally export them.
+
+```javascript
+import newAnimationObj from './newAnimation';
+
+const {...components} = newAnimationObj;
+
+export {...components};
+
+```
+
 ### ESLint
 Run `yarn lint`.
 
-### All In One
-Run `yarn builder`. This will check the type, lint and build errors.
+### Build
+Run `yarn webpack:build`
 
 ### Running the animations
 There is a small [starter kit](https://github.com/nitin42/animate-components/tree/master/starter) kit for testing the animations.
