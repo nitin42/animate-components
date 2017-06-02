@@ -47,7 +47,6 @@ Enough ?
 
 ## Current status
 
-* Working on site (rendering docs).
 * Reducing build size.
 * New animations
 
