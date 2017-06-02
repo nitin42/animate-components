@@ -1,7 +1,9 @@
 # Animate Components
 ![downloads](https://img.shields.io/badge/downloads-3k-brightgreen.svg)
-![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?maxAge=2592000)
+![website](https://img.shields.io/badge/website-up-brightgreen.svg)
 ![version](https://img.shields.io/badge/animate--components-1.1.7-brightgreen.svg)
+![gzip](https://img.shields.io/badge/gzip%20size-9.09%20KB-brightgreen.svg)
+![size](https://img.shields.io/badge/size-58.8%20KB-brightgreen.svg)
 
 <p align="center">
 	<img src="https://i.gyazo.com/64801677fb24b4492eb0b90870ead297.gif" />
@@ -21,6 +23,12 @@ npm install animate-components --save
 
 ```
 yarn add animate-components
+```
+
+The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https://unpkg.com):
+
+```html
+<script src="https://unpkg.com/animate-components@1.1.8/dist/animate-components.min.js"></script>
 ```
 
 ## Features
@@ -45,12 +53,19 @@ yarn add animate-components
 
 Enough ?
 
-## Current status
+## Size and optimisation
 
-* Reducing build size.
-* New animations
+This happened to build size 😲
 
-So keep checking in 😄 !
+<p align="center">
+	<img src="https://i.gyazo.com/8f5f0a292ff9d6e309eabde768ffa48f.png" />
+	<p align="center">Earlier</p>
+</p>
+
+<p align="center">
+	<img src="https://i.gyazo.com/91847915dd40eedaa5fbfc60af46759c.png" />
+	<p align="center">Present</p>
+</p>
 
 ## Docs
 Check the complete documentation [here](./docs).
