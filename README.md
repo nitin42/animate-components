@@ -45,6 +45,14 @@ yarn add animate-components
 
 Enough ?
 
+## Current status
+
+* Working on site (rendering docs).
+* Reducing build size.
+* New animations
+
+So keep checking in 😄 !
+
 ## Docs
 Check the complete documentation [here](./docs).
 
