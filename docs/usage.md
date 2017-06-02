@@ -120,9 +120,12 @@ let App = () => {
 ```javascript
 // Main component
 
+import React, { Component } from 'react';
+import { FadeIn } from 'animate-components';
+
 import App from './App';
 
-class Main extends React.Component {
+class Main extends Component {
   render () {
     return (
       <FadeIn className="main" as="div" duration="3s" component={App} />
