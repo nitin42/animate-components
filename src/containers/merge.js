@@ -35,32 +35,6 @@ type DefaultProps = {
   as: string
 };
 
-const validators = {
-  prop: PropTypes.objectOf((propValue, key) => {
-    names(key, propValue);
-    duration(key, propValue);
-    timingFunction(key, propValue);
-    propValidators(key);
-  }),
-};
-
-const propTypes = {
-  /* eslint-disable react/no-unused-prop-types */
-  one: validators.prop,
-  /* eslint-disable react/no-unused-prop-types */
-  two: validators.prop,
-  /* eslint-disable object-shorthand */
-  /* eslint-disable func-names */
-  /* eslint-disable react/no-unused-prop-types */
-  as: function (props, propName) {
-    const prop = props[propName];
-    const err = `Warning: '${prop}' passed to 'Merge' component is not a valid html tag.`;
-    /* eslint-disable no-console */
-    return checkTag.includes(prop) ? null : console.error(err);
-  },
-  component: PropTypes.func,
-};
-
 // Single prop update
 function setAttr(prop: Object) {
   return `${prop.name || ""} ${prop.duration || "1s"} ${prop.timingFunction || "ease"}`;
@@ -139,6 +113,29 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
   }
 }
 
-Merge.propTypes = propTypes;
+const validators = {
+  /* eslint-disable react/no-unused-prop-types */
+  props: PropTypes.objectOf((propValue, key) => {
+    names(key, propValue);
+    duration(key, propValue);
+    timingFunction(key, propValue);
+    propValidators(key);
+  }),
+};
+
+Merge.propTypes = {
+  one: validators.props,
+  two: validators.props,
+  /* eslint-disable object-shorthand */
+  /* eslint-disable func-names */
+  /* eslint-disable react/no-unused-prop-types */
+  as: function (props, propName) {
+    const prop = props[propName];
+    const err = `Warning: '${prop}' passed to 'Merge' component is not a valid html tag.`;
+    /* eslint-disable no-console */
+    return checkTag.includes(prop) ? null : console.error(err);
+  },
+  component: PropTypes.func,
+};
 
 export default Merge;
