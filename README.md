@@ -66,6 +66,10 @@ This happened to build size 😲
 	<p align="center">Present</p>
 </p>
 
+## Tasks
+
+Please check the [tasklist](https://github.com/nitin42/animate-components/blob/master/tasks.md) before creating an issue for a new feature (may be I am working on it).
+
 ## Docs
 Check the complete documentation [here](./docs).
 
