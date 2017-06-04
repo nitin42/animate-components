@@ -30,6 +30,7 @@ import expanseObj from './animations/expanse/index';
 import Expanse from './animations/expanse/styledExpanse';
 
 import Merge from './containers/merge';
+import Delay from './containers/Delay';
 
 const { Bounce, BounceUp, BounceRight, BounceLeft, BounceDown } = bounceObj;
 const { bounce, bounceDown, bounceUp, bounceLeft, bounceRight } = Bouncing;
@@ -229,4 +230,5 @@ export {
   expanseLeft,
   expanseRight,
   Merge,
+  Delay,
 };
