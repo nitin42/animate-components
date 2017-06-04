@@ -35,7 +35,7 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 * Component based
 * Supports all the animation properties
 * Use with styled-components, Aphrodite and glamor
-* Create a new animation using `<Merge />`
+* Merge two animations to create one.
 * Isolated keyframes
 * Ratifies DOM nesting
 * Element type rendering of components using `as` prop
