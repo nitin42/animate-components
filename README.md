@@ -52,20 +52,6 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 
 Enough ?
 
-## Size 
-
-This happened to build size 😲
-
-<p align="center">
-	<img src="https://i.gyazo.com/8f5f0a292ff9d6e309eabde768ffa48f.png" />
-	<p align="center">Earlier</p>
-</p>
-
-<p align="center">
-	<img src="https://i.gyazo.com/91847915dd40eedaa5fbfc60af46759c.png" />
-	<p align="center">Present</p>
-</p>
-
 ## Tasks
 
 [Tasklist](https://github.com/nitin42/animate-components/blob/master/tasks.md)
