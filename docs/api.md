@@ -27,6 +27,11 @@
 | **as** | string      |   div |
 | **component** | function      |   - |
 
+#### Props for `<Delay />` component
+| Props        | Type           | Default  |
+| ------------- |:-------------:| -----:|
+| **timeout**      | number | 4ms |
+
 `<Merge />`
 
 ```javascript
