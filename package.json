@@ -1,6 +1,6 @@
 {
   "name": "animate-components",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Elemental components for animations in React",
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
     "start": "./node_modules/.bin/webpack-dev-server --watch --open --config ./starter/webpack.config.js",
     "lint": "./node_modules/.bin/eslint ./src",
     "babel:build": "babel src -d build",
-    "webpack:build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.js --progress --profile --colors"
+    "webpack:build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.js --progress --colors"
   },
   "files": [
     "dist"
