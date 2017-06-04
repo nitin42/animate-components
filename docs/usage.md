@@ -152,6 +152,26 @@ Example -
 
 See the full api for `<Merge />` component [here](https://github.com/nitin42/animate-components/blob/master/docs/api.md).
 
+### Delay rendering
+Delay rendering and animation of a component (because it seems weird when component has rendered by React but animation has a delay of some seconds)
+
+Example -
+
+```javascript
+import React from 'react';
+import App from './App';
+
+let Example = () => {
+  return (
+    <Delay>
+      <FadeIn className="main" as="h1" duration="3s" component={App} />
+    </Delay>
+  );
+}
+```
+
+When and why to use ? Read [here](https://github.com/nitin42/animate-components/blob/master/examples/delay.js)
+
 ### Usage with styled-components
 ```javascript
 
