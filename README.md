@@ -1,5 +1,4 @@
 # Animate Components
-![downloads](https://img.shields.io/badge/downloads-3k-brightgreen.svg)
 ![website](https://img.shields.io/badge/website-up-brightgreen.svg)
 ![version](https://img.shields.io/badge/animate--components-1.1.8-brightgreen.svg)
 ![gzip](https://img.shields.io/badge/gzip%20size-9.09%20KB-brightgreen.svg)
@@ -66,6 +65,10 @@ This happened to build size 😲
 	<img src="https://i.gyazo.com/91847915dd40eedaa5fbfc60af46759c.png" />
 	<p align="center">Present</p>
 </p>
+
+## Tasks
+
+Please check the [tasklist](https://github.com/nitin42/animate-components/blob/master/tasks.md) before creating an issue for a new feature (may be I am working on it).
 
 ## Docs
 Check the complete documentation [here](./docs).
