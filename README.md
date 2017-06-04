@@ -68,7 +68,7 @@ This happened to build size 😲
 
 ## Tasks
 
-Please check the [tasklist](https://github.com/nitin42/animate-components/blob/master/tasks.md) before creating an issue for a new feature (may be I am working on it).
+[Tasklist](https://github.com/nitin42/animate-components/blob/master/tasks.md)
 
 ## Docs
 Check the complete documentation [here](./docs).
