@@ -13,3 +13,5 @@
 * [HTML attribute support](https://github.com/nitin42/animate-components/blob/master/examples/App.js)
 
 * [Render component](https://github.com/nitin42/animate-components/blob/master/examples/componentProp.js)
+
+* [Delay rendering](https://github.com/nitin42/animate-components/blob/master/examples/delay.js)
