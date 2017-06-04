@@ -163,7 +163,7 @@ import App from './App';
 
 let Example = () => {
   return (
-    <Delay>
+    <Delay timeout={4000}>
       <FadeIn className="main" as="h1" duration="3s" component={App} />
     </Delay>
   );
