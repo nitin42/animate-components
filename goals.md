@@ -1,4 +1,4 @@
-Future goals
+# Future goals
 
 - [ ] Integrating other libraries
 - [ ] Fun with SVGs
