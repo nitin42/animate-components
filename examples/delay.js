@@ -3,13 +3,13 @@
 - Delay rendering and animations
 
 Use `<Delay />` when you want to delay both the animation and component rendering. When using
-prop `delay="3s"`, animations are delayed but component is rendered. This looks weird in some
+prop `delay="3s"`, animations are delayed but the component is already rendered. This looks weird in some
 cases. `<Delay />` component will keep both in sync !
 
 - Event queuing model
 
 `<Delay />` being asynchronous, takes the children component (animation component or any other component)
-which would be queued up for execution after the timeout passed has expired.
+which would be queued up for execution after the timeout has expired.
 
 */
 
