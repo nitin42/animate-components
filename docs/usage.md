@@ -159,6 +159,8 @@ Example -
 
 ```javascript
 import React from 'react';
+import { FadeIn, Delay } from 'animate-components';
+
 import App from './App';
 
 let Example = () => {
@@ -168,6 +170,8 @@ let Example = () => {
     </Delay>
   );
 }
+
+export default Example;
 ```
 
 When and why to use ? Read [here](https://github.com/nitin42/animate-components/blob/master/examples/delay.js)
