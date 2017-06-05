@@ -61,7 +61,7 @@ Check the complete documentation [here](./docs).
 
 ## Animations
 
-Below is a list of all available animations.
+Below is a list of all available animations (Components).
 
 ### Bounce
 
