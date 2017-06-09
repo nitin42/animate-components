@@ -153,7 +153,7 @@ Example -
 See the full api for `<Merge />` component [here](https://github.com/nitin42/animate-components/blob/master/docs/api.md).
 
 ### Delay rendering
-Delay rendering and animation of a component (because it seems weird when the component is rendered by React but animation has a delay of some seconds)
+Delay rendering and animation of a component (useful in some cases).
 
 Example -
 
