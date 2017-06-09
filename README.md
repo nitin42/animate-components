@@ -35,7 +35,7 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 * Component based
 * Supports all the animation properties
 * Use with styled-components, Aphrodite and glamor
-* Create a new animation using `<Merge />`
+* Merge two animations to create one.
 * Isolated keyframes
 * Ratifies DOM nesting
 * Element type rendering of components using `as` prop
@@ -52,30 +52,16 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 
 Enough ?
 
-## Size 
-
-This happened to build size 😲
-
-<p align="center">
-	<img src="https://i.gyazo.com/8f5f0a292ff9d6e309eabde768ffa48f.png" />
-	<p align="center">Earlier</p>
-</p>
-
-<p align="center">
-	<img src="https://i.gyazo.com/91847915dd40eedaa5fbfc60af46759c.png" />
-	<p align="center">Present</p>
-</p>
-
 ## Tasks
 
-Please check the [tasklist](https://github.com/nitin42/animate-components/blob/master/tasks.md) before creating an issue for a new feature (may be I am working on it).
+[Tasklist](https://github.com/nitin42/animate-components/blob/master/tasks.md)
 
 ## Docs
 Check the complete documentation [here](./docs).
 
 ## Animations
 
-Below is a list of all available animations.
+Below is a list of all available animations (Components).
 
 ### Bounce
 
