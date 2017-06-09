@@ -38,7 +38,7 @@
     "prop-types": "^15.5.8",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "styled-components": "^1.4.4"
+    "styled-components": "^2.0.1"
   },
   "jest": {
     "testEnvironment": "node"
