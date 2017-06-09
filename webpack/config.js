@@ -15,7 +15,7 @@ const common = {
     /dist/,
     /examples/,
     /scripts/,
-    /starter/
+    /starter/,
   ]
 };
 
