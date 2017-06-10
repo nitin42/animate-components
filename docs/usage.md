@@ -136,8 +136,8 @@ class Main extends Component {
 
 > Note - You can also pass all the [html attributes](https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes) supported by React to the animation component along with the component props. Check [this](https://github.com/nitin42/animate-components/blob/master/examples/App.js) example.
 
-### Multistep animations
-Perform multistep animation (release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)).
+### Multiple animations
+Perform multiple animations (release [V0.8.0](https://github.com/nitin42/animate-components/releases/tag/0.8.0)).
 
 Example -
 
