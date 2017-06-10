@@ -18,7 +18,7 @@ class App extends Component {
 
 ```
 
-The animation component can takes these props:
+An animation component can takes these props:
 
 ### duration
 It defines seconds or milliseconds an animation takes to complete one cycle.
