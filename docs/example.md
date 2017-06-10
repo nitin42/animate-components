@@ -6,7 +6,7 @@
 
 * [forceInterpolate prop](https://github.com/nitin42/animate-components/blob/master/examples/forceInterpolate.js)
 
-* [Multistep animation](https://github.com/nitin42/animate-components/blob/master/examples/multistep.js)
+* [Merge animations](https://github.com/nitin42/animate-components/blob/master/examples/multistep.js)
 
 * [Render as an element type](https://github.com/nitin42/animate-components/blob/master/examples/renderElementType.js)
 
