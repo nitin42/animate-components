@@ -184,10 +184,10 @@ import { fadeIn } from 'animate-components';
 import styled from 'styled-components';
 
 const Heading = styled.h1`
-	display: inline-block;
-	animation: ${fadeIn} 2s ease-in;
-	padding: 2rem 3rem;
-	font-size: 1.2rem;
+  display: inline-block;
+  animation: ${fadeIn} 2s ease-in;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
 `;
 
 ```
@@ -235,9 +235,9 @@ import { fadeIn } from 'animate-components';
 import { css } from 'glamor';
 
 let rule = css({
-	display: 'inline-block',
-	animation: `${fadeIn} 2s ease-in`,
-	padding: '2rem 3rem',
-	font-size: '1.2rem'
+  display: 'inline-block',
+  animation: `${fadeIn} 2s ease-in`,
+  padding: '2rem 3rem',
+  font-size: '1.2rem'
 });
 ```
