@@ -34,13 +34,11 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 
 * Component based
 * Supports all the animation properties
-* Use with styled-components, Aphrodite and glamor
 * Merge two animations to create one.
-* Isolated keyframes
+* Isolated keyframes (use with styled-components, aphrodite and glamor)
 * Ratifies DOM nesting
 * Element type rendering of components using `as` prop
 * Add all the html attributes supported by React along with component props.
-* Render a component in isolation and apply animations on it. 
 
 ## Why ?
 
@@ -49,8 +47,6 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 * Best source for someone who is new to React (folks are already enjoying the ease of doing animations).
 * Supports element type rendering of an animation component (interesting tweak).
 * Provides isolated keyframes so that you don't have to hardcode all the curves and directly use them with css-in-js solutions like [glamor](https://github.com/threepointone/glamor), [styled-components](https://github.com/styled-components/styled-components), [Aphrodite](https://github.com/Khan/aphrodite) etc.
-
-Enough ?
 
 ## Tasks
 
