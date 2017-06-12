@@ -74,18 +74,15 @@ class Merge extends PureComponent<DefaultProps, Props, State> {
     this.setState(update);
   };
 
-  // componentWillReceiveProps = (nextProps: Props) => {
-  //   // New state object
-  //   const newUpdate = update(this.state, nextProps);
-  //
-  //   // Previous state object
-  //   const prevUpdate = update(this.state, this.props);
-  //
-  //   // Update with setState callback
-  //   if (newUpdate !== prevUpdate) {
-  //     this.setState(newUpdate);
-  //   }
-  // };
+  componentWillReceiveProps = (nextProps: Props) => {
+    const newUpdate = update(this.state, nextProps);
+    const prevUpdate = update(this.state, this.props);
+
+    // Update with setState callback
+    if (newUpdate !== prevUpdate) {
+      this.setState(newUpdate);
+    }
+  };
 
   render(): ?React$Element<any> {
     const ElementType = getElementType(Merge, this.props);
