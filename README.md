@@ -72,13 +72,14 @@ Below is a list of all available animations (Components).
 ### Fade
 
 * `FadeIn`
-* `FadeInUp`
+* `FadeInRightBig`
 * `FadeInRight`
+* `FadeInLeftBig`
 * `FadeInLeft`
 * `FadeInDown`
+* `FadeInDownBig`
+* `FadeInUp`
 * `FadeInUpBig`
-* `FadeInLeftBig`
-* `FadeInRightBig`
 
 ### Flip
 
@@ -119,6 +120,7 @@ Below is a list of all available animations (Components).
 * `ExpandUp`
 * `Entrance`
 * `Hatch`
+* `StarWars`
 
 ## 🚀 New
 ### Perspective
