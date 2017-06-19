@@ -15,13 +15,13 @@
 **npm**
 
 ```
-npm install animate-components --save
+npm install animate-components@1.1.9 --save
 ```
 
 **yarn**
 
 ```
-yarn add animate-components
+yarn add animate-components@1.1.9
 ```
 
 The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https://unpkg.com):
@@ -29,6 +29,8 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 ```html
 <script src="https://unpkg.com/animate-components@1.1.9/dist/animate-components.min.js"></script>
 ```
+
+> Current stable release is V1.1.9. If upgrading or installing the package gives an error, fallback to this version.
 
 ## Features
 
