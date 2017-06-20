@@ -135,7 +135,8 @@ class Main extends Component {
 ```
 
 ## Merge Component
-Merge two animations and create a new one.
+Perform multiple animations.
+
 ```javascript
 import { Merge } from 'animate-components';
 import { fadeIn, slideUp } from 'animate-keyframes';
@@ -159,11 +160,11 @@ import { fadeIn } from 'animate-keyframes';
   <h1>Hello World</h1>
 </Disappear>
 ```
-> Note - You can also pass all the [html attributes](https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes) supported by React to both the Merge and Disappear component along with the above props. Check [this](https://github.com/nitin42/animate-components/blob/master/examples/App.js) example.
+> Note - You can also pass all the [html attributes](https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes) supported by React to both the Merge and Disappear component along with the above props. Check [this](https://github.com/nitin42/animate-components/blob/master/packages/animate-components/examples/App.js) example.
 
 
 ## Delay Component
-Delay both the rendering and animations. Detailed info [here](https://github.com/nitin42/animate-components/blob/master/examples/delay.js).
+Delay both the rendering and animations. Detailed info [here](https://github.com/nitin42/animate-components/blob/master/packages/animate-components/examples/delay.js).
 
 
 ## Usage with styled-components
