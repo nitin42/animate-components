@@ -1,6 +1,22 @@
 {
   "name": "animate-components-packages",
-  "private": true,
+  "version": "0.0.1",
+  "description": "Contains packages for animate-components",
+  "keywords": [
+    "react",
+    "keyframes",
+    "animate",
+    "high order component",
+    "composed components",
+    "animations",
+    "styled",
+    "renderer",
+    "block",
+    "renderer",
+    "styled",
+    "custom elements"
+  ],
+  "main": "index.js",
   "scripts": {
     "postinstall": "lerna bootstrap --concurrency=1",
     "start": "cd packages/animate-components && yarn start",
