@@ -78,4 +78,4 @@ Use prop `as` to render as an element type.
 
 ### Delay both component rendering and animations
 
-[Example](https://github.com/nitin42/animate-components/blob/master/examples/delay.js)
+[Example](https://github.com/nitin42/animate-components/blob/master/packages/animate-components/examples/delay.js)
