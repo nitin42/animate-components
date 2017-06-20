@@ -163,7 +163,7 @@ import { fadeIn } from 'animate-keyframes';
 
 
 ## Delay Component
-Delay both the rendering and animations. Detailed info [here]().
+Delay both the rendering and animations. Detailed info [here](https://github.com/nitin42/animate-components/blob/master/examples/delay.js).
 
 
 ## Usage with styled-components
