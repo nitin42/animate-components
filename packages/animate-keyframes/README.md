@@ -9,7 +9,7 @@ npm install animate-keyframes
 ```
 
 ## Usage
-Keyframes are required when you will be using [Merge]() and [Disappear Component](). Earlier they were bundled with the same package ([`animate-components`](../animate-components)) so there are few changes when importing them.
+Keyframes are required when you use [Merge](https://github.com/nitin42/animate-components/blob/master/packages/animate-components/docs/usage.md#merge-component) and [Disappear](https://github.com/nitin42/animate-components/blob/master/packages/animate-components/docs/usage.md#disappear-component) Component. Earlier they were bundled within the same package ([`animate-components`](../animate-components)) so there are few changes when importing them.
 
 To import any keyframe,
 
@@ -94,7 +94,7 @@ import { fadeIn } from 'animate-keyframes';
 * `vanishout`
 * `vanishin`
 
-### Expanse (in space)
+### Expanse
 
 * `expanseUp`
 * `expanseDown`
