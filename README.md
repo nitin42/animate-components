@@ -1,6 +1,6 @@
 # Animate Components
 
-> ***Elemental components for doing animations in React***
+> ***Elemental components for doing animation in React***
 
 ## Packages
 This repository uses [Lerna](https://lernajs.io/) to organise the codebase.
