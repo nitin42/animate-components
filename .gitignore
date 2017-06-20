@@ -8,5 +8,6 @@ dist
 .DS_Store
 .env
 npm-debug.log*
+lerna-debug.log
 yarn.lock
 yarn-error.log
