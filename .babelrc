@@ -1,4 +1,4 @@
 {
 	"presets": ["es2015", "react", "babili"],
-	"plugins": ["transform-class-properties"]
+	"plugins": ["transform-object-rest-spread", "transform-class-properties"]
 }
