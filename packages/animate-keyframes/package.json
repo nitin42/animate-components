@@ -1,0 +1,12 @@
+{
+  "name": "animate-keyframes",
+  "version": "0.0.3",
+  "description": "Keyframes for animate-components",
+  "main": "index.js",
+  "repository": "https://github.com/nitin42/animate-components",
+  "author": "Nitin Tulswani",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^2.1.0"
+  }
+}
