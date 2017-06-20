@@ -12,16 +12,6 @@ let build = () => {
     if (code !== 0) {
       log(chalk.red("\n⚠️  Build failed."));
     } else log(chalk.yellow("\n✅  Build completed."))
-    flow();
-  });
-}
-
-let flow = () => {
-  log(chalk.green("\nTypechecking the source files..."));
-  shell.exec('yarn flow >&-', (code) => {
-    if (code !== 0) {
-      log(chalk.red("\n⚠️  There were some type errors. Run `yarn flow` to check the errors."));
-    } else log(chalk.yellow("\n✅  No errors."))
     lint();
   });
 }
