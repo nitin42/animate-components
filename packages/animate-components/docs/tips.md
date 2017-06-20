@@ -28,7 +28,7 @@ Both `Merge` and an animation component support `component` prop. Shorthand righ
 
 ### Merge two animations
 
-Merge two animations using `<Merge />` to create one.
+Perform multiple animations.
 
 ```html
 <Merge
