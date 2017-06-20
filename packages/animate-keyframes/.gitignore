@@ -3,6 +3,8 @@
 build
 coverage
 dist
+entry.js
+index.js
 
 # misc
 .DS_Store

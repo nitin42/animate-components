@@ -1,12 +1,22 @@
 {
   "name": "animate-keyframes",
-  "version": "0.0.3",
+  "version": "0.0.9",
   "description": "Keyframes for animate-components",
   "main": "index.js",
   "repository": "https://github.com/nitin42/animate-components",
   "author": "Nitin Tulswani",
   "license": "MIT",
+  "scripts": {
+    "build": "babel keyframes.js -o index.js && babel main.js -o entry.js"
+  },
+  "files": [
+    "index.js",
+    "entry.js"
+  ],
   "dependencies": {
     "styled-components": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
   }
 }

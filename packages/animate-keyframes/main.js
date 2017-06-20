@@ -1,4 +1,4 @@
-const { keyframes } = require('styled-components');
+import { keyframes } from 'styled-components';
 
 // Bingo
 const Bingo = {
@@ -840,7 +840,7 @@ const Special = {
   `,
 };
 
-module.exports = {
+export {
   Bouncing,
   Fade,
   Flippy,
