@@ -25,7 +25,7 @@ It defines seconds or milliseconds an animation takes to complete one cycle.
 
 ```javascript
 
-<Entrance duration="2s">
+<Entrance duration='2s'>
 
 ```
 ### delay
@@ -33,7 +33,7 @@ Specifies a delay for the start of an animation.
 
 ```javascript
 
-<Entrance delay="2s">
+<Entrance delay='2s'>
 
 ```
 ### timingFunction
@@ -41,7 +41,7 @@ Specifies the speed curve of the animation.
 
 ```javascript
 
-<Entrance timingFunction="ease-in">
+<Entrance timingFunction='ease-in'>
 
 ```
 ### direction
@@ -49,7 +49,7 @@ This prop lets an animation run in reverse direction or alternate cycles.
 
 ```javascript
 
-<Entrance direction="reverse">
+<Entrance direction='reverse'>
 
 ```
 ### iterations
@@ -57,7 +57,7 @@ Specifies the number of times an animation should run.
 
 ```javascript
 
-<Entrance iterations="2">
+<Entrance iterations='2'>
 
 ```
 ### backfaceVisible
@@ -65,7 +65,7 @@ This prop defines whether an element should be visible when not facing the scree
 
 ```javascript
 
-<Entrance backfaceVisible="visible">
+<Entrance backfaceVisible='visible'>
 
 ```
 ### fillMode
@@ -73,7 +73,7 @@ Specifies a style for the element when the animation is not playing.
 
 ```javascript
 
-<Entrance fillMode="forward">
+<Entrance fillMode='forward'>
 
 ```
 ### playState
@@ -81,7 +81,7 @@ Specifies whether the animation is running or paused.
 
 ```javascript
 
-<Entrance playState="running">
+<Entrance playState='running'>
 
 ```
 ### as
@@ -89,7 +89,7 @@ An element type to render as using the prop `as`.
 
 ```javascript
 
-<Entrance duration="3s" as="h1">
+<Entrance duration='3s' as='h1'>
   Hello World
 </Entrance>
 ```
@@ -128,7 +128,7 @@ import App from './App';
 class Main extends Component {
   render () {
     return (
-      <FadeIn className="main" as="div" duration="3s" component={App} />
+      <FadeIn className='main' as='div' duration='3s' component={App} />
     );
   }
 }
@@ -156,7 +156,7 @@ Performs an animation and unmounts after the last-step (@keyframe).
 import { Disappear } from 'animate-components';
 import { fadeIn } from 'animate-keyframes';
 
-<Disappear name={fadeIn} as="div" duration="3s">
+<Disappear name={fadeIn} as='div' duration='3s'>
   <h1>Hello World</h1>
 </Disappear>
 ```
