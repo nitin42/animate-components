@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delay component sets the timeout for an animation component 1`] = `<div />`;

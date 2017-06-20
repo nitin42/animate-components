@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Merge Component animates the children and render the div (default) element 1`] = `[Function]`;
+
+exports[`Merge Component animates the children and render the h1 element 1`] = `[Function]`;
