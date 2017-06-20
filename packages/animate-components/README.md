@@ -35,7 +35,7 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 * Component based
 * Supports all the animation properties
 * Merge two animations to create one
-* Isolated keyframes (use with styled-components, aphrodite and glamor) provided by [`animate-keyframes`]()
+* Isolated keyframes (use with styled-components, aphrodite and glamor) provided by [`animate-keyframes`](https://github.com/nitin42/animate-components/tree/master/packages/animate-keyframes)
 * Ratifies DOM nesting
 * Element type rendering of components using `as` prop
 * Add all the html attributes supported by React along with component props.
