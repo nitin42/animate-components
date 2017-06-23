@@ -13,6 +13,7 @@ import {
 import Merge from './containers/merge';
 import Delay from './containers/Delay';
 import Disappear from './containers/Disappear';
+import hoc from './containers/HOC';
 
 const { Bounce, BounceUp, BounceRight, BounceLeft, BounceDown } = bounceObj;
 const {
@@ -109,4 +110,5 @@ export {
   Merge,
   Delay,
   Disappear,
+  hoc,
 };
