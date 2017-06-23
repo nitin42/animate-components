@@ -1,11 +1,50 @@
+// @flow
+
 import React, { PureComponent } from 'react';
+import type { Element } from 'react';
 import PropTypes from 'prop-types';
 import checkTag from 'html-tags';
-import Render from '../mods/Render';
+import { Render } from 'element-utils';
 import derive from '../utils/state';
 import { direction, interpolateValidators } from '../utils/keyValidators';
 
-function setPropTypes(ComposedComponent) {
+type DefaultProps = {
+  duration: string,
+  timingFunction: string,
+  delay: string,
+  direction: string,
+  iterations: string,
+  backfaceVisible: string,
+  fillMode: string,
+  playState: string,
+  as: string,
+  component?: Function,
+  children?: Element<any>,
+  forceInterpolate?: Object,
+  style?: Object
+}
+
+type Props = {
+  duration: string,
+  timingFunction: string,
+  delay: string,
+  direction: string,
+  iterations: string,
+  backfaceVisible: string,
+  fillMode: string,
+  playState: string,
+  as: string,
+  component?: Function,
+  children?: Element<any>,
+  forceInterpolate?: Object,
+  style?: Object
+}
+
+type State = {
+  styles: Object
+}
+
+function setPropTypes(ComposedComponent: string) {
   return {
     direction: PropTypes.oneOf([
       'normal',
@@ -43,10 +82,9 @@ function setPropTypes(ComposedComponent) {
   };
 }
 
-function hoc(ComposedComponent, AnimationName) {
-  class _Animation extends PureComponent {
-    // avoids warning for super() in some cases
-    constructor(props) {
+function hoc(ComposedComponent: string, AnimationName: string) {
+  class _Animation extends PureComponent<DefaultProps, Props, State> {
+    constructor(props: Object) {
       super(props);
     };
 
@@ -72,7 +110,7 @@ function hoc(ComposedComponent, AnimationName) {
       this.setAnimation(this.props);
     };
 
-    componentWillReceiveProps = (nextProps) => {
+    componentWillReceiveProps = (nextProps: Props) => {
       // Interpolation of new animation properties
       const deriveInterpolationFromNextProps = derive(nextProps, AnimationName);
 
@@ -97,7 +135,7 @@ function hoc(ComposedComponent, AnimationName) {
       }
     };
 
-    setAnimation = (props) => {
+    setAnimation = (props: Props) => {
       // Keyframes Interpolation and Force Interpolation
       const deriveInterpolation = derive(props, AnimationName);
 
@@ -112,7 +150,7 @@ function hoc(ComposedComponent, AnimationName) {
       });
     };
 
-    render() {
+    render(): ?React$Element<any> {
       const {
         children,
         duration,
