@@ -1,10 +1,10 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { fadeIn } from "animate-keyframes";
-import { getElementType, avoidNest } from "../mods/getElement";
+import { getElementType, avoidNest } from "element-utils";
 
 export default class Disappear extends PureComponent {
-  constructor(props) {
+  constructor(props: Object) {
     super(props);
   };
 
@@ -36,13 +36,13 @@ export default class Disappear extends PureComponent {
   };
 
   performAndDisapper = (props) => {
-    const Element = document.getElementById("animation-root");
-    Element.style = `animation: ${props.name} ${props.duration} ${props.timingFunction}`; // start on initial render
-    Element.addEventListener("animationend", () => {
-      Element.style =
+    const element = document.getElementById("animation-root");
+    element.style = `animation: ${props.name} ${props.duration} ${props.timingFunction}`; // start on initial render
+    element.addEventListener("animationend", () => {
+      element.style =
         "visibility: 'hidden'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;";
       this.timeouts = setTimeout(() => {
-        Element.remove();
+        element.remove();
       }, 2000); // Sync with fadeOut
     });
   };
