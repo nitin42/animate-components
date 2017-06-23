@@ -1,0 +1,6 @@
+[include]
+./getElement.js
+./Render.js
+
+[ignore]
+.*/node_modules/
