@@ -265,4 +265,4 @@ let App = () => {
 }
 ```
 
-> Note - `hoc` takes two arguments, Animation name and keyframes.
+> Note - `hoc` takes two arguments, Component name and keyframes.
