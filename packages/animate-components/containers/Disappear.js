@@ -40,7 +40,7 @@ export default class Disappear extends PureComponent {
     element.style = `animation: ${props.name} ${props.duration} ${props.timingFunction}`; // start on initial render
     element.addEventListener('animationend', () => {
       element.style =
-        'visibility: 'hidden'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;';
+        'visibility: \'hidden\'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;';
       this.timeouts = setTimeout(() => {
         element.remove();
       }, 2000); // Sync with fadeOut
