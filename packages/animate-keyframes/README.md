@@ -1,5 +1,5 @@
 ## animate-keyframes
-![](https://img.shields.io/badge/npm-v0.0.3-blue.svg)
+![](https://img.shields.io/badge/npm-v0.1.5-blue.svg)
 
 > ***Keyframes for animations***
 
