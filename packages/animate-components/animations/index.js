@@ -1,3 +1,5 @@
+// @flow
+
 import {
   bounce,
   bounceDown,
@@ -54,8 +56,13 @@ import {
 } from 'animate-keyframes';
 import hoc from '../containers/HOC';
 
-// Animate Components
+type HighOrderComponent = Function;
 
+type Component = {
+  [key: string]: HighOrderComponent
+}
+
+// Animate Components
 const bingoObj = {
   PuffOut: hoc('PuffOut', puffmeout),
   PuffIn: hoc('PuffIn', puffmein),
