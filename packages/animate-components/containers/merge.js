@@ -1,7 +1,10 @@
+// @flow
+
 import React, { PureComponent } from 'react';
+import type { Element } from 'react';
 import PropTypes from 'prop-types';
 import checkTag from 'html-tags';
-import Render from '../mods/Render';
+import { Render } from 'element-utils';
 import {
   names,
   duration,
@@ -9,13 +12,35 @@ import {
   propValidators
 } from '../utils/keyValidators';
 
+type DefaultProps = {
+  one: Object,
+  two: Object,
+  as: string,
+  style?: Object,
+  component?: Function,
+  children?: Element<any>
+}
+
+type Props = {
+  one: Object,
+  two: Object,
+  as: string,
+  style?: Object,
+  component?: Function,
+  children?: Element<any>
+}
+
+type State = {
+  styles: Object
+}
+
 // Single prop update
-function setAttr(prop) {
+function setAttr(prop: Object) {
   return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
 }
 
 // As a callback for state update
-function update(state, props) {
+function update(state: State, props: Props) {
   const { one, two } = props;
   const properties = `${setAttr(one)}, ${setAttr(two)}`;
 
@@ -30,9 +55,8 @@ function update(state, props) {
   };
 }
 
-export default class Merge extends PureComponent {
-  // avoids warning for super() in some cases
-  constructor(props) {
+export default class Merge extends PureComponent<DefaultProps, Props, State> {
+  constructor(props: Object) {
     super(props);
   };
 
@@ -52,7 +76,7 @@ export default class Merge extends PureComponent {
     this.setState(update);
   };
 
-  componentWillReceiveProps = nextProps => {
+  componentWillReceiveProps = (nextProps: Props) => {
     const newUpdate = update(this.state, nextProps);
     const prevUpdate = update(this.state, this.props);
 
@@ -62,7 +86,7 @@ export default class Merge extends PureComponent {
     }
   };
 
-  render() {
+  render(): ?React$Element<any> {
     const { children, one, two, as, style, component, ...rest } = this.props;
     return Render(Merge, this.props, this.state, rest, 'Merge');
   }
