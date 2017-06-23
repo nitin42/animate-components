@@ -32,7 +32,7 @@ export default class Disappear extends PureComponent {
   };
 
   componentWillUnmount = () => {
-    this.timeouts ? clearTimeout(this.timeouts) : null;
+    clearTimeout(this.timeouts);
   };
 
   performAndDisapper = (props) => {
