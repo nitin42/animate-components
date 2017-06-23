@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import { fadeIn } from "animate-keyframes";
-import { getElementType, avoidNest } from "element-utils";
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { fadeIn } from 'animate-keyframes';
+import { getElementType, avoidNest } from 'element-utils';
 
 export default class Disappear extends PureComponent {
   constructor(props: Object) {
@@ -10,9 +10,9 @@ export default class Disappear extends PureComponent {
 
   static defaultProps = {
     name: fadeIn,
-    duration: "2s",
-    as: "div",
-    timingFunction: "ease"
+    duration: '2s',
+    as: 'div',
+    timingFunction: 'ease'
   };
 
   static propTypes = {
@@ -36,11 +36,11 @@ export default class Disappear extends PureComponent {
   };
 
   performAndDisapper = (props) => {
-    const element = document.getElementById("animation-root");
+    const element = document.getElementById('animation-root');
     element.style = `animation: ${props.name} ${props.duration} ${props.timingFunction}`; // start on initial render
-    element.addEventListener("animationend", () => {
+    element.addEventListener('animationend', () => {
       element.style =
-        "visibility: 'hidden'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;";
+        'visibility: 'hidden'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;';
       this.timeouts = setTimeout(() => {
         element.remove();
       }, 2000); // Sync with fadeOut
@@ -54,7 +54,7 @@ export default class Disappear extends PureComponent {
     const Wrapper = this.props.component;
 
     return (
-      <NormalizedComponent id="animation-root" {...rest}>
+      <NormalizedComponent id='animation-root' {...rest}>
         { Wrapper ? React.createElement(Wrapper, children) : children }
       </NormalizedComponent>
     );
