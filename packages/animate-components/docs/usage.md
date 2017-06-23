@@ -233,3 +233,36 @@ let rule = css({
   font-size: '1.2rem'
 });
 ```
+
+## Custom components 💃
+If you want to create your own animation components rather than using the built-in ones, `animate-components` also exports a high order function that lets you create your own components with ease (believe me!).
+
+Example -
+
+```javascript
+import { hoc } from 'animate-components';
+
+// Keyframes with styled-components
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+// Let's create an animation component
+const Rotate = hoc('Rotate', rotate360); 
+
+let App = () => {
+  return (
+    <Rotate as="div" duration="4s">
+      <h1>I am rotating!</h1>
+    </Rotate>
+  );
+}
+```
+
+> Note - `hoc` takes two arguments, Animation name and keyframes.
