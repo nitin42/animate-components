@@ -71,7 +71,7 @@ const plugins = () => {
       threshold: 10240,
       minRatio: 0.8
     }),
-    new CleanWebpackPlugin([resolve(__dirname, '../dist')])
+    new CleanWebpackPlugin([resolve(__dirname, 'dist')])
   ];
 };
 
@@ -81,7 +81,8 @@ const externals = () => {
     'react-dom': 'react-dom',
     'prop-types': 'prop-types',
     'html-tags': 'html-tags',
-    'animate-keyframes': 'animate-keyframes'
+    'animate-keyframes': 'animate-keyframes',
+    'element-utils': 'element-utils'
   };
 };
 
