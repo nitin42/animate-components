@@ -1,0 +1,33 @@
+{
+  "name": "element-utils",
+  "version": "0.1.2",
+  "description": "Utility functions for React elements",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/nitin42/animate-components/",
+  "author": "Nitin Tulswani",
+  "license": "MIT",
+  "scripts": {
+    "flow": "./node_modules/.bin/flow",
+    "prebuild": "rm -rf ./dist",
+    "build": "NODE_ENV=production ./node_modules/.bin/babel src -d dist",
+    "test": "NODE_ENV=development ./node_modules/.bin/jest",
+    "test:watch": "NODE_ENV=development ./node_modules/.bin/jest --watch",
+    "prepublishOnly": "yarn flow && yarn test && yarn build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "flow-bin": "^0.48.0",
+    "jest": "^20.0.4"
+  },
+  "dependencies": {
+    "react": "^15.6.1"
+  }
+}
