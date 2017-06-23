@@ -1,6 +1,7 @@
-// Utilities for changing the component state based on a particular prop.
+// @flow
 
-const derive = (props, AnimationName) => {
+// Utilities for changing the component state based on a particular prop.
+const derive = (props: Object, AnimationName: string): string => {
   const {
     duration,
     timingFunction,
