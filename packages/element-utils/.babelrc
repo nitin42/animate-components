@@ -1,0 +1,10 @@
+{
+  "env": {
+    "development": {
+      "presets": ["flow", "es2015", "react"]
+    },
+    "production": {
+      "presets": ["babili", "flow", "es2015", "react"]
+    }
+  }
+}
