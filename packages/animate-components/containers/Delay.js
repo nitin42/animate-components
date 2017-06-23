@@ -1,11 +1,30 @@
+// @flow
+
 import React, { PureComponent } from 'react';
+import type { Element } from 'react';
 import PropTypes from 'prop-types';
 
-export default class Delay extends PureComponent {
+type DefaultProps = {
+  timeout: number,
+  children?: Element<any> // Workaround 😕
+}
+
+type Props = {
+  timeout: number,
+  children?: Element<any>
+}
+
+type State = {
+  show: boolean
+}
+
+export default class Delay extends PureComponent<DefaultProps, Props, State> {
   // avoids warning for super() in some cases
-  constructor(props) {
+  constructor(props: Object) {
     super(props);
   };
+
+  timer = null;
 
   static displayName = 'Delay';
 
@@ -28,7 +47,6 @@ export default class Delay extends PureComponent {
   componentDidMount = () => {
     const { timeout } = this.props;
     this.timer = setTimeout(this.setShowValue, timeout);
-    return this.timer;
   };
 
   componentWillUnmount = () => {
@@ -36,13 +54,13 @@ export default class Delay extends PureComponent {
     this.timer ? clearTimeout(this.timer) : null;
   };
 
-  setShowValue = () => {
+  setShowValue = (): void => {
     this.setState({
       show: true,
     });
   };
 
-  render() {
+  render(): ?React$Element<any> {
     const { children } = this.props;
     const { show } = this.state;
     const performAnimation = show ? children : <div />;
