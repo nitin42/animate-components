@@ -15,4 +15,4 @@ This repository uses [Lerna](https://lernajs.io/) to organise the codebase.
 View the docs [here](./packages)
 
 ## Current Status
-🚧 Working on adding Typescript and Flow declaration files
+🚧 Working on adding Typescript declaration files
