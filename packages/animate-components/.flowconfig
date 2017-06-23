@@ -1,0 +1,9 @@
+[include]
+./containers
+./utils
+
+[ignore]
+.*/node_modules/styled-components/.*
+.*/node_modules/prop-types/.*
+.*/node_modules/html-tags/.*
+.*/node_modules/
