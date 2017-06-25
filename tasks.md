@@ -11,3 +11,5 @@ attribute of an animation but its an addon for existing library.
 - [x] Code refactor
 - [ ] Component Transitioning
 - [x] Misc Components like perform animation and then disapper (Node removal from DOM instead of hiding using component state which is imperative).
+- [ ] More animations
+- [ ] Integration
