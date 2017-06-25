@@ -266,3 +266,5 @@ let App = () => {
 ```
 
 > Note - `hoc` takes two arguments, Component name and keyframes.
+
+Now you have all the power!!
