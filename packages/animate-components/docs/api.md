@@ -1,6 +1,6 @@
 # API Reference
 
-#### Props for animation component
+#### Props for animation component (eg - `<FadeIn />`)
 
 | Props        | Type           | Default  |
 | ------------- |:-------------:| -----:|
