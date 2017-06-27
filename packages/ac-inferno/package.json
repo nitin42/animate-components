@@ -1,0 +1,62 @@
+{
+  "name": "ac-inferno",
+  "version": "1.0.3",
+  "description": "Elemental components for doing animation",
+  "keywords": [
+    "react",
+    "keyframes",
+    "animate",
+    "high order component",
+    "composed components",
+    "animations",
+    "styled",
+    "merge",
+    "delay",
+    "element type"
+  ],
+  "main": "main.js",
+  "author": "Nitin Tulswani",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "main.js"
+  ],
+  "homepage": "https://github.com/nitin42/animate-components",
+  "scripts": {
+    "prepublishOnly": "yarn flow && yarn webpack",
+    "start": "./node_modules/.bin/webpack-dev-server --watch --config ./webpack.config.js",
+    "flow": "./node_modules/.bin/flow",
+    "webpack": "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.js --display-max-modules 0 --display-optimization-bailout"
+  },
+  "dependencies": {
+    "animate-keyframes": "^0.1.5",
+    "inferno": "^3.6.1",
+    "inferno-compat": "^3.6.1",
+    "inferno-component": "^3.6.1",
+    "inferno-create-element": "^3.6.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.0",
+    "babel-plugin-inferno": "^3.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babili-webpack-plugin": "^0.1.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "compression-webpack-plugin": "^0.4.0",
+    "flow-bin": "^0.48.0",
+    "flow-typed": "^2.1.2",
+    "remove-flow-types-loader": "^1.0.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitin42/animate-components",
+    "bugs": {
+      "url": "https://github.com/nitin42/animate-components/issues"
+    }
+  }
+}
