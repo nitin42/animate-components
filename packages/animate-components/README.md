@@ -1,6 +1,6 @@
 # Animate Components
 ![website](https://img.shields.io/badge/website-up-brightgreen.svg)
-![version](https://img.shields.io/badge/animate--components-1.4.0-brightgreen.svg)
+![version](https://img.shields.io/badge/animate--components-1.4.2-brightgreen.svg)
 ![gzip](https://img.shields.io/badge/gzip%20size-4.5%20KB-brightgreen.svg)
 ![size](https://img.shields.io/badge/size-17.5%20KB-brightgreen.svg)
 
@@ -27,7 +27,7 @@ yarn add animate-components
 The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https://unpkg.com):
 
 ```html
-<script src="https://unpkg.com/animate-components@1.4.0/dist/animate-components.min.js"></script>
+<script src="https://unpkg.com/animate-components@1.4.2/dist/animate-components.min.js"></script>
 ```
 
 ## Features
