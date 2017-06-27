@@ -82,7 +82,7 @@ function setPropTypes(ComposedComponent: string) {
   };
 }
 
-function hoc(ComposedComponent: string, AnimationName: string) {
+function hoc(ComposedComponent: string, AnimationName: string): Function {
   class _Animation extends PureComponent<DefaultProps, Props, State> {
     constructor(props: Object) {
       super(props);

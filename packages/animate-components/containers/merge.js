@@ -35,12 +35,12 @@ type State = {
 }
 
 // Single prop update
-function setAttr(prop: Object) {
+function setAttr(prop: Object): string {
   return `${prop.name || ''} ${prop.duration || '1s'} ${prop.timingFunction || 'ease'}`;
 }
 
 // As a callback for state update
-function update(state: State, props: Props) {
+function update(state: State, props: Props): Object {
   const { one, two } = props;
   const properties = `${setAttr(one)}, ${setAttr(two)}`;
 
