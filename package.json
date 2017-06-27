@@ -19,10 +19,12 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "lerna bootstrap --concurrency=1",
-    "start": "cd packages/animate-components && yarn start",
+    "start:react": "cd packages/animate-components && yarn start",
+    "start:inferno": "cd packages/ac-inferno && yarn start",
     "lint": "cd packages/animate-components && yarn lint",
     "test": "cd packages/animate-components && yarn test",
-    "build": "cd packages/animate-components && yarn webpack:build"
+    "build:react": "cd packages/animate-components && yarn webpack:build",
+    "build:inferno": "cd packages/ac-inferno && yarn webpack"
   },
   "jest": {
     "testEnvironment": "node"
@@ -45,6 +47,8 @@
   "dependencies": {
     "animate-keyframes": "^0.1.3",
     "html-tags": "^2.0.0",
+    "inferno": "^3.6.1",
+    "inferno-component": "^3.6.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
