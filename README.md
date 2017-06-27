@@ -14,3 +14,9 @@ This repository uses [Lerna](https://lernajs.io/) to organise the codebase.
 
 ## Docs
 View the docs [here](./packages)
+
+## Support
+
+Animate Components also supports [InfernoJS](infernojs.org) (separate package so `inferno-compat` is not required) and [Preact](preactjs.com) (with `preact-compat`). 
+
+Why a separate package for InfernoJS  ? Read [here](https://github.com/nitin42/animate-components/tree/master/packages/ac-inferno#why-a-separate-package-for-infernojs-instead-of-using-animate-components-with-inferno-compat-).
