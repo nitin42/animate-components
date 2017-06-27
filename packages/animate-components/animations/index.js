@@ -1,5 +1,3 @@
-// @flow
-
 import {
   bounce,
   bounceDown,
@@ -55,12 +53,6 @@ import {
   expanseRight,
 } from 'animate-keyframes';
 import hoc from '../containers/HOC';
-
-type HighOrderComponent = Function;
-
-type Component = {
-  [key: string]: HighOrderComponent
-}
 
 // Animate Components
 const bingoObj = {
