@@ -1,6 +1,6 @@
 {
   "name": "animate-components",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "Elemental components for animations in React",
   "keywords": [
     "react",
@@ -22,7 +22,7 @@
     "test:watch": "./node_modules/.bin/jest --watch",
     "test:coverage": "./node_modules/.bin/jest --coverage",
     "builder": "node ../../scripts/check.js",
-    "lint": "./node_modules/.bin/eslint ./containers ./mods ./animations ./utils",
+    "lint": "./node_modules/.bin/eslint ./containers ./mods ./utils",
     "start": "../../node_modules/.bin/webpack-dev-server --watch --open --config ../../starter/webpack.config.js",
     "flow": "./node_modules/.bin/flow",
     "webpack:build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.js --display-max-modules 0 --display-optimization-bailout"
