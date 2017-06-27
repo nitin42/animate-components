@@ -1,0 +1,8 @@
+[include]
+./containers
+./utils
+./animations
+
+[ignore]
+.*/node_modules/styled-components/.*
+.*/node_modules/

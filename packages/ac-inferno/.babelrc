@@ -1,0 +1,20 @@
+{
+  "presets": ["flow", "es2015"],
+  "env": {
+    "production": {
+      "plugins": [
+        "inferno",
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        "transform-flow-strip-types"
+      ]
+    },
+    "development": {
+      "plugins": [
+        "inferno",
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    }
+  }
+}
