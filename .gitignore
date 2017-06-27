@@ -3,6 +3,7 @@
 build
 coverage
 dist
+starter
 
 # misc
 .DS_Store
