@@ -30,6 +30,7 @@ import {
   swing,
   zoom,
   hinge,
+  hingeDrop,
   pulse,
   expandUp,
   entrance,
@@ -124,6 +125,7 @@ const specialObj = {
   Swing: hoc('Swing', swing),
   Zoom: hoc('Zoom', zoom),
   Hinge: hoc('Hinge', hinge),
+  HingeDrop: hoc('HingeDrop', hingeDrop),
   Pulse: hoc('Pulse', pulse),
   ExpandUp: hoc('ExpandUp', expandUp),
   Entrance: hoc('Entrance', entrance),
@@ -133,8 +135,10 @@ const specialObj = {
 
 const flipObj = {
   Flip: hoc('Flip', flip),
-  FlipX: hoc('FlipX', flipX),
-  FlipY: hoc('FlipY', flipY),
+  FlipInX: hoc('FlipInX', flipInX),
+  FlipInY: hoc('FlipInY', flipInY),
+  FlipOutX: hoc('FlipOutX', flipOutX),
+  FlipOutY: hoc('FlipOutY', flipOutY),
 };
 
 export {
