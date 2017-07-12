@@ -82,8 +82,10 @@ Below is a list of all available animations (Components).
 ### Flip
 
 * `Flip`
-* `FlipX`
-* `FlipY`
+* `FlipInX`
+* `FlipInY`
+* `FlipOutX`
+* `FlipOutY`
 
 ### LightSpeed
 
@@ -114,6 +116,7 @@ Below is a list of all available animations (Components).
 * `Swing`
 * `Zoom`
 * `Hinge`
+* `HingeDrop`
 * `Pulse`
 * `ExpandUp`
 * `Entrance`

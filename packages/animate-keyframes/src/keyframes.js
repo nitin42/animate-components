@@ -23,7 +23,7 @@ const {
   up,
   upBig
 } = Fade;
-const { flip, flipX, flipY } = Flippy;
+const { flip, flipInX, flipInY, flipOutX, flipOutY } = Flippy;
 const { lightIn, lightOut } = Light;
 const {
   rotateIn,
@@ -40,6 +40,7 @@ const {
   swing,
   zoom,
   hinge,
+  hingeDrop,
   pulse,
   expandUp,
   entrance,
@@ -72,8 +73,10 @@ export {
   up,
   upBig,
   flip,
-  flipX,
-  flipY,
+  flipInX,
+  flipInY,
+  flipOutX,
+  flipOutY,
   lightIn,
   lightOut,
   rotateIn,
@@ -88,6 +91,7 @@ export {
   swing,
   zoom,
   hinge,
+  hingeDrop,
   pulse,
   expandUp,
   entrance,
