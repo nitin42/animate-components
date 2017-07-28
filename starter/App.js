@@ -1,55 +1,29 @@
-import React from "react";
+import React, { Component } from 'react';
+import glamorous from 'glamorous-native';
+import reactPrimitives from 'react-primitives';
 
-import {
-  Flash,
-  FadeIn,
-  Merge,
-  Delay,
-  Disappear,
-} from "../packages/animate-components/dist/animate-components.min.js";
-import { fadeIn, slideUp } from "animate-keyframes";
-import Comp from "./comp";
-import "./index.css";
+function createNative(componentConstructor, tag) {
+  if (typeof tag !== 'string' && typeof tag !== 'function') {
+    throw new Error(`Cannot create glamorous component for ${tag}`);
+  }
 
-class App extends React.Component {
+  return componentConstructor(tag);
+}
+
+const composer = (tag) => createNative(glamorous, tag)
+
+const NativeAlias = composer(reactPrimitives['View']);
+
+const StyledView = NativeAlias({ color: 'red', fontSize: '1.3em' });
+
+class App extends Component {
   render() {
     return (
-      <div>
-        {/* <FadeIn
-          style={{ fontSize: "3em" }}
-          className="main"
-          duration="4s"
-          component={Comp}
-        />
-        <Flash
-          duration="3s"
-          timingFunction="ease-out"
-          iterations="infinite"
-          forceInterpolate={{ steps: 4, direction: "start" }}
-          as="h1"
-        >
-          Hello
-        </Flash>
-        <Delay timeout={4000}>
-          <FadeIn>Hello World</FadeIn>
-        </Delay>
-        <Flash duration="2s" iterations="infinite" as="h1">
-          WAAAAAAAAAAAAAAAOOO!!
-        </Flash>
-        <FadeIn as="h2">
-          <h2>Hello World</h2>
-        </FadeIn> */}
-        <Disappear name={slideUp} duration="4s" as="div" timingFunction="ease-out">
-          <h1>I will disappear</h1>
-        </Disappear>
-      </div>
+      <StyledView>
+        Hello
+      </StyledView>
     );
   }
 }
 
 export default App;
-
-
-// Error boundaries
-// Code Refactor
-// Test all the animations and properties

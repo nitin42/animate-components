@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const { join, resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const VENDOR = ["react", "react-dom"];
+const VENDOR = ["react", "react-dom", 'inferno', 'inferno-component'];
 
 module.exports = {
   entry: {
