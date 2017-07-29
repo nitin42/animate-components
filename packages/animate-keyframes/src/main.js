@@ -394,7 +394,7 @@ const Flippy: KeyframeObject = {
       animation-timing-function: ease-in;
     }
   `,
-  flipX: keyframes`
+  flipInX: keyframes`
     from {
       transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
       animation-timing-function: ease-in;
@@ -415,7 +415,7 @@ const Flippy: KeyframeObject = {
       transform: perspective(400px);
     }
   `,
-  flipY: keyframes`
+  flipInY: keyframes`
     from {
       transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
       animation-timing-function: ease-in;
@@ -434,6 +434,48 @@ const Flippy: KeyframeObject = {
     }
     to {
       transform: perspective(400px);
+    }
+  `,
+  flipOutX: keyframes`
+    from {
+      transform: perspective(400px);
+    }
+    40% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      animation-timing-function: ease-in;
+    }
+    60% {
+      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      opacity: 1;
+    }
+    80% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    }
+    to {
+      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  `,
+  flipOutY: keyframes`
+    from {
+      transform: perspective(400px);
+    }
+    40% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      animation-timing-function: ease-in;
+    }
+    60% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 2-deg);
+      opacity: 1;
+    }
+    80% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    }
+    to {
+      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
     }
   `,
 };
@@ -746,6 +788,36 @@ const Special: KeyframeObject = {
       animation-timing-function: ease-in-out;
       opacity: 1;
     }
+    to {
+      transform: translate3d(0, 700px, 0);
+      opacity: 0;
+    }
+  `,
+  hingeDrop: keyframes`
+    from {
+      -ms-transform-origin: top-left;
+      transform-origin: top left;
+      animation-timing-function: ease-in-out;
+      opacity: 1;
+    }
+
+    20%, 60% {
+      -ms-transform: rotate(0, 0, 1, 80deg);
+      transform: rotate3d(0, 0, 1, 80deg);
+      -ms-transform-origin: top-left;
+      transform-origin: top left;
+      animation-timing-function: ease-in-out;
+    }
+
+    40%, 80% {
+      -ms-transform: rotate(0, 0, 1, 60deg);
+      transform: rotate3d(0, 0, 1, 60deg);
+      -ms-transform-origin: top-left;
+      transform-origin: top left;
+      animation-timing-function: ease-in-out;
+      opacity: 1;
+    }
+
     to {
       transform: translate3d(0, 700px, 0);
       opacity: 0;

@@ -17,3 +17,5 @@
 * [Delay rendering](https://github.com/nitin42/animate-components/blob/master/packages/animate-components/examples/delay.js)
 
 * [Disappear Component](https://github.com/nitin42/animate-components/blob/master/packages/animate-components/examples/Disappear.js)
+
+> Note - All the above examples are also valid for InfernoJS. There is no change in API for InfernoJS.

@@ -234,6 +234,10 @@ let rule = css({
 });
 ```
 
+## Usage with InfernoJS
+
+Use Animate Components in [InfernoJS](infernojs.org) with [`ac-inferno`](https://github.com/nitin42/animate-components/tree/master/packages/ac-inferno).
+
 ## Custom components 💃
 If you want to create your own animation components rather than using the built-in ones, `animate-components` also exports a high order function that lets you create your own components with ease (believe me!).
 

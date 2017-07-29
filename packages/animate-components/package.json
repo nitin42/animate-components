@@ -1,6 +1,6 @@
 {
   "name": "animate-components",
-  "version": "1.4.3",
+  "version": "1.4.5",
   "description": "Elemental components for animations in React",
   "keywords": [
     "react",
@@ -34,7 +34,7 @@
   "author": "Nitin Tulswani <tulswani19@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "animate-keyframes": "^0.1.5",
+    "animate-keyframes": "^0.1.6",
     "element-utils": "^0.1.2",
     "html-tags": "^1.1.1",
     "prop-types": "^15.5.8",

@@ -26,7 +26,7 @@ const {
   FadeInRightBig,
   FadeInLeftBig,
 } = fadeObj;
-const { Flip, FlipX, FlipY } = flipObj;
+const { Flip, FlipInX, FlipInY, FlipOutX, FlipOutY } = flipObj;
 const { LightOut, LightIn } = lightObj;
 const {
   RotateIn,
@@ -70,8 +70,10 @@ export {
   FadeInLeftBig,
   FadeInRightBig,
   Flip,
-  FlipX,
-  FlipY,
+  FlipInX,
+  FlipInY,
+  FlipOutX,
+  FlipOutY,
   LightOut,
   LightIn,
   RotateIn,

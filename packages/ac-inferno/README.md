@@ -1,5 +1,5 @@
 # ac-inferno (Animate Components for Inferno)
-![version](https://img.shields.io/badge/ac-inferno-1.0.3-brightgreen.svg)
+![version](https://img.shields.io/badge/ac--inferno-1.0.3-blue.svg)
 ![gzip](https://img.shields.io/badge/gzip%20size-4.4%20KB-brightgreen.svg)
 ![size](https://img.shields.io/badge/size-17.3%20KB-brightgreen.svg)
 
@@ -27,8 +27,14 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 <script src="https://unpkg.com/ac-inferno@1.0.3/dist/ac-inferno.min.js"></script>
 ```
 
+#### Why a separate package for InfernoJS instead of using `animate-components` with `Inferno-compat` ?
+
+* Cost in performance.
+* Strange errors (specially with `Disappear` component).
+* Reduce build size with Inferno.
+
 ## Docs
-View the complete documentation [here](./docs) (API is similar for both React and Inferno).
+View the complete documentation [here](https://github.com/nitin42/animate-components/tree/master/packages/animate-components/docs) (API is similar for both React and Inferno).
 
 ## Animations
 
