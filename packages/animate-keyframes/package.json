@@ -1,6 +1,6 @@
 {
   "name": "animate-keyframes",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Keyframes for animate-components",
   "main": "./dist/keyframes.js",
   "repository": "https://github.com/nitin42/animate-components",
