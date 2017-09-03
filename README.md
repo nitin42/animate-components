@@ -20,3 +20,5 @@ View the docs [here](./packages)
 Animate Components also supports [InfernoJS](infernojs.org) (separate package so `inferno-compat` is not required) and [Preact](preactjs.com) (with `preact-compat`). 
 
 Why a separate package for InfernoJS  ? Read [here](https://github.com/nitin42/animate-components/tree/master/packages/ac-inferno#why-a-separate-package-for-infernojs-instead-of-using-animate-components-with-inferno-compat-).
+
+<a href="https://app.codesponsor.io/link/FCRW65HPiwhNtebDx2tTc53E/nitin42/animate-components" rel="nofollow"><img src="https://app.codesponsor.io/embed/FCRW65HPiwhNtebDx2tTc53E/nitin42/animate-components.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
