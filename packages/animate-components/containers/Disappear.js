@@ -4,6 +4,7 @@ import { fadeIn } from 'animate-keyframes';
 import { getElementType, avoidNest } from 'element-utils';
 
 export default class Disappear extends PureComponent {
+
   constructor(props: Object) {
     super(props);
   };
@@ -23,27 +24,19 @@ export default class Disappear extends PureComponent {
     component: PropTypes.func
   };
 
-  componentWillMount = () => {
-    this.timeouts = null;
-  };
+  componentWillMount = () => this.timeouts = null;
 
-  componentDidMount = () => {
-    this.performAndDisapper(this.props);
-  };
+  componentDidMount = () => this.performAndDisapper(this.props);
 
-  componentWillUnmount = () => {
-    clearTimeout(this.timeouts);
-  };
+  componentWillUnmount = () => clearTimeout(this.timeouts);
 
-  performAndDisapper = (props) => {
+  performAndDisapper = props => {
+    const { name, duration, timingFunction } = props;
     const element = document.getElementById('animation-root');
-    element.style = `animation: ${props.name} ${props.duration} ${props.timingFunction}`; // start on initial render
+    element.style = `animation: ${name} ${duration} ${timingFunction}`; // start on initial render
     element.addEventListener('animationend', () => {
-      element.style =
-        'visibility: \'hidden\'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;';
-      this.timeouts = setTimeout(() => {
-        element.remove();
-      }, 2000); // Sync with fadeOut
+      element.style = 'visibility: \'hidden\'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;';
+      this.timeouts = setTimeout(() => element.remove(), 2000); // Sync with fadeOut
     });
   };
 

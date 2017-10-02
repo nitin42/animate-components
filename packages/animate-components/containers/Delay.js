@@ -40,18 +40,14 @@ export default class Delay extends PureComponent<DefaultProps, Props, State> {
     show: false,
   };
 
-  componentWillMount = () => {
-    this.timer = null;
-  };
+  componentWillMount = () => this.timer = null;
 
   componentDidMount = () => {
     const { timeout } = this.props;
     this.timer = setTimeout(this.setShowValue, timeout);
   };
 
-  componentWillUnmount = () => {
-    clearTimeout(this.timer);
-  };
+  componentWillUnmount = () => clearTimeout(this.timer);
 
   setShowValue = (): void => {
     this.setState({
