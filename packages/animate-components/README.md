@@ -1,6 +1,6 @@
 # Animate Components
 ![website](https://img.shields.io/badge/website-up-brightgreen.svg)
-![version](https://img.shields.io/badge/animate--components-1.4.2-brightgreen.svg)
+![version](https://img.shields.io/badge/animate--components-1.4.8-brightgreen.svg)
 ![gzip](https://img.shields.io/badge/gzip%20size-4.5%20KB-brightgreen.svg)
 ![size](https://img.shields.io/badge/size-17.5%20KB-brightgreen.svg)
 

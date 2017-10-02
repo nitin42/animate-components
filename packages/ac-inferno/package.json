@@ -1,6 +1,6 @@
 {
   "name": "ac-inferno",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Elemental components for doing animation",
   "keywords": [
     "react",
@@ -29,7 +29,9 @@
     "webpack": "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.js --display-max-modules 0 --display-optimization-bailout"
   },
   "dependencies": {
-    "animate-keyframes": "^0.1.5",
+    "animate-keyframes": "^0.1.5"
+  },
+  "peerDependencies": {
     "inferno": "^3.6.1",
     "inferno-compat": "^3.6.1",
     "inferno-component": "^3.6.1",
