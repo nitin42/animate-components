@@ -1,27 +1,27 @@
 const shell = require('shelljs');
 const clearConsole = require('react-dev-utils/clearConsole');
-const chalk = require('chalk');
+const { green, red, yellow } = require('chalk');
 
 const tty_mode = process.stdout.isTTY;
 
-let log = (arg) => console.log(arg);
+let log = arg => console.log(arg);
 
 let build = () => {
-  log(chalk.green("\nBuilding the project..."));
+  log(green("\nBuilding the project..."));
   shell.exec('yarn build >&-', (code, stderr) => {
     if (code !== 0) {
-      log(chalk.red("\n⚠️  Build failed."));
-    } else log(chalk.yellow("\n✅  Build completed."))
+      log(red("\n⚠️  Build failed."));
+    } else log(yellow("\n✅  Build completed."))
     lint();
   });
 }
 
 let lint = () => {
-  log(chalk.green("\nRunning ESLint plugin..."));
+  log(green("\nRunning ESLint plugin..."));
   shell.exec('yarn lint >&-', (code) => {
     if (code !== 0) {
-      log(chalk.red("\n⚠️  There were some errors. Run `yarn lint` to check the errors.\n"));
-    } else log(chalk.yellow("\n✅  No errors.\n"))
+      log(red("\n⚠️  There were some errors. Run `yarn lint` to check the errors.\n"));
+    } else log(yellow("\n✅  No errors.\n"))
   });
 }
 

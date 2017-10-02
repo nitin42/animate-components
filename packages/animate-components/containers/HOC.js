@@ -84,6 +84,7 @@ function setPropTypes(ComposedComponent: string) {
 
 function hoc(ComposedComponent: string, AnimationName: string): Function {
   class _Animation extends PureComponent<DefaultProps, Props, State> {
+
     constructor(props: Object) {
       super(props);
     };
@@ -106,9 +107,7 @@ function hoc(ComposedComponent: string, AnimationName: string): Function {
       styles: {}
     };
 
-    componentDidMount = () => {
-      this.setAnimation(this.props);
-    };
+    componentDidMount = () => this.setAnimation(this.props);
 
     componentWillReceiveProps = (nextProps: Props) => {
       // Interpolation of new animation properties
@@ -165,7 +164,7 @@ function hoc(ComposedComponent: string, AnimationName: string): Function {
         as,
         style,
         component,
-        ...rest
+        ...rest,
       } = this.props;
 
       return Render(ComposedComponent, this.props, this.state, rest, ComposedComponent);

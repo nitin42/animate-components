@@ -56,6 +56,7 @@ function update(state: State, props: Props): Object {
 }
 
 export default class Merge extends PureComponent<DefaultProps, Props, State> {
+
   constructor(props: Object) {
     super(props);
   };
@@ -72,9 +73,7 @@ export default class Merge extends PureComponent<DefaultProps, Props, State> {
     styles: {}
   };
 
-  componentDidMount = () => {
-    this.setState(update);
-  };
+  componentDidMount = () => this.setState(update);
 
   componentWillReceiveProps = (nextProps: Props) => {
     const newUpdate = update(this.state, nextProps);
