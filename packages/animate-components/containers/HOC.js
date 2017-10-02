@@ -71,7 +71,6 @@ function setPropTypes(ComposedComponent: string) {
     as: function(props, propName) {
       const prop = props[propName];
       const err = `Warning: '${prop}' passed to '${ComposedComponent}' component is not a valid html tag.`;
-      /* eslint-disable no-console */
       return checkTag.includes(prop) ? null : console.error(err);
     },
     forceInterpolate: PropTypes.objectOf((propValue, key) => {

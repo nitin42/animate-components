@@ -110,7 +110,6 @@ Merge.propTypes = {
   as: function(props, propName) {
     const prop = props[propName];
     const err = `Warning: '${prop}' passed to 'Merge' component is not a valid html tag.`;
-    /* eslint-disable no-console */
     return checkTag.includes(prop) ? null : console.error(err);
   },
   component: PropTypes.func
