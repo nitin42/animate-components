@@ -1,4 +1,4 @@
-const er = console.error
+const er = console.error;
 
 const names = (key, propValue) => {
   if (key === 'name' && typeof propValue[key] !== 'string') {
@@ -50,14 +50,14 @@ const direction = (key, propValue) => {
   }
 };
 
-const interpolateValidators = key => {
+const interpolateValidators = (key) => {
   const keys = ['steps', 'direction'];
   const err = `Warning: Unknown prop '${key}' passed to the Merge component.`;
 
   return keys.includes(key) ? null : console.error(err);
 };
 
-const propValidators = key => {
+const propValidators = (key) => {
   const keys = ['name', 'duration', 'timingFunction'];
   const err = `Warning: Unknown prop '${key}' passed to the Merge component. Prop should be one of [${keys}]`;
 
