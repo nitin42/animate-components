@@ -12,7 +12,8 @@ export default class Disappear extends PureComponent {
     name: fadeIn,
     duration: '2s',
     as: 'div',
-    timingFunction: 'ease'
+    timingFunction: 'ease',
+    onDisappear: () => {}
   };
 
   static propTypes = {
@@ -20,7 +21,8 @@ export default class Disappear extends PureComponent {
     duration: PropTypes.string,
     as: PropTypes.string,
     timingFunction: PropTypes.string,
-    component: PropTypes.func
+    component: PropTypes.func,
+    onDisappear: PropTypes.func
   };
 
   componentWillMount = () => {
@@ -43,6 +45,7 @@ export default class Disappear extends PureComponent {
         'visibility: \'hidden\'; opacity: 0; transition: visibility 0s 2s, opacity 2s linear;';
       this.timeouts = setTimeout(() => {
         element.remove();
+        props.onDisappear();
       }, 2000); // Sync with fadeOut
     });
   };
