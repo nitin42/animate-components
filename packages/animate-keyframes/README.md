@@ -30,6 +30,7 @@ import { fadeIn } from 'animate-keyframes';
 ### Fade
 
 * `fadeIn`
+* `fadeOut`
 * `up`
 * `right`
 * `left`
