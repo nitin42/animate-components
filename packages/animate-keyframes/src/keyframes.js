@@ -14,6 +14,7 @@ import {
 const { bounce, bounceDown, bounceUp, bounceLeft, bounceRight } = Bouncing;
 const {
   fadeIn,
+  fadeOut,
   left,
   leftBig,
   right,
@@ -64,6 +65,7 @@ export {
   bounceRight,
   bounceUp,
   fadeIn,
+  fadeOut,
   left,
   down,
   downBig,
