@@ -17,6 +17,7 @@ import Disappear from './containers/Disappear';
 const { Bounce, BounceUp, BounceRight, BounceLeft, BounceDown } = bounceObj;
 const {
   FadeIn,
+  FadeOut,
   FadeInUp,
   FadeInRight,
   FadeInLeft,
@@ -61,6 +62,7 @@ export {
   BounceLeft,
   BounceDown,
   FadeIn,
+  FadeOut,
   FadeInUp,
   FadeInRight,
   FadeInLeft,

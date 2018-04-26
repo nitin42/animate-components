@@ -5,6 +5,7 @@ import {
   bounceRight,
   bounceUp,
   fadeIn,
+  fadeOut,
   left,
   down,
   downBig,
@@ -82,6 +83,7 @@ const expanseObj = {
 
 const fadeObj = {
   FadeIn: hoc('FadeIn', fadeIn),
+  FadeOut: hoc('FadeOut', fadeOut),
   FadeInDown: hoc('FadeInDown', down),
   FadeInDownBig: hoc('FadeInDownBig', downBig),
   FadeInUp: hoc('FadeInUp', up),
