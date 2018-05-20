@@ -1,3 +1,5 @@
+**Looking for maintainers. Please reach out to me if you're interested!**
+
 # Animate Components
 
 > ***Elemental components for doing animation in React***
