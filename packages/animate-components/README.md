@@ -70,6 +70,7 @@ Below is a list of all available animations (Components).
 ### Fade
 
 * `FadeIn`
+* `FadeOut`
 * `FadeInRightBig`
 * `FadeInRight`
 * `FadeInLeftBig`

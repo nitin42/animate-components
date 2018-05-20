@@ -13,6 +13,7 @@ declare module "animate-keyframes" {
     bounceRight: Keyframe$Rule,
     bounceUp: Keyframe$Rule,
     fadeIn: Keyframe$Rule,
+    fadeOut: Keyframe$Rule,
     left: Keyframe$Rule,
     down: Keyframe$Rule,
     downBig: Keyframe$Rule,

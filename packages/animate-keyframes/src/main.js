@@ -281,6 +281,14 @@ const Fade: KeyframeObject = {
       opacity: 1;
     }
   `,
+  fadeOut: keyframes`
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  `,
   left: keyframes`
     from {
       opacity: 0;
